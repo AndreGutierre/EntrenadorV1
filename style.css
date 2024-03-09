@@ -1,0 +1,577 @@
+
+h1{
+    display: flex;
+    align-items: center;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: <weight>;
+    font-style: normal;
+}
+
+body{
+    background: #FFFEF9;
+    margin: 2.8vw;
+    /* Fuente General*/
+    
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    font-variation-settings:
+    "slnt" 0;  
+    
+}
+
+.problemaMat{
+
+    font-size: 1.5em;
+    font-weight: 500;
+    font-style: italic;
+    color: #ac0f13;
+    padding: 1em;
+    top: 15%;
+}
+
+.respuestaOficial {
+    top: 10%;
+    font-size: 1.3em;
+    margin: 2em;
+    font-weight: 600; /* Puedes ajustar el estilo según tus preferencias */
+    color: #ac0f13;     /* Puedes ajustar el estilo según tus preferencias */
+    text-align: center;
+}
+
+.pasoApaso {
+    top: 20%;
+    font-size: 1em;
+    margin: 2em;
+    font-weight: 400; /* Puedes ajustar el estilo según tus preferencias */
+    color: #0A3871; 
+    
+}
+
+
+/*Seccion Input*/
+.input-texto{
+    display: flexbox;
+    float: left;
+    margin-top: 20vh;
+    width: 67.2%;
+    height: 40vh;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/*Campo Input*/
+.campo-texto {
+    text-align: center;
+    width: 50%;
+    height: 1em;
+    padding-top: 5vh;
+    font-weight: bold;
+    background: #FFFEF9;
+    border: none;
+    font-size: 1.5em;
+    color: #0A3871;
+    resize: none; /*Evita que el usuario pueda redimensionar el textarea*/
+    outline: none;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.campo-texto::placeholder{
+    color: #003D92;
+    font-weight: 300;
+}
+
+.unidades{
+    width: 100%;
+}
+
+select{
+    color: #003D92;
+    font-size: 1em;
+    font-weight: 600;
+    border: none;
+    background-color: #FFFEF9;
+    border:none;
+    border-radius: 5px;
+   
+    padding: 1%;
+    box-shadow: 3px 3px 30px #cac2c2;
+}
+
+
+/*Seccion botones Input*/
+.botones{
+    
+    position:absolute;
+    top: 80%;
+    left: 10%;
+    width: 80%;
+    
+    
+}
+
+.advertencia{
+    position:absolute;
+    text-align: center;
+    color: #495057;
+    top: 70%;
+    left: 13%;
+    max-width: 50%; /* Ajusta este valor según el ancho máximo deseado */
+    white-space: normal; /* Permite que el texto se ajuste a varias líneas */
+}
+
+.simbolo {
+    fill: #aebac5;
+}
+
+
+.btnEncriptar{
+    position: absolute;
+    top: 84%;
+    width: 22.7vw;
+    height: 6.5vh;
+    padding: auto;
+    font-size: 16px;
+    font-weight: 100;
+    color:white;
+    background: #0A3871;
+    border:none;
+    border-radius: 24px;
+    transition: 0.5s all;
+    cursor:pointer;
+    box-shadow: 5px 5px 20px #b1a9a9;
+}
+
+.btnEncriptar:hover{
+    transform: scale(1.1);
+    box-shadow: 7px 7px 7px #8a8484;
+}
+
+.btnDesencriptar{
+    position: absolute;
+    top: 84%;
+    left: 35%;
+    width: 22.7vw;
+    height: 6.5vh;
+    padding: auto;
+    margin-left: 1em;
+    font-size: 16px;
+    font-weight: 100;
+    color:white;
+    background: #fdcf00;
+    border:none;
+    border-radius: 24px;
+    transition: 0.5s all;
+    cursor:pointer;
+    box-shadow: 5px 5px 20px #b1a9a9;
+}
+
+.btnDesencriptar:hover{
+    transform: scale(0.8);
+}
+
+/*Seccion Output*/
+.ouput-mensaje{
+    text-align: center;
+    position: relative;
+    float: right;
+    width: 27.2%;
+    height: 80vh;
+    box-sizing: border-box;
+}
+
+/*Campo Output*/
+.mensaje{
+    
+    width: 90%;
+    height: 90%; 
+    padding: 5%;
+    display: inline-block;
+    box-shadow: 10px 10px 30px 5px #dfd7d7;
+    color: #495057;
+    background: #FFFEF9;
+    border: none;
+    border-radius: 32px;
+    font-size: 18px;
+    font-weight: 400;
+    resize: none; /*Evita que el usuario pueda redimensionar el textarea*/
+    outline: none;
+   
+    
+}
+
+.ocultar{
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+  
+#munecos, #sinTexto, #incorrecta {
+    position: absolute;
+    max-width: 85%;
+    max-height: 60%;
+    transition: 0.5s;
+    
+}
+  
+#munecos {
+    top: 5%;
+    left: 7.5%;
+}
+  
+#sinTexto {
+    top: 63%;
+    font-size: 1.2em;
+    color: rgb(14, 13, 13);
+    font-weight: 70;
+    font-family: "Bebas Neue", sans-serif;
+   
+}
+
+.excelente{
+    position: absolute;
+    
+    top: 55%;
+    left: 22%;
+    font-size: 2em;
+    color: #dc2b19;
+    font-weight: 70;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.bienvenida{
+    position: absolute;
+    max-width: 85%;
+    top: 65%;
+    transition: 0.3s;
+    font-size: 1.8em;
+    color: rgb(14, 13, 13);
+    font-weight: lighter;
+    font-family: "Bebas Neue", sans-serif;
+    
+} 
+
+.incorrecta, .intentos, .fin-intentos {
+    text-align: left;
+    left: 15%;
+    top: 70%;
+    transition: 0.3s;
+    font-size: 1.6em;
+    color: rgb(14, 13, 13);
+    font-weight: 70;
+    font-family: "Bebas Neue", sans-serif;
+     
+}
+
+  
+.btnCopiar {
+
+    position: absolute;
+    text-align: center;
+    z-index: 2; /* Valor más alto que otros elementos */
+    left: 10%;
+    top: 77% ;
+    width: 80%;
+    height: 6.5vh;
+    font-size: 16px;
+    font-weight: 100;
+    color: white;
+    background: #ac0f13;
+    border-color: transparent;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: 0.5s all;
+
+}  
+  
+.btnCopiar:hover{
+    transform: scale(1.05);
+    color: white ;
+    box-shadow: 0 -0.5em 3em #8a8484;
+}
+
+footer {
+   
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    margin: 2em 0 1em 0;
+    background-color: transparent; /* Color de fondo opcional */
+    font-size: 12px; /* Tamaño de fuente opcional */
+    color: #0A3871; /* Color de texto opcional */
+    font-weight: 400;
+}
+
+
+
+/* Media queries para hacerlo responsive */
+@media screen and (max-width:430px) {
+    
+    header{
+        margin: 3em auto 2em 1.5em;
+    }
+    
+    .problemaMat{
+        margin: 1em 0 0 0;
+        font-size: 1.2em;
+    }
+
+    /*Seccion Input*/
+    .input-texto {
+        display: inline-block;
+        position: relative;
+        height: 40vh;
+        margin: 1em 0 0 0;
+        padding: 0;
+        width: 100%;
+        
+    }
+
+    .campo-texto{
+        
+        font-size: 1.5em;
+        width: 50%;
+    }
+
+   .advertencia{
+        display: block;
+        position: relative;
+        text-align: center;
+        margin: 4em 0 2em 0;
+        width: 100%;
+        left: 10%;
+        font-size: 0.8em;
+        max-width: 80%; /* Ajusta este valor según el ancho máximo deseado */
+        white-space: none; /* Permite que el texto se ajuste a varias líneas */
+        
+    }
+
+    .botones{
+        position: relative;
+        width: 90%;
+    }
+
+    .btnEncriptar {
+        position: relative;
+        width: 90%;
+        margin: 0;
+        left: 0;
+    }
+   
+    .btnDesencriptar {
+        position: relative;
+        width: 90%;
+        margin: 0;
+        margin-top: 1em;
+        left: 0;
+    }
+    
+    /*Seccion Output*/
+    .ouput-mensaje {
+        
+        position: relative;
+        margin: 0;
+        box-sizing: border-box;
+        margin-top: 10%; /* Ajusta el margen superior según sea necesario */
+        width: 100%;
+        height: 100vw;
+    } 
+    
+    .mensaje{
+        width: 70%;
+        height:  100%; 
+    }
+
+    .intentos{
+        font-size: 1.5em;
+        font-weight: 300;
+        width: 70%;
+        text-align: center;
+        top: 36%;
+        left: 13%;
+    }
+
+    .excelente{
+        top: 10%;
+        left: 29%;
+        
+    }
+
+    .bienvenida, .incorrecta{
+        top: 10%;
+        left: 17%;
+        width: 70%;
+        font-size: 1.5em;
+    }
+
+    .respuestaOficial{
+        top: 0%;
+        left: 17%;
+        font-size: 1em;
+        
+    }
+
+    .pasoApaso{
+        top: 15%;
+        font-size: 0.9em;
+    }
+
+    #munecos{
+        position: absolute;
+        max-width: 80%;
+        max-height: 70%;
+        top: 36%;
+        left: 13%;
+    }
+
+    #sinTexto{
+        position: absolute;
+        max-width: 80%;
+        max-height: 60%;
+        top: 22%;
+        left: 10%;
+        font-size: 1em;
+    }
+        
+    
+
+    .btnCopiar {
+        position: absolute;
+        top: 10%;
+        left: 17%;
+        width: 65%;
+        
+        
+    }
+
+}
+  
+/* Media queries para hacerlo responsive */
+@media screen and (min-width:431px) and (max-width: 950px){
+
+    header{
+        margin-top: 2em;
+        margin-bottom: 3em;
+    }
+    
+   .problemaMat{
+        margin-top: 0%;
+   }
+
+   
+
+    /*Seccion Input*/
+    .input-texto {
+        position: relative;
+        height: 30vh;
+        padding: 0%;
+        margin-top: 0%;
+        padding: 0;
+        width: 100%;
+        
+    }
+
+
+    .unidades{
+        margin-top: 2em;
+    }
+    .advertencia{
+        display: inline-block;
+        position: relative;
+        text-align: center;
+        margin: 20% 0 0% 5%;
+        width: auto;
+        left: 20%;
+        
+        
+    }
+
+    .botones{
+        position: relative;
+        width: auto;
+        margin: 2em 0 2em 0;
+        left: 0%;
+        text-align: center;
+        
+    }
+
+    .btnEncriptar .btnDesencriptar {
+        height: 2em;
+    }
+
+    .btnEncriptar {
+        position: relative;
+        width: 40%;
+        margin: 1em;
+        left: 0;
+    }
+   
+    .btnDesencriptar {
+        position: relative;
+        width: 40%;
+        margin: 1em;
+        margin-top: 1em;
+        left: 0;
+    }
+    
+    /*Seccion Output*/
+    .ouput-mensaje {
+        position: relative;
+        margin: 0;
+        box-sizing: border-box;
+        margin-top: 0%; /* Ajusta el margen superior según sea necesario */
+        width: 100%;
+        height: 60vw;
+    } 
+    
+    .mensaje{
+        width: 70%;
+        height:  70%;
+        
+    }
+
+    #munecos{
+        top: 13%;
+        left: 18%;
+        scale: 1.2;
+    }
+
+    #sinTexto {
+        position: relative;
+        max-width: 60%;
+        max-height: 70%;
+    }
+        
+    #sinTexto {
+        display: block;
+        position: absolute;
+        top: 38%;
+        left: 60%;
+        width: 25%;
+        font-weight: 500;
+        
+    }
+
+    .excelente{
+        top: 20%;
+        left: 61%;
+    }
+
+    .bienvenida, .incorrecta{
+        top: 32%;
+        left: 60%;
+        width: 30%;
+    }
+
+    .btnCopiar {
+        top: 65%;
+        width: 35%;
+        border-radius: 50px;
+        left: 53%; 
+    }
+
+}
+
+
+

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>El entrenador de arquitect@s</title>
+        
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">  
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+    </head>
+
+   <body onload="mostrarProblemaAleatorio(), fraseAleatoria()">
+        <header>
+            <div>
+                <h1><img src="imagenes/logo.png" class="logo">El Entrenador de Ciencias</h1>
+            </div>
+        </header>
+
+        <main>
+
+            <section class="input-texto">
+                
+                <p class="problemaMat"></p>
+                <div class="unidades">
+                    <textarea id="texto-encriptado" class="campo-texto" placeholder="Escribe aquí"></textarea>
+        
+                    <select id="unidad" class="unidad">
+                        <option>unidades</option>
+                        <option>pulgadas</option>
+                        <option>pulgadas^2</option>
+                        <option>pulgadas^3</option>
+                        <option>mm</option>
+                        <option>mm^2</option>
+                        <option>mm^3</option>
+                        <option>cms</option>
+                        <option>cms^2</option>
+                        <option>cms^3</option>
+                        <option>m</option>
+                        <option>m^2</option>
+                        <option>m^3</option>
+                        <option>km</option>
+                        <option>km^2</option>
+                        <option>lts</option>
+                        <option>kgs</option>
+                        <option>ha</option>
+                    </select>
+                </div>
+
+                    
+            </section>
+
+            <section>
+            
+                <p class="advertencia"><img src="imagenes/exclamation-circle-fill.svg" class="simbolo"> ¡Importante! Solo escribe respuestas numéricas con punto separadas por una coma. Por ejemplo: 6.9, 5.3</p>
+                
+                <div class="botones">
+                    <button class="btnEncriptar" onclick="revisarResultado()">Revisar mi respuesta</button>
+                    <button class="btnDesencriptar" onclick="probarOtraVez(), mostrarProblemaAleatorio(), fraseAleatoria();">Mostrar problema nuevo</button>
+                </div>
+                
+                
+            </section>
+
+            <section class="ouput-mensaje">
+                
+                <div id="campo-mensaje" class="mensaje"><p id="incorrecta" class="incorrecta ocultar"></p>
+                    
+                    <p class="respuestaOficial ocultar"></p><p class="pasoApaso ocultar"></p><p class="intentos ocultar"></p>
+                    <p class="bienvenida">Bienvenidxs al Entrenador de Ciencias de la Arquitectura</p>
+                    <p class="fin-intentos ocultar" style="position: absolute;"></p>
+                
+                    <img src="imagenes/pngegg.png" id="munecos" class="arquitecto">
+                    <img src="imagenes/cuadro.webp" id="munecos" class="croquis ocultar">
+                    <p id="excelente" class="excelente ocultar">¡Buen Trabajo!</p>
+                    <p id="sinTexto" class="sin-Texto ocultar"></p>
+                    
+                    <button id="btn-copiar" disabled class="btnCopiar ocultar" onclick="mostrarPasos()">Ver el paso a paso</button>
+                </div>
+            </section>
+           
+
+        </main>
+
+        <footer>
+            <p id="derechos" class="copyright">&copy Copyright LhasaStore.cl - 2024</p>
+        </footer>
+
+
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous"></script>
+
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+        
+        <script src="script-problemas.js"></script>
+    </body>
+
+</html>
