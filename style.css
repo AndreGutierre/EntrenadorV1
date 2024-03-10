@@ -8,6 +8,7 @@ h1{
 }
 
 body{
+
     background: #FFFEF9;
     margin: 2.8vw;
     /* Fuente General*/
@@ -29,7 +30,6 @@ body{
     padding: 1em;
     top: 5%;
 }
-
 
 .respuestaOficial {
     top: 10%;
@@ -73,22 +73,25 @@ body{
 }
 
 
-/*Campo Input*/
 .campo-texto {
+    vertical-align: middle;
     text-align: center;
-    width: 50%;
+    
     height: 1em;
-    padding-top: 5vh;
+    
     font-weight: bold;
-    background: #FFFEF9;
+    background-color: #FFFEF9;
     border: none;
-    font-size: 1.5em;
+    font-size: 1.2em;
     color: #0A3871;
-    resize: none; /*Evita que el usuario pueda redimensionar el textarea*/
+    resize: none;
     outline: none;
     -ms-overflow-style: none;
     scrollbar-width: none;
+    border-radius: 5px;
+    box-shadow: 3px 3px 30px #888181;
 }
+
 
 .campo-texto::placeholder{
     color: #003D92;
@@ -96,21 +99,24 @@ body{
 }
 
 .unidades{
+    
     margin: 4em 0 0 0;
     width: 100%;
 }
 
 select{
     color: #003D92;
+    vertical-align: middle;
+    text-align: center;
     font-size: 1em;
-    font-weight: 600;
+    font-weight: 500;
     border: none;
     background-color: #FFFEF9;
     border:none;
     border-radius: 5px;
-   
-    padding: 1%;
-    box-shadow: 3px 3px 30px #cac2c2;
+    width: 30%;
+    
+    box-shadow: 3px 3px 30px #888181;
 }
 
 .advertencia{
@@ -146,12 +152,12 @@ select{
     border-radius: 24px;
     transition: 0.5s all;
     cursor:pointer;
-    box-shadow: 5px 5px 20px #b1a9a9;
+    box-shadow: 5px 5px 20px #888181;
 }
 
 .btnEncriptar:hover{
     transform: scale(1.1);
-    box-shadow: 7px 7px 7px #8a8484;
+    box-shadow: 7px 7px 7px #888181;
 }
 
 .btnDesencriptar{
@@ -161,13 +167,13 @@ select{
     margin-left: 1em;
     font-size: 16px;
     font-weight: 100;
-    color:white;
+    color: #495057;
     background: #fdcf00;
     border:none;
     border-radius: 24px;
     transition: 0.5s all;
     cursor:pointer;
-    box-shadow: 5px 5px 20px #b1a9a9;
+    box-shadow: 5px 5px 20px #888181;
 }
 
 .btnDesencriptar:hover{
@@ -178,8 +184,8 @@ select{
 .ouput-mensaje {
     text-align: center;
     position: absolute;
-    right: 5%;
-    width: 27.2%;
+    left: 65%;
+    
     height: 70vh;
     box-sizing: border-box;
   }
@@ -188,11 +194,11 @@ select{
 /*Campo Output*/
 .mensaje{
     
-    width: 90%;
-    height: 70vh; 
+    width: 80%;
+    height: 90%; 
     padding: 5%;
     display: inline-block;
-    box-shadow: 10px 10px 30px 5px #dfd7d7;
+    box-shadow: 10px 10px 30px 5px #888181;
     color: #495057;
     background: #FFFEF9;
     border: none;
@@ -343,17 +349,18 @@ footer {
 
    .advertencia{
         position: absolute;
-        margin: 4em 0 2em 0;
+        top: 95%;
         width: 90%;
         left: 5%;
         font-size: 0.8em;
         max-width: 100%; /* Ajusta este valor según el ancho máximo deseado */
+        z-index: -1;
         
     }
 
     .botones{
-        position: absolute;
-        top: 85%;
+        position: fixed;
+        top: 75%;
         width: 90%;
         left: 5%;
     }
@@ -376,7 +383,8 @@ footer {
     /*Seccion Output*/
     .ouput-mensaje {
         position: absolute;
-        top: 100%;
+        z-index: -1; /* Valor más alto que otros elementos */
+        top: 120%;
         left: 0%;
         margin-top: 10%; /* Ajusta el margen superior según sea necesario */
         width: 100%;
@@ -455,18 +463,20 @@ footer {
 
   
     footer{
+    z-index: -1; /* Valor más alto que otros elementos */
    position: absolute; 
    display: block;
-   top: 200%;
+   top: 250%;
    left: 0%;
    text-align: center;
    padding-bottom: 5%;
+    }
 }
 
 
 
 /* Media queries para hacerlo responsive */
-@media screen and (min-width:431px) and (max-width: 900px){
+@media screen and (min-width:431px) and (max-width: 730px){
 
     header{
         margin-top: 2em;
@@ -476,8 +486,6 @@ footer {
    .problemaMat{
         margin-top: 0%;
    }
-
-   
 
     /*Seccion Input*/
     .input-texto {
@@ -506,8 +514,8 @@ footer {
     }
 
     .botones{
-        position: absolute;
-        top: 60%;
+        position: fixed;
+        top: 90%;
         width: 90%;
         left: 5%;
     }
@@ -532,8 +540,9 @@ footer {
     }
     
     .ouput-mensaje {
+        z-index: -1;
         position: absolute;
-        top: 100%;
+        top: 70%;
         left: 0%;
         margin-top: 10%; /* Ajusta el margen superior según sea necesario */
         width: 100%;
@@ -589,10 +598,11 @@ footer {
     footer{
         position: absolute; 
         display: block;
-        top: 300%;
+        top:170%;
         left: 0%;
         text-align: center;
         padding-bottom: 5%;
+        z-index: -1;
      }
 
 }

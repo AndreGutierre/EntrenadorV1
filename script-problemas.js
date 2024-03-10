@@ -1,4 +1,11 @@
 
+window.addEventListener('keyboardDidHide', () => {
+    // Restaurar la posición original de las secciones
+});
+
+window.addEventListener('keyboardDidShow', () => {
+    // Ajustar la posición de las secciones
+});
 
 // Función para obtener el elemento del DOM por su selector
 function obtenerElemento(selector) {
