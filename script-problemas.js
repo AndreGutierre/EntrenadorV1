@@ -1001,7 +1001,7 @@ function mostrarProblemaAleatorio() {
     // Seleccionar aleatoriamente un problema
     problemaAleatorio = problemasMatematicos[Math.floor(Math.random() * problemasMatematicos.length)];
 
-    //console.log(problemaAleatorio);
+    console.log(problemaAleatorio);
 
     // Actualizar el contenido del elemento problemaMat
     problemaMat.innerHTML = `${problemaAleatorio.ecuacion}`;

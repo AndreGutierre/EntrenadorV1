@@ -22,11 +22,9 @@
                 <h1><img src="imagenes/logo.png" class="logo">El Entrenador de Ciencias</h1>
             </div>
         </header>
-
         <main>
 
             <section class="input-texto">
-                
                 <p class="problemaMat"></p>
                 <div class="unidades">
                     <textarea id="texto-encriptado" class="campo-texto" placeholder="Escribe aquí"></textarea>
@@ -51,21 +49,17 @@
                         <option>kgs</option>
                         <option>ha</option>
                     </select>
-                </div>
-
-                    
+                </div>    
+            
             </section>
 
-            <section>
-            
+            <section class="botonesYAdvertencia">
                 <p class="advertencia"><img src="imagenes/exclamation-circle-fill.svg" class="simbolo"> ¡Importante! Solo escribe respuestas numéricas con punto separadas por una coma. Por ejemplo: 6.9, 5.3</p>
                 
                 <div class="botones">
                     <button class="btnEncriptar" onclick="revisarResultado()">Revisar mi respuesta</button>
                     <button class="btnDesencriptar" onclick="probarOtraVez(), mostrarProblemaAleatorio(), fraseAleatoria();">Mostrar problema nuevo</button>
                 </div>
-                
-                
             </section>
 
             <section class="ouput-mensaje">
