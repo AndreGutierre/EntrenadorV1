@@ -178,7 +178,7 @@ const problemasMatematicos = [
       {
         ecuacion: 'Una piscina rectangular tiene una longitud de 25 metros, una anchura de 10 metros y una profundidad de 1.5 metros. Se desea llenar la piscina de agua. ¿Cuántos litros de agua se necesitan?',
         respuestaNumerica: ['Volumen = 375000 litros'],
-        unidadRespuesta: ['litros'],
+        unidadRespuesta: ['lts'],
         pasos: [
           'Calcular el volumen de la piscina: largo x ancho x profundidad.',
           'Convertir el volumen de metros cúbicos a litros multiplicando por 1000.'
@@ -447,7 +447,7 @@ const problemasMatematicos = [
       {
         ecuacion: 'Un cubo de agua tiene un volumen de 125 metros cúbicos. ¿Cuántos litros de agua tiene?',
         respuestaNumerica: ['Volumen = 125000 litros'],
-        unidadRespuesta: ['litros'],
+        unidadRespuesta: ['lts'],
         pasos: [
           'Para convertir de metros cúbicos a litros, multiplica por 1000.',
           'Volumen en litros = 125 m^3 x 1000 = 125000 litros.'
