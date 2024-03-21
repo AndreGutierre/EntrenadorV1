@@ -28,12 +28,22 @@
         
     </head>
 
-   <body onload="mostrarProblemaAleatorio(), fraseAleatoria()">
+   <body onload="actualizarProblemas(), mostrarProblemaAleatorio(), fraseAleatoria()">
+
         <header>
-            <div>
+            <div class="header-contenedor">
                 <h1><img src="imagenes/logo.png" class="logo">El Entrenador de Ciencias</h1>
+                <nav class="cajaTema">
+                    <select id="tema" class="tema" onchange="actualizarProblemas(), mostrarProblemaAleatorio(), fraseAleatoria()">
+                        <option value="unidades">  |   Entrena conversión de unidades</option>
+                        <option value="algebra">  |   Entrena reducción de términos semejantes </option>
+                        <option value="ecuaciones">  |   Entrena ecuaciones de primer grado</option>
+                    </select>
+                </nav>
             </div>
+
         </header>
+
         <main>
 
             <section class="input-texto">
@@ -67,7 +77,7 @@
             </section>
 
             <section class="botonesYAdvertencia">
-                <p class="advertencia"><img src="imagenes/exclamation-circle-fill.svg" class="simbolo"> ¡Importante! Solo escribe respuestas numéricas con punto separadas por una coma. Por ejemplo: 6.9, 5.3</p>
+                <p class="advertencia"><img src="imagenes/exclamation-circle-fill.svg" class="simbolo"></p>
                 
                 <div class="botones">
                     <button class="btnEncriptar" onclick="revisarResultado()">Revisar mi respuesta</button>
@@ -85,14 +95,16 @@
                 
                     <img src="imagenes/pngegg.png" id="munecos" class="arquitecto">
                     <img src="imagenes/cuadro.webp" id="munecos" class="croquis ocultar">
+                    <img src="imagenes/repaso.png" id="munecos" class="repaso ocultar">
                     <p id="excelente" class="excelente ocultar">¡Buen Trabajo!</p>
                     <p id="sinTexto" class="sin-Texto ocultar"></p>
                     
                     <button id="btn-copiar" disabled class="btnCopiar ocultar" onclick="mostrarPasos()">Ver el paso a paso</button>
+                    <button id="btn-copiar" class="btnRepaso btnCopiar ocultar" onclick="quieroRepasar()">Quiero repasar</button>
+
                 </div>
             </section>
            
-
         </main>
 
         <footer>
@@ -100,6 +112,7 @@
         </footer>
 
         <script src="script-problemasAlgebraicos.js"></script>
+
     </body>
 
 </html>

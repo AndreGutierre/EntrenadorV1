@@ -17,11 +17,12 @@ let respuestaOficial = obtenerElemento('.respuestaOficial');
 let pasoApaso = obtenerElemento(".pasoApaso");
 let fraseElegida = obtenerElemento(".sin-Texto");
 let leCobusier = ' - Le Corbusier -';
+let advertencia = obtenerElemento(".advertencia");
 
 // Obtener la unidad seleccionada por el usuario
 let unidadUsuario = document.getElementById("unidad").value.trim();
 
-const problemasMatematicos = [
+const problemasUnidades = [
     {
         ecuacion: 'Una habitación tiene forma cúbica con lados de longitud 3 metros. Calcula el volumen de la habitación.',
         respuestaNumerica: ['Volumen = 27 metros cúbicos'],
@@ -56,7 +57,7 @@ const problemasMatematicos = [
         respuestaNumerica: ['Número de baldosas = 300'],
         unidadRespuesta: ['unidades'],
         pasos: [
-          'Calcular el área total de la habitación: largo x ancho.',
+          'Calcular el área total de la habitación : largo x ancho.',
           'Calcular el área de una baldosa: lado x lado.',
           'Dividir el área total de la habitación por el área de una baldosa para obtener el número de baldosas necesarias.'
         ]
@@ -170,7 +171,7 @@ const problemasMatematicos = [
         respuestaNumerica: ['Número de baldosas = 100'],
         unidadRespuesta: ['unidades'],
         pasos: [
-          'Calcular el área total del suelo del balcón: largo x ancho.',
+          'Calcular el área total del suelo del balcón : largo x ancho.',
           'Calcular el área de una baldosa: largo x ancho.',
           'Dividir el área total del suelo del balcón por el área de una baldosa para obtener el número de baldosas necesarias.'
         ]
@@ -198,7 +199,7 @@ const problemasMatematicos = [
         unidadRespuesta: ['unidades'],
         pasos: [
           'Calcular el área total del muro: altura x longitud.',
-          'Calcular el volumen de un bloque de hormigón: largo x ancho x alto.',
+          'Calcular el volumen de un bloque de hormigón : largo x ancho x alto.',
           'Calcular el número de bloques de hormigón necesarios dividiendo el área total del muro por el volumen de un bloque de hormigón.'
         ]
       },
@@ -302,7 +303,7 @@ const problemasMatematicos = [
         respuestaNumerica: ['Volumen = 0.6 metros cúbicos'],
         unidadRespuesta: ['m^3'],
         pasos: [
-          'Calcular el volumen de la canalización: largo x ancho x altura.'
+          'Calcular el volumen de la canalización : largo x ancho x altura.'
         ]
       },
       {
@@ -1160,46 +1161,1905 @@ const problemasMatematicos = [
 ];
 
 const problemasAlgebraicos = [
-        {
-            "ecuacion": "Desarrolla la expresión y reduce sus términos semenjantes :  -3(3x - 4).",
-            "respuestaNumerica": ["Expresión desarrollada:", "-9x + 12"],
-            "unidadRespuesta": [],
-            "pasos": [
-            "Multiplica cada término dentro del paréntesis por -3: -3 · 3x = -9x, y -3 · (-4) = 12."
-            ]
-        },
-        {
-            "ecuacion": "Desarrolla la expresión y reduce sus términos semenjantes :  4(2x + 7).",
-            "respuestaNumerica": ["Expresión desarrollada:", "8x + 28"],
-            "unidadRespuesta": [],
-            "pasos": [
-            "Multiplica cada término dentro del paréntesis por 4: 4 · 2x = 8x, y 4 · 7 = 28."
-            ]
-        },
-        {
-            "ecuacion": "Desarrolla la expresión y reduce sus términos semenjantes :  3(5x - 2).",
-            "respuestaNumerica": ["Expresión desarrollada:", "15x - 6"],
-            "unidadRespuesta": [],
-            "pasos": [
-            "Multiplica cada término dentro del paréntesis por 3: 3 · 5x = 15x, y 3 · (-2) = -6."
-            ]
-        },
-        
-             
+    {
+        ecuacion: "Desarrolla la expresión y reduce sus términos semenjantes:" +"<br>"+ "-3(3x - 4).",
+        respuestaNumerica: ["Expresión desarrollada:", "-9x + 12"],
+        unidadRespuesta: [],
+        combinacionesRespuesta: ["-9x+12","12-9x","12-x9","-x9+12"],
+        pasos: [
+        "Multiplica cada término dentro del paréntesis por -3: -3 · 3x = -9x, y -3 · (-4) = 12."
+        ]
+    },
+    {
+        ecuacion: "Reduce los términos semejantes en la siguiente ecuación:" +"<br>"+ "3x + 2 - 4x + 5.",
+        respuestaNumerica: ["Expresión reducida:", "-x + 7"],
+        unidadRespuesta: [],
+        combinacionesRespuesta: ["-x + 7", "7 - x"],
+        pasos: [
+        "Combina los términos semejantes: (3x - 4x) + (2 + 5) = -x + 7."
+        ]
+    },
+    {
+        ecuacion: "Simplifica la expresión:" +"<br>"+ "2y - 3 - y + 4.",
+        respuestaNumerica: ["Expresión simplificada:", "y + 1"],
+        unidadRespuesta: [],
+        combinacionesRespuesta: ["y + 1", "1 + y"],
+        pasos: [
+        "Combina los términos semejantes: (2y - y) + (-3 + 4) = y + 1."
+        ]
+    },
+    {
+        ecuacion: "Reduce los términos semejantes en la siguiente ecuación:" +"<br>"+ "4a + 6 - 2a + 3.",
+        respuestaNumerica: ["Expresión reducida:", "2a + 9"],
+        unidadRespuesta: [],
+        combinacionesRespuesta: ["2a + 9", "9 + 2a"],
+        pasos: [
+        "Combina los términos semejantes: (4a - 2a) + (6 + 3) = 2a + 9."
+        ]
+    },
+    {
+        ecuacion: "Simplifica la expresión" +"<br>"+ "5b - 2 - 3b + 7.",
+        respuestaNumerica: ["Expresión simplificada:", "2b + 5"],
+        unidadRespuesta: [],
+        combinacionesRespuesta: ["2b + 5", "5 + 2b"],
+        pasos: [
+        "Combina los términos semejantes: (5b - 3b) + (-2 + 7) = 2b + 5."
+        ]
+    },
+    {
+        ecuacion: "Reduce los términos semejantes en la siguiente ecuación:" +"<br>"+ "6x - 2y - 3x + 4y.",
+        respuestaNumerica: ["Expresión reducida:", "3x + 2y"],
+        unidadRespuesta: [],
+        combinacionesRespuesta: ["3x+2y", "2y+3x"],
+        pasos: [
+        "Combina los términos semejantes: (6x - 3x) + (-2y + 4y) = 3x + 2y."
+        ]
+    },
+    {
+        ecuacion: "Simplifica la expresión" +"<br>"+ "-3a + 5b - 2a + 6b.",
+        respuestaNumerica: ["Expresión simplificada:", "-5a + 11b"],
+        unidadRespuesta: [],
+        combinacionesRespuesta: ["-5a + 11b", "11b - 5a"],
+        pasos: [
+        "Combina los términos semejantes: (-3a - 2a) + (5b + 6b) = -5a + 11b."
+        ]
+    },
+    {
+        ecuacion: "Reduce los términos semejantes en la siguiente ecuación:" +"<br>"+ "2x - 3y - x + 4y.",
+        respuestaNumerica: ["Expresión reducida:", "x + y"],
+        unidadRespuesta: [],
+        combinacionesRespuesta: ["x + y", "y + x"],
+        pasos: [
+        "Combina los términos semejantes: (2x - x) + (-3y + 4y) = x + y."
+        ]
+    },
+    {
+        "ecuacion": "Reduce los términos semejantes en la siguiente ecuación:" +"<br>"+ "3(x + 2) - 2(2x - 1).",
+        "respuestaNumerica": ["Expresión reducida:", "x + 4"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["x + 4", "4 + x"],
+        "pasos": [
+            "Distribuye el 3 y el -2: 3x + 6 - 4x + 2.",
+            "Combina los términos semejantes: (3x - 4x) + (6 + 2) = -x + 8.",
+            "Expresión reducida: x + 4"
+        ]
+    },
+    {
+        "ecuacion": "Reduce los términos semejantes en la siguiente ecuación:" +"<br>"+ "-2(3x - 4) + 5(x + 2).",
+        "respuestaNumerica": ["Expresión reducida:", "8 + 3x"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["8 + 3x", "3x + 8"],
+        "pasos": [
+            "Distribuye el -2 y el 5: -6x + 8 + 5x + 10.",
+            "Combina los términos semejantes: (-6x + 5x) + (8 + 10) = -x + 18.",
+            "Expresión reducida: 8 + 3x"
+        ]
+    },
+    {
+        "ecuacion": "Reduce los términos semejantes en la siguiente ecuación:" +"<br>"+ "2(2x + 3) - 3(x - 4).",
+        "respuestaNumerica": ["Expresión reducida:", "x + 18"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["x + 18", "18 + x"],
+        "pasos": [
+            "Distribuye el 2 y el -3: 4x + 6 - 3x + 12.",
+            "Combina los términos semejantes: (4x - 3x) + (6 + 12) = x + 18.",
+            "Expresión reducida: x + 18"
+        ]
+    },
+    {
+        "ecuacion": "Reduce los términos semejantes en la siguiente ecuación:" +"<br>"+ "-3(2x - 1) + 4(3x + 2).",
+        "respuestaNumerica": ["Expresión reducida:", "6x + 11"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["6x + 11", "11 + 6x"],
+        "pasos": [
+            "Distribuye el -3 y el 4: -6x + 3 + 12x + 8.",
+            "Combina los términos semejantes: (-6x + 12x) + (3 + 8) = 6x + 11.",
+            "Expresión reducida: 6x + 11"
+        ]
+    },
+    {
+        "ecuacion": "Reduce los términos semejantes en la siguiente ecuación:" +"<br>"+ "2(2x - 3) - 3(3x + 2).",
+        "respuestaNumerica": ["Expresión reducida:", "-5x - 12"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["-5x - 12", "-12 - 5x"],
+        "pasos": [
+            "Distribuye el 2 y el -3: 4x - 6 - 9x - 6.",
+            "Combina los términos semejantes: (4x - 9x) + (-6 - 6) = -5x - 12.",
+            "Expresión reducida: -5x - 12"
+        ]
+    },
+    {
+        "ecuacion": "Reduce los términos semejantes en la siguiente ecuación:" +"<br>"+ "-3(2x - 1) + 5(x + 4).",
+        "respuestaNumerica": ["Expresión reducida:", "-x + 23"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["-x + 23", "23 - x"],
+        "pasos": [
+            "Distribuye el -3 y el 5: -6x + 3 + 5x + 20.",
+            "Combina los términos semejantes: (-6x + 5x) + (3 + 20) = -x + 23.",
+            "Expresión reducida: -x + 23"
+        ]
+    },
+    {
+        "ecuacion": "Reduce los términos semejantes en la siguiente ecuación:" +"<br>"+ "3(2x + 4) - 4(x - 2).",
+        "respuestaNumerica": ["Expresión reducida:", "2x + 20"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["2x + 20", "20 + 2x"],
+        "pasos": [
+            "Distribuye el 3 y el -4: 6x + 12 - 4x + 8.",
+            "Combina los términos semejantes: (6x - 4x) + (12 + 8) = 2x + 20.",
+            "Expresión reducida: 2x + 20"
+        ]
+    },
+    {
+        "ecuacion": "Reduce los términos semejantes en la siguiente ecuación:" +"<br>"+ "-2(2x - 3) + 3(x + 4).",
+        "respuestaNumerica": ["Expresión reducida:", "x + 18"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["x + 18", "18 + x"],
+        "pasos": [
+            "Distribuye el -2 y el 3: -4x + 6 + 3x + 12.",
+            "Combina los términos semejantes: (-4x + 3x) + (6 + 12) = x + 18.",
+            "Expresión reducida: x + 18"
+        ]
+    },
+    {
+        "ecuacion": "Reduce los términos semejantes en la siguiente ecuación:" +"<br>"+ "-2(3x + 2) + 4(2 - x).",
+        "respuestaNumerica": ["Expresión reducida:", "-10x + 4"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["-10x + 4", "4 - 10x"],
+        "pasos": [
+            "Distribuye el -2 y el 4: -6x - 4 + 8 - 4x.",
+            "Combina los términos semejantes: (-6x - 4x) + (-4 + 8) = -10x + 4.",
+            "Expresión reducida: -10x + 4"
+        ]
+    },
+    {
+        "ecuacion": "Reduce los términos semejantes en la siguiente ecuación:" +"<br>"+ "2(2x - 3) - 3(3x + 2).",
+        "respuestaNumerica": ["Expresión reducida:", "-5x - 12"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["-5x - 12", "-12 - 5x"],
+        "pasos": [
+            "Distribuye el 2 y el -3: 4x - 6 - 9x - 6.",
+            "Combina los términos semejantes: (4x - 9x) + (-6 - 6) = -5x - 12.",
+            "Expresión reducida: -5x - 12"
+        ]
+    },
+    {
+        "ecuacion": "Reduce los términos semejantes en la siguiente ecuación:" +"<br>"+ "2(3x - 2) - 3(2x + 1) + 4(4 - x).",
+        "respuestaNumerica": ["Expresión reducida:", "5x - 14"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["5x - 14", "-14 + 5x"],
+        "pasos": [
+            "Distribuye el 2, el -3 y el 4: 6x - 4 - 6x - 3 + 16 - 4x.",
+            "Combina los términos semejantes: (6x - 6x - 4x) + (-4 - 3 + 16) = 5x - 14.",
+            "Expresión reducida: 5x - 14"
+        ]
+    },
+    {
+        "ecuacion": "Reduce los términos semejantes en la siguiente ecuación:" +"<br>"+ "-3(2x + 3) - 2(3 - x) + 5(4x - 1).",
+        "respuestaNumerica": ["Expresión reducida:", "9x + 8"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["9x + 8", "8 + 9x"],
+        "pasos": [
+            "Distribuye el -3, el -2 y el 5: -6x - 9 - 6 + 2x + 20 - 5.",
+            "Combina los términos semejantes: (-6x + 2x + 4x) + (-9 - 6 - 5 + 20) = 9x + 8.",
+            "Expresión reducida: 9x + 8"
+        ]
+    },
+    {
+        "ecuacion": "Reduce los términos semejantes en la siguiente ecuación:" +"<br>"+ "4(3x - 2) - 2(2x + 3) - 3(x - 1).",
+        "respuestaNumerica": ["Expresión reducida:", "5x - 11"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["5x - 11", "-11 + 5x"],
+        "pasos": [
+            "Distribuye el 4, el -2 y el -3: 12x - 8 - 4x - 6 - 3x + 3.",
+            "Combina los términos semejantes: (12x - 4x - 3x) + (-8 - 6 + 3) = 5x - 11.",
+            "Expresión reducida: 5x - 11"
+        ]
+    },
+    {
+        "ecuacion": "Reduce los términos semejantes en la siguiente ecuación:" +"<br>"+ "-2(2x + 3) - 3(3 - x) + 4(4x - 2).",
+        "respuestaNumerica": ["Expresión reducida:", "3x + 8"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["3x + 8", "8 + 3x"],
+        "pasos": [
+            "Distribuye el -2, el -3 y el 4: -4x - 6 - 9 + 3x + 16 - 8x + 4.",
+            "Combina los términos semejantes: (-4x + 3x - 8x) + (-6 - 9 + 16 + 4) = 3x + 8.",
+            "Expresión reducida: 3x + 8"
+        ]
+    },
+    {
+        "ecuacion": "Reduce los términos semejantes en la siguiente ecuación:" +"<br>"+ "2(2x - 3) + 3(x + 2) - 4(3 - x).",
+        "respuestaNumerica": ["Expresión reducida:", "5x + 10"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["5x + 10", "10 + 5x"],
+        "pasos": [
+            "Distribuye el 2, el 3 y el -4: 4x - 6 + 3x + 6 - 12 + 4x.",
+            "Combina los términos semejantes: (4x + 3x + 4x) + (-6 + 6 - 12) = 5x + 10.",
+            "Expresión reducida: 5x + 10"
+        ]
+    },
+    {
+        "ecuacion": "Reduce los términos semejantes en la siguiente ecuación:" +"<br>"+ "-3(3x - 2) + 4(2x + 3) - 2(x + 1).",
+        "respuestaNumerica": ["Expresión reducida:", "7x + 1"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["7x + 1", "1 + 7x"],
+        "pasos": [
+            "Distribuye el -3, el 4 y el -2: -9x + 6 + 8x + 12 - 2x - 2.",
+            "Combina los términos semejantes: (-9x + 8x - 2x) + (6 + 12 - 2) = 7x + 1.",
+            "Expresión reducida: 7x + 1"
+        ]
+    },
+    {
+        "ecuacion": "Reduce los términos semejantes en la siguiente ecuación:" +"<br>"+ "3(2x + 3) - 2(3 - x) + 5(x - 2).",
+        "respuestaNumerica": ["Expresión reducida:", "9x - 4"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["9x - 4", "-4 + 9x"],
+        "pasos": [
+            "Distribuye el 3, el -2 y el 5: 6x + 9 - 6 + 2x - 10 + 5x - 10.",
+            "Combina los términos semejantes: (6x + 2x + 5x) + (9 - 6 - 10 - 10) = 9x - 4.",
+            "Expresión reducida: 9x - 4"
+        ]
+    },
+    {
+        "ecuacion": "Reduce los términos semejantes en la siguiente ecuación:" +"<br>"+ "-2(3x + 2) - 3(2 - x) + 4(4x - 1).",
+        "respuestaNumerica": ["Expresión reducida:", "5x + 4"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["5x + 4", "4 + 5x"],
+        "pasos": [
+            "Distribuye el -2, el -3 y el 4: -6x - 4 - 6 + 3x + 8 - 4x + 4.",
+            "Combina los términos semejantes: (-6x + 3x - 4x) + (-4 - 6 + 8 + 4) = 5x + 4.",
+            "Expresión reducida: 5x + 4"
+        ]
+    },
+    {
+        "ecuacion": "Reduce los términos semejantes en la siguiente ecuación:" +"<br>"+ "2(2x - 3) - 3(3 - x) + 4(x + 2).",
+        "respuestaNumerica": ["Expresión reducida:", "9x + 5"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["9x + 5", "5 + 9x"],
+        "pasos": [
+            "Distribuye el 2, el -3 y el 4: 4x - 6 - 9 + 3x + 12 + 4x + 8.",
+            "Combina los términos semejantes: (4x + 3x + 4x) + (-6 - 9 + 12 + 8) = 9x + 5.",
+            "Expresión reducida: 9x + 5"
+        ]
+    },
+    {
+        "ecuacion": "Reduce los términos semejantes en la siguiente ecuación:" +"<br>"+ "-3(2x - 1) - 2(3x + 4) + 4(2 - x).",
+        "respuestaNumerica": ["Expresión reducida:", "-9x + 11"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["-9x + 11", "11 - 9x"],
+        "pasos": [
+            "Distribuye el -3, el -2 y el 4: -6x + 3 - 6x - 8 + 8 - 4x.",
+            "Combina los términos semejantes: (-6x - 6x - 4x) + (3 - 8 + 8) = -9x + 11.",
+            "Expresión reducida: -9x + 11"
+        ]
+    },
+    {
+        "ecuacion": "Reduce los términos semejantes en la siguiente ecuación:" +"<br>"+ "2(3x - 4) + 3(x + 2) - 4(4 - x).",
+        "respuestaNumerica": ["Expresión reducida:", "7x + 2"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["7x + 2", "2 + 7x"],
+        "pasos": [
+            "Distribuye el 2, el 3 y el -4: 6x - 8 + 3x + 6 - 16 + 4x.",
+            "Combina los términos semejantes: (6x + 3x + 4x) + (-8 + 6 - 16) = 7x + 2.",
+            "Expresión reducida: 7x + 2"
+        ]
+    },
+    {
+        "ecuacion": "Reduce los términos semejantes en la siguiente ecuación:" +"<br>"+ "-2(2x + 3) - 3(3 - x) + 4(x - 1).",
+        "respuestaNumerica": ["Expresión reducida:", "9x - 2"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["9x - 2", "-2 + 9x"],
+        "pasos": [
+            "Distribuye el -2, el -3 y el 4: -4x - 6 - 9 + 3x - 12 + 4x - 4.",
+            "Combina los términos semejantes: (-4x + 3x + 4x) + (-6 - 9 - 12 - 4) = 9x - 2.",
+            "Expresión reducida: 9x - 2"
+        ]
+    },
+    {
+        "ecuacion": "Reduce los términos semejantes en la siguiente ecuación:" +"<br>"+ "3(2x + 3) + 4(x - 2) - 2(3 - x).",
+        "respuestaNumerica": ["Expresión reducida:", "7x + 10"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["7x + 10", "10 + 7x"],
+        "pasos": [
+            "Distribuye el 3, el 4 y el -2: 6x + 9 + 4x - 8 - 6 + 2x.",
+            "Combina los términos semejantes: (6x + 4x + 2x) + (9 - 8 - 6) = 7x + 10.",
+            "Expresión reducida: 7x + 10"
+        ]
+    },
+    {
+        "ecuacion": "Reduce los términos semejantes en la siguiente ecuación:" +"<br>"+ "-2(3x - 2) + 3(x + 4) + 4(2 - x).",
+        "respuestaNumerica": ["Expresión reducida:", "-5x + 14"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["-5x + 14", "14 - 5x"],
+        "pasos": [
+            "Distribuye el -2, el 3 y el 4: -6x + 4 + 3x + 12 + 8 - 4x.",
+            "Combina los términos semejantes: (-6x + 3x - 4x) + (4 + 12 + 8) = -5x + 14.",
+            "Expresión reducida: -5x + 14"
+        ]
+    },
+    {
+        "ecuacion": "Reduce los términos semejantes en la siguiente ecuación:" +"<br>"+ "2(3x - 4) - 3(2 - x) + 4(4x - 2).",
+        "respuestaNumerica": ["Expresión reducida:", "9x + 2"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["9x + 2", "2 + 9x"],
+        "pasos": [
+            "Distribuye el 2, el -3 y el 4: 6x - 8 - 6 + 3x + 12 - 8x + 4.",
+            "Combina los términos semejantes: (6x + 3x - 8x) + (-8 - 6 + 12 + 4) = 9x + 2.",
+            "Expresión reducida: 9x + 2"
+        ]
+    },
+    {
+        "ecuacion": "Reduce los términos semejantes en la siguiente ecuación:" +"<br>"+ "-3(2x + 3) - 2(3 - x) + 5(4x - 1) - 2(5 + 2x).",
+        "respuestaNumerica": ["Expresión reducida:", "11x + 1"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["11x + 1", "1 + 11x"],
+        "pasos": [
+            "Distribuye el -3, el -2, el 5 y el -2: -6x - 9 - 6 + 2x + 20 - 5 - 10 - 4x.",
+            "Combina los términos semejantes: (-6x + 2x - 4x) + (-9 - 6 + 20 - 5 - 10) = 11x + 1.",
+            "Expresión reducida: 11x + 1"
+        ]
+    },
+    {
+        "ecuacion": "Reduce los términos semejantes en la siguiente ecuación:" +"<br>"+ "2(3x - 2) - 3(2x + 1) + 4(4 - x) - (2x - 3) + 3(5 + 2x).",
+        "respuestaNumerica": ["Expresión reducida:", "19x + 22"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["19x + 22", "22 + 19x"],
+        "pasos": [
+            "Distribuye el 2, el -3 y el 4: 6x - 4 - 6x - 3 + 16 - 4x - 2x + 3 + 12 + 6x.",
+            "Combina los términos semejantes: (6x - 6x - 4x + 6x) + (-4 - 3 + 16 + 3 + 12) = 19x + 22.",
+            "Expresión reducida: 19x + 22"
+        ]
+    },
+    {
+        "ecuacion": "Reduce los términos semejantes en la siguiente ecuación:" +"<br>"+ "-2(2x + 3) - 3(3 - x) + 4(x - 1) - 3(5 + 2x) + 2(3 - x).",
+        "respuestaNumerica": ["Expresión reducida:", "-15x - 13"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["-15x - 13", "-13 - 15x"],
+        "pasos": [
+            "Distribuye el -2, el -3, el 4, el -3 y el 2: -4x - 6 - 9 + 3x - 12 + 4x - 4 - 15 - 6x + 3.",
+            "Combina los términos semejantes: (-4x + 3x + 4x - 6x) + (-6 - 9 - 12 - 4 - 15 + 3) = -15x - 13.",
+            "Expresión reducida: -15x - 13"
+        ]
+    },
+    {
+        "ecuacion": "Reduce los términos semejantes en la siguiente ecuación:" +"<br>"+ "2(3x - 2) + 3(x + 2) - 4(3 - x) + 2(5 + 3x) - 5(4x - 1).",
+        "respuestaNumerica": ["Expresión reducida:", "7x + 22"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["7x + 22", "22 + 7x"],
+        "pasos": [
+            "Distribuye el 2, el 3, el -4, el 2 y el -5: 6x - 4 + 3x + 6 - 12 + 4x - 8 + 10 + 6x - 5 - 20.",
+            "Combina los términos semejantes: (6x + 3x + 4x + 6x) + (-4 + 6 - 12 - 8 + 10 - 5 - 20) = 7x + 22.",
+            "Expresión reducida: 7x + 22"
+        ]
+    },
+    {
+        "ecuacion": "Reduce los términos semejantes en la siguiente ecuación:" +"<br>"+ "-3(2x + 3) - 2(3 - x) + 5(4x - 1) - (2x - 3) + 3(5 + 2x) - 4(x - 1).",
+        "respuestaNumerica": ["Expresión reducida:", "14x + 18"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["14x + 18", "18 + 14x"],
+        "pasos": [
+            "Distribuye el -3, el -2, el 5, el -1, el 3 y el -4: -6x - 9 - 6 + 2x + 20 - 2x + 3 + 15 + 6x - 12 + 3 - 4x.",
+            "Combina los términos semejantes: (-6x + 2x + 6x - 4x) + (-9 - 6 + 20 + 3 + 15 + 3 - 12) = 14x + 18.",
+            "Expresión reducida: 14x + 18"
+        ]
+    },
+    {
+        "ecuacion": "Reduce los términos semejantes en la siguiente ecuación:" +"<br>"+ "2(3x - 2) + 3(x + 2) - 4(3 - x) - (2x - 3) + 3(5 + 2x) - 5(4x - 1).",
+        "respuestaNumerica": ["Expresión reducida:", "14x + 18"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["14x + 18", "18 + 14x"],
+        "pasos": [
+            "Distribuye el 2, el 3, el -4, el -1, el 3 y el -5: 6x - 4 + 3x + 6 - 12 - 4x + 6 - 2x + 3 + 15 + 6x - 12 + 3 - 4x.",
+            "Combina los términos semejantes: (6x + 3x - 4x - 2x + 6x - 4x) + (-4 + 6 - 12 + 6 + 3 + 15 + 3 - 12) = 14x + 18.",
+            "Expresión reducida: 14x + 18"
+        ]
+    },
+    {
+        "ecuacion": "Reduce los términos semejantes en la siguiente ecuación:" +"<br>"+ "-2(2x + 3) - 3(3 - x) + 4(x - 1) - 3(5 + 2x) + 2(3 - x) - 4(x + 1).",
+        "respuestaNumerica": ["Expresión reducida:", "-13x - 11"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["-13x - 11", "-11 - 13x"],
+        "pasos": [
+            "Distribuye el -2, el -3, el 4, el -3, el 2 y el -4: -4x - 6 - 9 + 3x - 12 + 4x - 4 - 15 - 6x + 3 + 6 - 4x - 4.",
+            "Combina los términos semejantes: (-4x + 3x + 4x - 6x - 4x) + (-6 - 9 - 12 - 4 - 15 + 3 + 6 - 4) = -13x - 11.",
+            "Expresión reducida: -13x - 11"
+        ]
+    },
+    {
+        "ecuacion": "Reduce los términos semejantes en la siguiente ecuación:" +"<br>"+ "2(3x - 2) - 3(2x + 1) + 4(4 - x) - 2(5 + 2x) + 3(3 - x) - 5(4x - 1).",
+        "respuestaNumerica": ["Expresión reducida:", "-3x + 20"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["-3x + 20", "20 - 3x"],
+        "pasos": [
+            "Distribuye el 2, el -3, el 4, el -2, el 3 y el -5: 6x - 4 - 6x - 3 + 16 - 4x - 10 - 4 + 6x - 2 - 15 + 3 - 20x + 5.",
+            "Combina los términos semejantes: (6x - 6x + 6x) + (-4 - 3 - 4 - 10 - 2 + 3 + 5 + 16 - 15) = -3x + 20.",
+            "Expresión reducida: -3x + 20"
+        ]
+    },
+    {
+        "ecuacion": "Reduce los términos semejantes en la siguiente ecuación:" +"<br>"+ "-3(2x + 3) + 4(x - 1) - 2(3 - x) + 3(5 + 2x) - 5(4x - 1) + 2(2 - x).",
+        "respuestaNumerica": ["Expresión reducida:", "-9x + 3"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["-9x + 3", "3 - 9x"],
+        "pasos": [
+            "Distribuye el -3, el 4, el -2, el 3, el -5 y el 2: -6x - 9 + 4x - 4 - 6 + 2x + 15 + 6x - 12 - 5x + 5 + 4 - 2x.",
+            "Combina los términos semejantes: (-6x + 4x + 2x + 6x - 5x - 2x) + (-9 - 4 - 6 + 15 - 12 + 5 + 4) = -9x + 3.",
+            "Expresión reducida: -9x + 3"
+        ]
+    },
+    {
+        "ecuacion": "Reduce los términos semejantes en la siguiente ecuación:" +"<br>"+ "2(3x - 2) - 3(2 - x) + 4(x + 1) - 2(5 + 2x) + 3(3 - x) - 5(4x - 1).",
+        "respuestaNumerica": ["Expresión reducida:", "-3x + 21"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["-3x + 21", "21 - 3x"],
+        "pasos": [
+            "Distribuye el 2, el -3, el 4, el -2, el 3 y el -5: 6x - 4 - 6 + 3x + 4 - 4x - 10 + 2x - 4 + 9 - 3x + 15 - 20x + 5.",
+            "Combina los términos semejantes: (6x + 3x - 4x + 2x - 3x) + (-4 - 6 + 4 - 10 - 4 + 9 + 15 + 5) = -3x + 21.",
+            "Expresión reducida: -3x + 21"
+        ]
+    },
+    {
+        "ecuacion": "Reduce los términos semejantes en la siguiente ecuación:" +"<br>"+ "(3/4)x - (1/2)y + (5/6)x - (2/3)y.",
+        "respuestaNumerica": ["Expresión reducida:", "(11/12)x - (1/6)y"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": [
+            "(11/12)x - (1/6)y",
+            "(-1/6)y + (11/12)x",
+            "-(1/6)y + (11/12)x",
+            "-1y/6 + 11x/12",
+            "11x/12 - 1y/6"
+        ],
+        "pasos": [
+            "Combina los términos semejantes: (3/4)x + (5/6)x - (1/2)y - (2/3)y = (11/12)x - (1/6)y."
+        ]
+    },
+    {
+        "ecuacion": "Reduce los términos semejantes en la siguiente ecuación:" +"<br>"+ "-(2/5)x - (1/3)y - (4/7)x + (5/6)y.",
+        "respuestaNumerica": ["Expresión reducida:", "(-46/35)x + (7/6)y"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": [
+            "(-46/35)x + (7/6)y",
+            "(7/6)y - (46/35)x",
+            "-(46/35)x + (7/6)y",
+            "(7/6)y - 46x/35",
+            "7y/6 - 46x/35"
+        ],
+        "pasos": [
+            "Combina los términos semejantes: -(2/5)x - (4/7)x - (1/3)y + (5/6)y = (-46/35)x + (7/6)y."
+        ]
+    },
+    {
+        "ecuacion": "Reduce los términos semejantes en la siguiente ecuación:" +"<br>"+ "(3/4)x + (2/3)y - (5/6)x - (1/2)y.",
+        "respuestaNumerica": ["Expresión reducida:", "(1/12)x + (1/6)y"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": [
+            "(1/12)x + (1/6)y",
+            "(1/6)y + (1/12)x",
+            "(1/6)y + (1/12)x",
+            "1y/6 + 1x/12",
+            "1x/12 + 1y/6"
+        ],
+        "pasos": [
+            "Combina los términos semejantes: (3/4)x - (5/6)x + (2/3)y - (1/2)y = (1/12)x + (1/6)y."
+        ]
+    },
+    {
+        "ecuacion": "Reduce los términos semejantes en la siguiente ecuación:" +"<br>"+ "-(2/3)x + (3/4)y + (5/6)x - (1/2)y.",
+        "respuestaNumerica": ["Expresión reducida:", "(7/6)x + (1/4)y"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": [
+            "(7/6)x + (1/4)y",
+            "(1/4)y + (7/6)x",
+            "(1/4)y + 7x/6",
+            "1y/4 + 7x/6"
+        ],
+        "pasos": [
+            "Combina los términos semejantes: -(2/3)x + (5/6)x + (3/4)y - (1/2)y = (7/6)x + (1/4)y."
+        ]
+    },
+    {
+        "ecuacion": "Reduce los términos semejantes en la siguiente ecuación:" +"<br>"+ "(1/2)x - (3/5)y - (4/7)x + (5/6)y.",
+        "respuestaNumerica": ["Expresión reducida:", "(1/14)x + (7/30)y"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": [
+            "(1/14)x + (7/30)y",
+            "(7/30)y + (1/14)x",
+            "(7/30)y + 1x/14",
+            "7y/30 + 1x/14"
+        ],
+        "pasos": [
+            "Combina los términos semejantes: (1/2)x - (4/7)x - (3/5)y + (5/6)y = (1/14)x + (7/30)y."
+        ]
+    },
+    {
+        "ecuacion": "Reduce los términos semejantes en la siguiente ecuación:" +"<br>"+ "-(2/3)x + (3/4)y - (5/6)x - (4/5)y.",
+        "respuestaNumerica": ["Expresión reducida:", "(-19/6)x - (11/20)y"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": [
+            "-(19/6)x - (11/20)y",
+            "(-19/6)x + (-11/20)y",
+            "-(11/20)y - (19/6)x",
+            "(-11/20)y + (-19/6)x",
+            "-11y/20 - 19x/6",
+            " -19x/6 - 11y/20",
+      
+        ],
+        "pasos": [
+            "Combina los términos semejantes: -(2/3)x - (5/6)x + (3/4)y - (4/5)y = (-19/6)x - (11/20)y."
+        ]
+    },
+    {
+        "ecuacion": "Reduce los términos semejantes en la siguiente ecuación:" +"<br>"+ "(4/5)x + (1/2)y - (2/3)x + (3/4)y.",
+        "respuestaNumerica": ["Expresión reducida:", "(7/15)x + (5/4)y"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": [
+            "(7/15)x+(5/4)y",
+            "(7/15)x+(5y/4)",
+            "(5/4)y+(7/15)x",
+            "(5y/4)+(7/15)x"
+        ],
+        "pasos": [
+            "Combina los términos semejantes: (4/5)x - (2/3)x + (1/2)y + (3/4)y = (7/15)x + (5/4)y."
+        ]
+    },
+    {
+        "ecuacion": "Reduce los términos semejantes en la siguiente ecuación:" +"<br>"+ "-(3/4)x - (1/3)y + (5/6)x - (2/5)y - (4/5)x + (3/4)y + (1/2)x - (3/5)y.",
+        "respuestaNumerica": ["Expresión reducida:", "(-1/60)x - (7/60)y"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": [
+            "(-1/60)x - (7/60)y",
+            "-x/60 - 7y/60",
+            "-(7/60)y+(-1/60)x",
+            "-7y/60-x/60",
+
+        ],
+        "pasos": [
+            "Combina los términos semejantes: -(3/4)x + (5/6)x - (4/5)x + (1/2)x - (1/3)y - (2/5)y + (3/4)y - (3/5)y = (-1/60)x - (7/60)y."
+        ]
+    },
+    {
+        "ecuacion": "Reduce los términos semejantes en la siguiente ecuación:" +"<br>"+ "(1/2)x - (3/4)y - (4/5)x + (5/6)y - (2/3)x + (3/4)y - (5/6)x + (1/3)y.",
+        "respuestaNumerica": ["Expresión reducida:", "(-3/10)x + (11/12)y"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": [
+            "(-3/10)x + (11/12)y",
+            "(11/12)y - (3/10)x",
+            "-(3/10)x + (11/12)y",
+            "(11/12)y - 3x/10",
+            "11y/12 - 3x/10",
+            "- 3x/10+11y/12"
+        ],
+        "pasos": [
+            "Combina los términos semejantes: (1/2)x - (4/5)x - (2/3)x - (5/6)x - (3/4)y + (5/6)y + (3/4)y + (1/3)y = (-3/10)x + (11/12)y."
+        ]
+    },
+    {
+        "ecuacion": "Reduce los términos semejantes en la siguiente ecuación:" +"<br>"+ "-(2/3)x + (3/4)y - (5/6)x - (4/5)y + (1/2)x - (3/4)y + (5/6)x - (1/3)y.",
+        "respuestaNumerica": ["Expresión reducida:", "(-1/15)x - (11/20)y"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": [
+            "(-1/15)x - (11/20)y",
+            "(-11/20)y - (1/15)x",
+            "-(1/15)x - (11/20)y",
+            "-11y/20 - 1x/15",
+            "-11y/20 - 1x/15"
+        ],
+        "pasos": [
+            "Combina los términos semejantes: -(2/3)x - (5/6)x + (1/2)x + (5/6)x + (3/4)y - (4/5)y - (3/4)y - (1/3)y = (-1/15)x - (11/20)y."
+        ]
+    },
+    {
+        "ecuacion": "Reduce los términos semejantes en la siguiente ecuación:" +"<br>"+ "(7/3)x - (2/5)y + (5/4)x - (3/2)y.",
+        "respuestaNumerica": ["Expresión reducida:", "(29/12)x - (11/10)y"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": [
+            "(29/12)x - (11/10)y",
+            "(-11/10)y + (29/12)x",
+            "-(11/10)y + (29/12)x",
+            "-11y/10 + 29x/12",
+            "29x/12 - 11y/10"
+        ],
+        "pasos": [
+            "Combina los términos semejantes: (7/3)x + (5/4)x - (2/5)y - (3/2)y = (29/12)x - (11/10)y."
+        ]
+    },
+    {
+        "ecuacion": "Reduce los términos semejantes en la siguiente ecuación:" +"<br>"+ " -(5/6)x - (2/3)y - (4/5)x + (7/8)y.",
+        "respuestaNumerica": ["Expresión reducida:", "(-41/30)x + (13/24)y"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": [
+            "(-41/30)x + (13/24)y",
+            "(13/24)y - (41/30)x",
+            "-(41/30)x + (13/24)y",
+            "(13/24)y - 41x/30",
+            "13y/24 - 41x/30"
+        ],
+        "pasos": [
+            "Combina los términos semejantes: -(5/6)x - (4/5)x - (2/3)y + (7/8)y = (-41/30)x + (13/24)y."
+        ]
+    },
+    {
+        "ecuacion": "Reduce los términos semejantes en la siguiente ecuación: (3/4)x + (5/6)y - (2/3)x - (1/2)y.",
+        "respuestaNumerica": ["Expresión reducida:", "(1/12)x + (2/3)y"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": [
+            "(1/12)x + (2/3)y",
+            "(2/3)y + (1/12)x",
+            "x/12 +2y/3",
+            "2y/3 + x/12"
             
-            
+        ],
+        "pasos": [
+            "Combina los términos semejantes: (3/4)x - (2/3)x + (5/6)y - (1/2)y = (1/12)x + (2/3)y."
+        ]
+    },
+    {
+        "ecuacion": "Reduce los términos semejantes en la siguiente ecuación:" +"<br>"+ " -(3/5)x + (4/7)y + (5/6)x - (1/3)y.",
+        "respuestaNumerica": ["Expresión reducida:", "(7/30)x + (17/42)y"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": [
+            "(7/30)x + (17/42)y",
+            "(17/42)y + (7/30)x",
+            "x/30 + 17y/42",
+            "17y/42 + x/30"
+        ],
+        "pasos": [
+            "Combina los términos semejantes: -(3/5)x + (5/6)x + (4/7)y - (1/3)y = (7/30)x + (17/42)y."
+        ]
+    },
+    {
+        "ecuacion": "Reduce los términos semejantes en la siguiente ecuación:" +"<br>"+ " (2/3)x - (5/6)y - (1/2)x + (3/4)y.",
+        "respuestaNumerica": ["Expresión reducida:", "(1/6)x + (1/12)y"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": [
+            "(1/6)x + (1/12)y",
+            "(1/12)y + (1/6)x",
+            "x/6 + y/12",
+            "y/12 + x/6"
+        ],
+        "pasos": [
+            "Combina los términos semejantes: (2/3)x - (1/2)x - (5/6)y + (3/4)y = (1/6)x + (1/12)y."
+        ]
+    },
+    {
+        "ecuacion": "Reduce los términos semejantes en la siguiente ecuación:" +"<br>"+ " -(5/4)x - (3/5)y + (4/3)x + (2/7)y.",
+        "respuestaNumerica": ["Expresión reducida:", "(11/12)x - (13/35)y"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": [
+            "(11/12)x - (13/35)y",
+            "(-13/35)y + (11/12)x",
+            "-(13/35)y + (11/12)x",
+            "x/12 - 13y/35",
+            "-13y/35 + x/12"
+        ],
+        "pasos": [
+            "Combina los términos semejantes: -(5/4)x + (4/3)x - (3/5)y + (2/7)y = (11/12)x - (13/35)y."
+        ]
+    },
+    {
+        "ecuacion": "Reduce los términos semejantes en la siguiente ecuación:" +"<br>"+ " (7/5)x + (3/4)y - (2/3)x + (5/6)y.",
+        "respuestaNumerica": ["Expresión reducida:", "(11/15)x + (11/12)y"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": [
+            "(11/15)x + (11/12)y",
+            "(11/12)y + (11/15)x",
+            "x/15 + 11y/12",
+            "11y/12 + x/15"
+        ],
+        "pasos": [
+            "Combina los términos semejantes: (7/5)x - (2/3)x + (3/4)y + (5/6)y = (11/15)x + (11/12)y."
+        ]
+    },
+    {
+        "ecuacion": "Reduce los términos semejantes en la siguiente ecuación:" +"<br>"+ " -(4/3)x - (2/5)y + (3/2)x - (7/6)y.",
+        "respuestaNumerica": ["Expresión reducida:", "(7/6)x - (19/30)y"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": [
+            "(7/6)x - (19/30)y",
+            "(-19/30)y + (7/6)x",
+            "-(19/30)y + (7/6)x",
+            "x/6 - 19y/30",
+            "-19y/30 + x/6"
+        ],
+        "pasos": [
+            "Combina los términos semejantes: -(4/3)x + (3/2)x - (2/5)y - (7/6)y = (7/6)x - (19/30)y."
+        ]
+    },
+    {
+        "ecuacion": "Reduce los términos semejantes en la siguiente ecuación:" +"<br>"+ " (3/5)x + (4/7)y - (2/3)x + (5/6)y.",
+        "respuestaNumerica": ["Expresión reducida:", "(1/15)x + (67/42)y"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": [
+            "(1/15)x + (67/42)y",
+            "(67/42)y + (1/15)x",
+            "x/15 + 67y/42",
+            "67y/42 + x/15"
+        ],
+        "pasos": [
+            "Combina los términos semejantes: (3/5)x - (2/3)x + (4/7)y + (5/6)y = (1/15)x + (67/42)y."
+        ]
+    },
+    {
+        "ecuacion": "Reduce los términos semejantes en la siguiente ecuación:" +"<br>"+ " -(7/4)x + (5/6)y + (3/2)x - (2/3)y.",
+        "respuestaNumerica": ["Expresión reducida:", "(1/12)x + (11/6)y"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": [
+            "(1/12)x + (11/6)y",
+            "(11/6)y + (1/12)x",
+            "x/12 + 11y/6",
+            "11y/6 + x/12"
+        ],
+        "pasos": [
+            "Combina los términos semejantes: -(7/4)x + (3/2)x + (5/6)y - (2/3)y = (1/12)x + (11/6)y."
+        ]
+    },
+    {
+        "ecuacion": "Reduce los términos semejantes en la siguiente ecuación:" +"<br>"+ " (2/3)x - (5/4)y + (7/6)x - (3/5)y - (4/7)x + (5/8)y.",
+        "respuestaNumerica": ["Expresión reducida:", "(25/42)x + (41/40)y"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": [
+            "(25/42)x + (41/40)y",
+            "(41/40)y + (25/42)x",
+            "x/42 + 41y/40",
+            "41y/40 + x/42"
+        ],
+        "pasos": [
+            "Combina los términos semejantes: (2/3)x + (7/6)x - (4/7)x - (5/4)y - (3/5)y + (5/8)y = (25/42)x + (41/40)y."
+        ]
+    },
+    {
+        "ecuacion": "Reduce los términos semejantes en la siguiente ecuación:" +"<br>"+ " -(3/5)x - (2/3)y - (4/7)x + (7/8)y + (1/2)x - (3/4)y.",
+        "respuestaNumerica": ["Expresión reducida:", "(-19/35)x + (17/24)y"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": [
+            "(-19/35)x + (17/24)y",
+            "(17/24)y - (19/35)x",
+            "-(19/35)x + (17/24)y",
+            "-19x/35 + 17y/24",
+            "17y/24 - 19x/35"
+        ],
+        "pasos": [
+            "Combina los términos semejantes: -(3/5)x - (4/7)x + (1/2)x - (2/3)y + (7/8)y - (3/4)y = (-19/35)x + (17/24)y."
+        ]
+    },
+    {
+        "ecuacion": "Reduce los términos semejantes en la siguiente ecuación:" +"<br>"+ " (3/4)x + (5/6)y - (2/3)x - (1/2)y + (5/7)x - (3/5)y.",
+        "respuestaNumerica": ["Expresión reducida:", "(29/28)x - (23/30)y"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": [
+            "(29/28)x - (23/30)y",
+            "(-23/30)y + (29/28)x",
+            "-(23/30)y + (29/28)x",
+            "29x/28 - 23y/30",
+            "23y/30 + 29x/28"
+        ],
+        "pasos": [
+            "Combina los términos semejantes: (3/4)x - (2/3)x + (5/7)x + (5/6)y - (1/2)y - (3/5)y = (29/28)x - (23/30)y."
+        ]
+    },
+    {
+        "ecuacion": "Reduce los términos semejantes en la siguiente ecuación:" +"<br>"+ " -(2/3)x + (3/4)y - (5/6)x - (1/2)y + (7/9)x - (4/7)y.",
+        "respuestaNumerica": ["Expresión reducida:", "(7/18)x - (29/28)y"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": [
+            "(7/18)x - (29/28)y",
+            "(-29/28)y + (7/18)x",
+            "-(29/28)y + (7/18)x",
+            "7x/18 - 29y/28",
+            "-29y/28 + 7x/18"
+        ],
+        "pasos": [
+            "Combina los términos semejantes: -(2/3)x - (5/6)x + (7/9)x + (3/4)y - (1/2)y - (4/7)y = (7/18)x - (29/28)y."
+        ]
+    },
+    {
+        "ecuacion": "Reduce los términos semejantes en la siguiente ecuación:" +"<br>"+ " (7/8)x + (1/3)y - (2/5)x - (4/7)y - (3/4)x + (5/6)y.",
+        "respuestaNumerica": ["Expresión reducida:", "(7/40)x + (13/42)y"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": [
+            "(7/40)x + (13/42)y",
+            "(13/42)y + (7/40)x",
+            "x/40 + 13y/42",
+            "13y/42 + x/40"
+        ],
+        "pasos": [
+            "Combina los términos semejantes: (7/8)x - (2/5)x - (3/4)x + (1/3)y - (4/7)y + (5/6)y = (7/40)x + (13/42)y."
+        ]
+    },
+    {
+        "ecuacion": "Reduce los términos semejantes en la siguiente ecuación:" +"<br>"+ " -(3/4)x - (2/3)y + (4/5)x + (7/8)y - (1/2)x + (3/4)y.",
+        "respuestaNumerica": ["Expresión reducida:", "(13/20)x + (5/24)y"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": [
+            "(13/20)x + (5/24)y",
+            "(5/24)y + (13/20)x",
+            "x/20 + 5y/24",
+            "5y/24 + x/20"
+        ],
+        "pasos": [
+            "Combina los términos semejantes: -(3/4)x + (4/5)x - (1/2)x - (2/3)y + (7/8)y + (3/4)y = (13/20)x + (5/24)y."
+        ]
+    },
+    {
+        "ecuacion": "Reduce los términos semejantes en la siguiente ecuación:" +"<br>"+ " (5/6)x + (2/3)y - (4/5)x + (3/4)y + (1/2)x - (5/8)y.",
+        "respuestaNumerica": ["Expresión reducida:", "(3/40)x + (41/24)y"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": [
+            "(3/40)x + (41/24)y",
+            "(41/24)y + (3/40)x",
+            "x/40 + 41y/24",
+            "41y/24 + x/40"
+        ],
+        "pasos": [
+            "Combina los términos semejantes: (5/6)x - (4/5)x + (1/2)x + (2/3)y + (3/4)y - (5/8)y = (3/40)x + (41/24)y."
+        ]
+    },
+    {
+        "ecuacion": "Reduce los términos semejantes en la siguiente ecuación:" +"<br>"+ " -(5/4)x - (3/5)y + (4/3)x + (2/7)y - (2/3)x + (3/4)y.",
+        "respuestaNumerica": ["Expresión reducida:", "(1/12)x + (1/2)y"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": [
+            "(1/12)x + (1/2)y",
+            "(1/2)y + (1/12)x",
+            "x/12 + y/2",
+            "y/2 + x/12"
+        ],
+        "pasos": [
+            "Combina los términos semejantes: -(5/4)x + (4/3)x - (2/3)x - (3/5)y + (2/7)y + (3/4)y = (1/12)x + (1/2)y."
+        ]
+    },
+    {
+        "ecuacion": "Reduce los términos semejantes en la siguiente ecuación:" +"<br>"+ " (7/5)x + (3/4)y - (2/3)x + (5/6)y + (7/8)x - (5/7)y.",
+        "respuestaNumerica": ["Expresión reducida:", "(189/140)x + (69/28)y"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": [
+            "(189/140)x + (69/28)y",
+            "(69/28)y + (189/140)x",
+            "x/140 + 69y/28",
+            "69y/28 + x/140"
+        ],
+        "pasos": [
+            "Combina los términos semejantes: (7/5)x - (2/3)x + (7/8)x + (3/4)y + (5/6)y - (5/7)y = (189/140)x + (69/28)y."
+        ]
+    },
+    {
+        "ecuacion": "Reduce los términos semejantes en la siguiente ecuación:" +"<br>"+ " -(7/4)x + (5/6)y - (3/2)x + (2/3)y + (1/2)x - (3/4)y.",
+        "respuestaNumerica": ["Expresión reducida:", "(11/12)x - (29/24)y"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": [
+            "(11/12)x - (29/24)y",
+            "(-29/24)y + (11/12)x",
+            "-(29/24)y + (11/12)x",
+            "11x/12 - 29y/24",
+            "-29y/24 + 11x/12"
+        ],
+        "pasos": [
+            "Combina los términos semejantes: -(7/4)x - (3/2)x + (1/2)x + (5/6)y + (2/3)y - (3/4)y = (11/12)x - (29/24)y."
+        ]
+    },
+    
+   
+    
+    
+    
 
 
 
 
-                    
 ]
       
-console.log(problemasMatematicos.length);
+const problemasEcuacionesPrimerGrado =[
+    {
+        "ecuacion": "Encuentra el valor de x en la ecuación:" +"<br>"+ " 2x + 3 = 5.",
+        "respuestaNumerica": ["Valor de x:", "1"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["1", "1.0", "1,0"],
+        "pasos": [
+            "Intercambie los lados para que todos los términos de las variables estén en el lado izquierdo: 2x + 3 = 5.",
+            "Resta 3 en ambos lados de la ecuación: 2x = 5 - 3.",
+            "Resta 3 de 5 para obtener 2: 2x = 2.",
+            "Divide ambos lados por 2: x = 2/2.",
+            "Divide 2 entre 2 para obtener 1: x = 1."
+        ]
+    },
+    {
+        "ecuacion": "Encuentra el valor de x en la ecuación:" +"<br>"+ " 2x + 5 = 15.",
+        "respuestaNumerica": ["Valor de x:", "5"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["5", "5.0", "5,0"],
+        "pasos": [
+            "Resta 5 en ambos lados de la ecuación: 2x = 15 - 5.",
+            "Resta 5 de 15 para obtener 10: 2x = 10.",
+            "Divide ambos lados por 2: x = \frac{10}{2}.",
+            "Divide 10 entre 2 para obtener 5: x = 5."
+        ]
+    },
+    {
+        "ecuacion": "Encuentra el valor de x en la ecuación:" +"<br>"+ " 3(x + 2) = 21.",
+        "respuestaNumerica": ["Valor de x:", "5"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["5", "5.0", "5,0"],
+        "pasos": [
+            "Divide ambos lados por 3: x + 2 = \\frac{21}{3}.",
+            "Divide 21 entre 3 para obtener 7: x + 2 = 7.",
+            "Resta 2 en ambos lados: x = 7 - 2.",
+            "Resta 2 de 7 para obtener 5: x = 5."
+        ]
+    },
+    {
+        "ecuacion": "Encuentra el valor de x en la ecuación:" +"<br>"+ " 4x - 7 = 17.",
+        "respuestaNumerica": ["Valor de x:", "6"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["6", "6.0", "6,0"],
+        "pasos": [
+            "Suma 7 a ambos lados de la ecuación: 4x = 24.",
+            "Divide ambos lados por 4: x = 6."
+        ]
+    },
+    {
+        "ecuacion": "Encuentra el valor de x en la ecuación:" +"<br>"+ " 2(3x - 1) = 20.",
+        "respuestaNumerica": ["Valor de x:", "11/3"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["11/3", "3.666666667"],
+        "pasos": [
+            "Divide ambos lados por 2: 3x - 1 = 10.",
+            "Agrega 1 a ambos lados: 3x = 11.",
+            "Divide ambos lados por 3: x = 11/3."
+        ]
+    },
+    {
+        "ecuacion": "Encuentra el valor de x en la ecuación:" +"<br>"+ " (x/2) + 4 = 10.",
+        "respuestaNumerica": ["Valor de x:", "12"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["12", "12.0", "12,0"],
+        "pasos": [
+            "Resta 4 de ambos lados: (x/2) = 6.",
+            "Multiplica ambos lados por 2: x = 12."
+        ]
+    },
+    {
+        "ecuacion": "Encuentra el valor de x en la ecuación:" +"<br>"+ " 5 - 2x = 13.",
+        "respuestaNumerica": ["Valor de x:", "-4"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["-4", "-4.0", "-4,0"],
+        "pasos": [
+            "Resta 5 de ambos lados: -2x = 8.",
+            "Divide ambos lados por -2: x = -4."
+        ]
+    },
+    {
+        "ecuacion": "Encuentra el valor de x en la ecuación:" +"<br>"+ " (3/2)x - 1 = 5.",
+        "respuestaNumerica": ["Valor de x:", "4"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["4", "4.0", "4,0"],
+        "pasos": [
+          "Suma 1 a ambos lados: (3/2)x = 6.",
+          "Multiplica ambos lados por 2/3: x = 4."
+        ]
+      },
+      {
+        "ecuacion": "Encuentra el valor de x en la ecuación:" +"<br>"+ " (2/3)(x + 3) = 8.",
+        "respuestaNumerica": ["Valor de x:", "9"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["9", "9.0", "9,0"],
+        "pasos": [
+          "Multiplica ambos lados por 3/2: x + 3 = 12.",
+          "Resta 3 de ambos lados: x = 9."
+        ]
+      },
+      {
+        "ecuacion": "Encuentra el valor de x en la ecuación:" +"<br>"+ " 2x + 5 = 13.",
+        "respuestaNumerica": ["Valor de x:", "4"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["4", "4.0", "4,0"],
+        "pasos": [
+          "Resta 5 de ambos lados: 2x = 8.",
+          "Divide ambos lados por 2: x = 4."
+        ]
+      },
+      {
+        "ecuacion": "Encuentra el valor de x en la ecuación:" +"<br>"+ " 3x - 7 = 1.",
+        "respuestaNumerica": ["Valor de x:", "2.666"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["2.6666666666666665", "2.6667", "2.667"],
+        "pasos": [
+          "Suma 7 a ambos lados: 3x = 8.",
+          "Divide ambos lados por 3: x = 2.6666666666666665."
+        ]
+      },
+      {
+        "ecuacion": "Encuentra el valor de x en la ecuación:" +"<br>"+ " 4x + 2 = 10.",
+        "respuestaNumerica": ["Valor de x:", "2"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["2", "2.0", "2,0"],
+        "pasos": [
+          "Resta 2 de ambos lados: 4x = 8.",
+          "Divide ambos lados por 4: x = 2."
+        ]
+      },
+      {
+        "ecuacion": "Encuentra el valor de x en la ecuación:" +"<br>"+ " 5x - 3 = 17.",
+        "respuestaNumerica": ["Valor de x:", "4"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["4", "4.0", "4,0"],
+        "pasos": [
+          "Suma 3 a ambos lados: 5x = 20.",
+          "Divide ambos lados por 5: x = 4."
+        ]
+      },
+      {
+        "ecuacion": "Encuentra el valor de x en la ecuación:" +"<br>"+ " 6x + 4 = 22.",
+        "respuestaNumerica": ["Valor de x:", "3"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["3", "3.0", "3,0"],
+        "pasos": [
+          "Resta 4 de ambos lados: 6x = 18.",
+          "Divide ambos lados por 6: x = 3."
+        ]
+      },
+      {
+        "ecuacion": "Encuentra el valor de x en la ecuación:" +"<br>"+ " 7x - 5 = 29.",
+        "respuestaNumerica": ["Valor de x:", "4.857142857142857"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["4.857142857142857", "4.8571", "4.857"],
+        "pasos": [
+          "Suma 5 a ambos lados: 7x = 34.",
+          "Divide ambos lados por 7: x = 4.857142857142857."
+        ]
+      },
+      {
+        "ecuacion": "Encuentra el valor de x en la ecuación:" +"<br>"+ " 3(x + 2) = 15.",
+        "respuestaNumerica": ["Valor de x:", "3"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["3", "3.0", "3,0"],
+        "pasos": [
+          "Distribuye el 3 en el lado izquierdo: 3x + 6 = 15.",
+          "Resta 6 de ambos lados: 3x = 9.",
+          "Divide ambos lados por 3: x = 3."
+        ]
+      },
+      {
+        "ecuacion": "Encuentra el valor de x en la ecuación:" +"<br>"+ " 2(x - 1) = 8.",
+        "respuestaNumerica": ["Valor de x:", "5"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["5", "5.0", "5,0"],
+        "pasos": [
+          "Distribuye el 2 en el lado izquierdo: 2x - 2 = 8.",
+          "Suma 2 a ambos lados: 2x = 10.",
+          "Divide ambos lados por 2: x = 5."
+        ]
+      },
+      {
+        "ecuacion": "Encuentra el valor de x en la ecuación:" +"<br>"+ " 5(2x + 3) = 25.",
+        "respuestaNumerica": ["Valor de x:", "1"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["1", "1.0", "1,0"],
+        "pasos": [
+          "Distribuye el 5 en el lado izquierdo: 10x + 15 = 25.",
+          "Resta 15 de ambos lados: 10x = 10.",
+          "Divide ambos lados por 10: x = 1."
+        ]
+      },
+      {
+        "ecuacion": "Encuentra el valor de x en la ecuación:" +"<br>"+ " 4(x - 2) + 3 = 15.",
+        "respuestaNumerica": ["Valor de x:", "5"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["5", "5.0", "5,0"],
+        "pasos": [
+          "Distribuye el 4 en el lado izquierdo: 4x - 8 + 3 = 15.",
+          "Combina las constantes: 4x - 5 = 15.",
+          "Suma 5 a ambos lados: 4x = 20.",
+          "Divide ambos lados por 4: x = 5."
+        ]
+      },
+      {
+        "ecuacion": "Encuentra el valor de x en la ecuación:" +"<br>"+ " 3(x + 1) - 2 = 10.",
+        "respuestaNumerica": ["Valor de x:", "5"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["5", "5.0", "5,0"],
+        "pasos": [
+          "Distribuye el 3 en el lado izquierdo: 3x + 3 - 2 = 10.",
+          "Combina las constantes: 3x + 1 = 10.",
+          "Resta 1 de ambos lados: 3x = 9.",
+          "Divide ambos lados por 3: x = 3."
+        ]
+      },
+      {
+        "ecuacion": "Encuentra el valor de x en la ecuación:" +"<br>"+ " 2(x - 3) + 5 = 9.",
+        "respuestaNumerica": ["Valor de x:", "2"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["2", "2.0", "2,0"],
+        "pasos": [
+          "Distribuye el 2 en el lado izquierdo: 2x - 6 + 5 = 9.",
+          "Combina las constantes: 2x - 1 = 9.",
+          "Suma 1 a ambos lados: 2x = 10.",
+          "Divide ambos lados por 2: x = 5."
+        ]
+      },
+      {
+        "ecuacion": "Encuentra el valor de x en la ecuación:" +"<br>"+ " 5(x + 2) - 3 = 22.",
+        "respuestaNumerica": ["Valor de x:", "4"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["4", "4.0", "4,0"],
+        "pasos": [
+          "Distribuye el 5 en el lado izquierdo: 5x + 10 - 3 = 22.",
+          "Combina las constantes: 5x + 7 = 22.",
+          "Resta 7 de ambos lados: 5x = 15.",
+          "Divide ambos lados por 5: x = 3."
+        ]
+      },
+      {
+        "ecuacion": "Encuentra el valor de x en la ecuación:" +"<br>"+ " 4(x - 1) + 2 = 14.",
+        "respuestaNumerica": ["Valor de x:", "4"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["4", "4.0", "4,0"],
+        "pasos": [
+          "Distribuye el 4 en el lado izquierdo: 4x - 4 + 2 = 14.",
+          "Combina las constantes: 4x - 2 = 14.",
+          "Suma 2 a ambos lados: 4x = 16.",
+          "Divide ambos lados por 4: x = 4."
+        ]
+      },
+      {
+        "ecuacion": "Encuentra el valor de x en la ecuación:" +"<br>"+ " 5x−2 = 2 (2x + 3).",
+        "respuestaNumerica": ["Valor de x:", "8"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["8", "8.0", "8,0"],
+        "pasos": [
+          "Usa la propiedad distributiva para multiplicar 2 por 2x + 3: 5x − 2 = 4x + 6.",
+          "Resta 4x en los dos lados: 5x − 2 − 4x = 6.",
+          "Combina 5x y −4x para obtener x: x − 2 = 6.",
+          "Agrega 2 a ambos lados: x = 6 + 2.",
+          "Suma 6 y 2 para obtener 8: x = 8."
+        ]
+      },
+      {
+        "ecuacion": "Encuentra el valor de x en la ecuación:" +"<br>"+ " 2x + 3 = 3x - 2.",
+        "respuestaNumerica": ["Valor de x:", "5"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["5", "5.0", "5,0"],
+        "pasos": [
+          "Resta 3x en los dos lados: 2x + 3 - 3x = -2.",
+          "Combina 2x y -3x para obtener -x: -x + 3 = -2.",
+          "Resta 3 en los dos lados: -x = -2 - 3.",
+          "Resta 3 de -2 para obtener -5: -x = -5.",
+          "Multiplica los dos lados por -1: x = 5."
+        ]
+      },
+      {
+        "ecuacion": "Encuentra el valor de x en la ecuación:" +"<br>"+ " 4x−2⋅3−x=5x+1.",
+        "respuestaNumerica": ["Valor de x:", "-7/2", "-3.5"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["-7/2", "-3.5"],
+        "pasos": [
+          "Multiplica 2 y 3 para obtener 6: 4x - 6 - x = 5x + 1.",
+          "Combina 4x y -x para obtener 3x: 3x - 6 = 5x + 1.",
+          "Resta 5x en ambos lados: 3x - 6 - 5x = 1.",
+          "Combina 3x y -5x para obtener -2x: -2x - 6 = 1.",
+          "Agrega 6 a ambos lados: -2x = 1 + 6.",
+          "Suma 1 y 6 para obtener 7: -2x = 7.",
+          "Divide ambos lados por -2: x = -7/2.",
+          "La fracción -7/2 se puede reescribir como -3 1/2."
+        ]
+      },
+      {
+        "ecuacion": "Encuentra el valor de x en la ecuación:" +"<br>"+ " 5x−2⋅2x−3=7.",
+        "respuestaNumerica": ["Valor de x:", "10"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["10"],
+        "pasos": [
+          "Multiplica 2 y 2 para obtener 4: 5x - 4x - 3 = 7.",
+          "Combina 5x y -4x para obtener x: x - 3 = 7.",
+          "Agrega 3 a ambos lados: x = 7 + 3.",
+          "Suma 7 y 3 para obtener 10: x = 10."
+        ]
+      },
+      {
+        "ecuacion": "Encuentra el valor de x en la ecuación:" +"<br>"+ " 2x−3+4=x+5.",
+        "respuestaNumerica": ["Valor de x:", "4"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["4"],
+        "pasos": [
+          "Suma -3 y 4 para obtener 1: 2x + 1 = x + 5.",
+          "Resta x en los dos lados: 2x + 1 - x = 5.",
+          "Combina 2x y -x para obtener x: x + 1 = 5.",
+          "Resta 1 en los dos lados: x = 5 - 1.",
+          "Resta 1 de 5 para obtener 4: x = 4."
+        ]
+      },
+      {
+        "ecuacion": "Encuentra el valor de x en la ecuación:" +"<br>"+ " 3x−2=4x+1.",
+        "respuestaNumerica": ["Valor de x:", "-3"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["-3"],
+        "pasos": [
+          "Resta 4x en los dos lados: 3x − 2 − 4x = 1.",
+          "Combina 3x y −4x para obtener −x: −x − 2 = 1.",
+          "Agrega 2 a ambos lados: −x = 1 + 2.",
+          "Suma 1 y 2 para obtener 3: −x = 3.",
+          "Multiplica los dos lados por −1: x = −3."
+        ]
+      },
+      {
+        "ecuacion": "5x + 2 = 3x - 1",
+        "respuestaNumerica": ["Valor de x:", "-1.5"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["-3/2", "-1.5"],
+        "pasos": [
+          "Resta 3x en ambos lados: 5x + 2 - 3x = -1.",
+          "Combina 5x y -3x para obtener 2x: 2x + 2 = -1.",
+          "Resta 2 en ambos lados: 2x = -1 - 2.",
+          "Suma -1 y -2 para obtener -3: 2x = -3.",
+          "Divide ambos lados por 2: x = -3 / 2."
+        ]
+      },
+      {
+        "ecuacion": "2(x + 3) - 4 = 3(x - 2) + 5",
+        "respuestaNumerica": ["Valor de x:", "3"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["3"],
+        "pasos": [
+          "Aplica la distributiva: 2x + 6 - 4 = 3x - 6 + 5.",
+          "Combina términos semejantes: 2x + 2 = 3x - 1.",
+          "Resta 2x en ambos lados: 2 = x - 1.",
+          "Suma 1 en ambos lados: 2 + 1 = x.",
+          "Obtenemos: x = 3."
+        ]
+      },
+      {
+        "ecuacion": "3(x - 4) + 2 = 4(2x + 1) - 5",
+        "respuestaNumerica": ["Valor de x:", "-9/5"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["-9/5, -1.8, -1(4/5)"],
+        "pasos": [
+          "Aplica la distributiva: 3x - 12 + 2 = 8x + 4 - 5.",
+          "Combina términos semejantes: 3x - 10 = 8x - 1.",
+          "Resta 3x en ambos lados: -10 = 5x - 1.",
+          "Suma 1 en ambos lados: -10 + 1 = 5x.",
+          "Obtenemos: -9 = 5x.",
+          "Divide ambos lados por 5: x = -9 / 5."
+        ]
+      },
+      {
+        "ecuacion": "2(x - 3) - 5 = x + 4",
+        "respuestaNumerica": ["Valor de x:", "15"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["15"],
+        "pasos": [
+          "Aplica la distributiva: 2x - 6 - 5 = x + 4.",
+          "Combina términos semejantes: 2x - 11 = x + 4.",
+          "Resta x en ambos lados: x - 11 = 4.",
+          "Suma 11 en ambos lados: x = 4 + 11.",
+          "Obtenemos: x = 15."
+        ]
+      },
+      {
+        "ecuacion": "4(2x + 3) + 2 = 3(4x - 1) - 5",
+        "respuestaNumerica": ["Valor de x:", "11/2"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["11/2, 5.5"],
+        "pasos": [
+          "Aplica la distributiva: 8x + 12 + 2 = 12x - 3 - 5.",
+          "Combina términos semejantes: 8x + 14 = 12x - 8.",
+          "Resta 8x en ambos lados: 14 = 4x - 8.",
+          "Suma 8 en ambos lados: 14 + 8 = 4x.",
+          "Obtenemos: 22 = 4x.",
+          "Divide ambos lados por 4: x = 22 / 4.",
+          "Simplificamos: x = 11 / 2."
+        ]
+      },
+      {
+        "ecuacion": "3(x + 5) - 2 = 2(x - 3) + 7",
+        "respuestaNumerica": ["Valor de x:", "-12"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["-12"],
+        "pasos": [
+          "Aplica la distributiva: 3x + 15 - 2 = 2x - 6 + 7.",
+          "Combina términos semejantes: 3x + 13 = 2x + 1.",
+          "Resta 2x en ambos lados: x + 13 = 1.",
+          "Resta 13 en ambos lados: x = 1 - 13.",
+          "Obtenemos: x = -12."
+        ]
+      },
+      {
+        "ecuacion": "5(x - 1) + 3 = 2(3x + 4) - 1",
+        "respuestaNumerica": ["Valor de x:", "-9"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["-9"],
+        "pasos": [
+          "Aplica la distributiva: 5x - 5 + 3 = 6x + 8 - 1.",
+          "Combina términos semejantes: 5x - 2 = 6x + 7.",
+          "Resta 5x en ambos lados: -2 = x + 7.",
+          "Resta 7 en ambos lados: -2 - 7 = x.",
+          "Obtenemos: x = -9."
+        ]
+      },
+      {
+        "ecuacion": "5x + 3 = 2x - 4",
+        "respuestaNumerica": ["Valor de x:", "-7/3"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["-7/3,-2.3,-2.33,-2.333"],
+        "pasos": [
+          "Resta 2x en ambos lados: 5x + 3 - 2x = -4.",
+          "Combina 5x y -2x para obtener 3x: 3x + 3 = -4.",
+          "Resta 3 en ambos lados: 3x = -4 - 3.",
+          "Suma -4 y -3 para obtener -7: 3x = -7.",
+          "Divide ambos lados por 3: x = -7/3."
+        ]
+      },
+      {
+        "ecuacion": "2(x - 1) = 3x + 5",
+        "respuestaNumerica": ["Valor de x:", "-7"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["-7"],
+        "pasos": [
+          "Distribuye el 2: 2x - 2 = 3x + 5.",
+          "Resta 3x en ambos lados: 2x - 3x - 2 = 5.",
+          "Combina 2x y -3x para obtener -x: -x - 2 = 5.",
+          "Suma 2 en ambos lados: -x = 5 + 2.",
+          "Suma 5 y 2 para obtener 7: -x = 7.",
+          "Multiplica ambos lados por -1: x = -7."
+        ]
+      },
+      {
+        "ecuacion": "4(x + 2) - 3 = 2(3 - x)",
+        "respuestaNumerica": ["Valor de x:", "1/6"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["1/6, 1.6, 1.66, 1.666 "],
+        "pasos": [
+          "Distribuye el 4: 4x + 8 - 3 = 6 - 2x.",
+          "Combina términos semejantes: 4x + 5 = 6 - 2x.",
+          "Suma 2x en ambos lados: 4x + 5 + 2x = 6.",
+          "Combina 4x y 2x para obtener 6x: 6x + 5 = 6.",
+          "Resta 5 en ambos lados: 6x = 6 - 5.",
+          "Resta 5 de 6 para obtener 1: 6x = 1.",
+          "Divide ambos lados por 6: x = 1/6."
+        ]
+      },
+      {
+        "ecuacion": "3(x + 1) - 2(x - 3) = 4(2 - x) - 5",
+        "respuestaNumerica": ["Valor de x:", "-6/5"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["-6/5,-1.2"],
+        "pasos": [
+          "Distribuye el 3: 3x + 3 - 2(x - 3) = 8 - 4x - 5.",
+          "Distribuye el -2: 3x + 3 - 2x + 6 = 8 - 4x - 5.",
+          "Combina términos semejantes: x + 9 = 3 - 4x.",
+          "Suma 4x en ambos lados: x + 4x + 9 = 3.",
+          "Combina x y 4x para obtener 5x: 5x + 9 = 3.",
+          "Resta 9 en ambos lados: 5x = 3 - 9.",
+          "Resta 9 de 3 para obtener -6: 5x = -6.",
+          "Divide ambos lados por 5: x = -6/5.",
+        ]
+      },
+      {
+        "ecuacion": "Encuentra el valor de x en la ecuación:" +"<br>"+ " 2(x+4)/3 - 1/2 = 3(x-1)/4.",
+        "respuestaNumerica": ["Valor de x:", "35"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["35"],
+        "pasos": [
+          "Multiplica ambos lados de la ecuación por 12, el mínimo común denominador de 3, 2, 4: 4 × 2(x + 4) - 6 = 3 × 3(x − 1).",
+          "Multiplica 4 y 2 para obtener 8: 8(x + 4) − 6 = 3 × 3(x − 1).",
+          "Usa la propiedad distributiva para multiplicar 8 por x + 4: 8x + 32 − 6 = 3 × 3(x − 1).",
+          "Resta 6 de 32 para obtener 26: 8x + 26 = 3 × 3(x − 1).",
+          "Multiplica 3 y 3 para obtener 9: 8x + 26 = 9(x − 1).",
+          "Usa la propiedad distributiva para multiplicar 9 por x − 1: 8x + 26 = 9x − 9.",
+          "Resta 9x en los dos lados: 8x + 26 − 9x = −9.",
+          "Combina 8x y −9x para obtener −x: −x + 26 = −9.",
+          "Resta 26 en los dos lados: −x = −9 − 26.",
+          "Resta 26 de −9 para obtener −35: −x = −35.",
+          "Multiplica los dos lados por −1: x = 35."
+        ]
+      },
+      {
+        "ecuacion": "Encuentra el valor de x en la ecuación:" +"<br>"+ " 1(x-3)/4 + 1/3 = 1(x+2)/2.",
+        "respuestaNumerica": ["Valor de x:", "-17/3 ≈ -5.666666667"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["-17/3", "-5.6, -5.66, -5.666"],
+        "pasos": [
+          "Multiplica ambos lados de la ecuación por 12, el mínimo común denominador de 4, 3, 2: 3(x - 3) + 4 = 6(x + 2).",
+          "Distribuye 3 en (x - 3) y suma 4: 3x - 9 + 4 = 6(x + 2).",
+          "Simplifica dentro del paréntesis: 3x - 5 = 6(x + 2).",
+          "Distribuye 6 en (x + 2): 3x - 5 = 6x + 12.",
+          "Resta 3x en ambos lados: -5 = 3x + 12.",
+          "Resta 12 en ambos lados: -17 = 3x.",
+          "Divide ambos lados por 3: x = -17/3 ≈ -5.666666667."
+        ]
+      },
+      {
+        "ecuacion": "Encuentra el valor de x en la ecuación:" +"<br>"+ " 2(x+1)/5 + 3/4 = (x-2)/2.",
+        "respuestaNumerica": ["Valor de x:", "43/2 = 21.5"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["43/2", "21.5"],
+        "pasos": [
+          "Multiplica ambos lados de la ecuación por 20, el mínimo común denominador de 5, 4, 2: 4 × 2 (x + 1) + 15 = 10 (x − 2).",
+          "Multiplica 4 y 2 para obtener 8: 8 (x + 1) + 15 = 10 (x − 2).",
+          "Usa la propiedad distributiva para multiplicar 8 por x + 1: 8x + 8 + 15 = 10 (x − 2).",
+          "Suma 8 y 15 para obtener 23: 8x + 23 = 10 (x − 2).",
+          "Usa la propiedad distributiva para multiplicar 10 por x − 2: 8x + 23 = 10x − 20.",
+          "Resta 10x en ambos lados: 8x + 23 − 10x = −20.",
+          "Combina 8x y −10x para obtener −2x: -2x + 23 = −20.",
+          "Resta 23 en ambos lados: -2x = −20 − 23.",
+          "Resta 23 de −20 para obtener −43: -2x = −43.",
+          "Divide los dos lados por −2: x = -43 / -2.",
+          "La fracción -43 / -2 se puede simplificar a 43/2 quitando el signo negativo del numerador y el denominador."
+        ]
+      },
+      {
+        "ecuacion": "Encuentra el valor de x en la ecuación:" +"<br>"+ " 3(x-1)/2 - 1/3 = 2(x+2)/5.",
+        "respuestaNumerica": ["Valor de x:", "79/33 ≈ 2.393939394"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["79/33", "2.39", "2.4", "2.393"],
+        "pasos": [
+          "Multiplica ambos lados de la ecuación por 30, el mínimo común denominador de 2, 3, 5: 15 × 3 (x − 1) − 10 = 6 × 2 (x + 2).",
+          "Multiplica 15 y 3 para obtener 45: 45 (x − 1) − 10 = 6 × 2 (x + 2).",
+          "Usa la propiedad distributiva para multiplicar 45 por x − 1: 45x − 45 − 10 = 6 × 2 (x + 2).",
+          "Resta 10 de −45 para obtener −55: 45x − 55 = 6 × 2 (x + 2).",
+          "Multiplica 6 y 2 para obtener 12: 45x − 55 = 12 (x + 2).",
+          "Usa la propiedad distributiva para multiplicar 12 por x + 2: 45x − 55 = 12x + 24.",
+          "Resta 12x en ambos lados: 45x − 55 − 12x = 24.",
+          "Combina 45x y −12x para obtener 33x: 33x − 55 = 24.",
+          "Agrega 55 a ambos lados: 33x = 24 + 55.",
+          "Suma 24 y 55 para obtener 79: 33x = 79.",
+          "Divide ambos lados por 33: x = 79 / 33.",
+          "La fracción 79 / 33 se puede simplificar a 2.393939394 aproximadamente."
+        ]
+      },
+      {
+        "ecuacion": "Encuentra el valor de x en la ecuación:" +"<br>"+ " 2(x+2)/3 - 1/4 = (x-3)/5.",
+        "respuestaNumerica": ["Valor de x:", "-101/28 ≈ -3.607142857"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["-101/28", "-3.6"],
+        "pasos": [
+          "Multiplica ambos lados de la ecuación por 60, el mínimo común denominador de 3, 4, 5: 20 × 2 (x + 2) − 15 = 12 (x − 3).",
+          "Multiplica 20 y 2 para obtener 40: 40 (x + 2) − 15 = 12 (x − 3).",
+          "Usa la propiedad distributiva para multiplicar 40 por x + 2: 40x + 80 − 15 = 12 (x − 3).",
+          "Resta 15 de 80 para obtener 65: 40x + 65 = 12 (x − 3).",
+          "Usa la propiedad distributiva para multiplicar 12 por x − 3: 40x + 65 = 12x − 36.",
+          "Resta 12x en ambos lados: 40x + 65 − 12x = −36.",
+          "Combina 40x y −12x para obtener 28x: 28x + 65 = −36.",
+          "Resta 65 en ambos lados: 28x = −36 − 65.",
+          "Resta 65 de −36 para obtener −101: 28x = −101.",
+          "Divide ambos lados por 28: x = -101 / 28.",
+        ]
+      },
+      {
+        "ecuacion": "Encuentra el valor de x en la ecuación:" +"<br>"+ " (x-2)/3 - 2/5 = (x+1)/4.",
+        "respuestaNumerica": ["Valor de x:", "79/5 ≈ 15.8"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["79/5", "15.8"],
+        "pasos": [
+          "Multiplica ambos lados de la ecuación por 60, el mínimo común denominador de 3, 5, 4: 20(x - 2) - 24 = 15(x + 1).",
+          "Usa la propiedad distributiva para multiplicar 20 por x - 2: 20x - 40 - 24 = 15(x + 1).",
+          "Resta 24 de -40 para obtener -64: 20x - 64 = 15(x + 1).",
+          "Usa la propiedad distributiva para multiplicar 15 por x + 1: 20x - 64 = 15x + 15.",
+          "Resta 15x en ambos lados: 20x - 64 - 15x = 15.",
+          "Combina 20x y -15x para obtener 5x: 5x - 64 = 15.",
+          "Agrega 64 a ambos lados: 5x = 15 + 64.",
+          "Suma 15 y 64 para obtener 79: 5x = 79.",
+          "Divide ambos lados por 5: x = 79/5."
+        ]
+      },
+      {
+        "ecuacion": "Encuentra el valor de x en la ecuación:" +"<br>"+ " 2(x+3)/3 + 1/4 = 3(x-2)/5.",
+        "respuestaNumerica": ["Valor de x:", "-207/4 ≈ -51.75"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["-207/4", "-51.75"],
+        "pasos": [
+          "Multiplica ambos lados de la ecuación por 60, el mínimo común denominador de 3, 4, 5: 20(2x + 3) + 15 = 12(3x - 2).",
+          "Multiplica 20 y 2 para obtener 40: 40(x + 3) + 15 = 12(3x - 2).",
+          "Usa la propiedad distributiva para multiplicar 40 por x + 3: 40x + 120 + 15 = 12(3x - 2).",
+          "Suma 120 y 15 para obtener 135: 40x + 135 = 12(3x - 2).",
+          "Multiplica 12 y 3 para obtener 36: 40x + 135 = 36(x - 2).",
+          "Usa la propiedad distributiva para multiplicar 36 por x - 2: 40x + 135 = 36x - 72.",
+          "Resta 36x en ambos lados: 40x + 135 - 36x = -72.",
+          "Combina 40x y -36x para obtener 4x: 4x + 135 = -72.",
+          "Resta 135 en ambos lados: 4x = -72 - 135.",
+          "Resta 135 de -72 para obtener -207: 4x = -207.",
+          "Divide ambos lados por 4: x = -207/4."
+        ]
+      },
+      {
+        "ecuacion": "Encuentra el valor de x en la ecuación:" +"<br>"+ " (x-2)/4 - 1/5 = (x+1)/3.",
+        "respuestaNumerica": ["Valor de x:", "-62/5 ≈ -12.4"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["-62/5", "-12.4"],
+        "pasos": [
+          "Multiplica ambos lados de la ecuación por 60, el mínimo común denominador de 4, 5, 3: 15(x - 2) - 12 = 20(x + 1).",
+          "Usa la propiedad distributiva para multiplicar 15 por x - 2: 15x - 30 - 12 = 20(x + 1).",
+          "Resta 12 de -30 para obtener -42: 15x - 42 = 20(x + 1).",
+          "Usa la propiedad distributiva para multiplicar 20 por x + 1: 15x - 42 = 20x + 20.",
+          "Resta 20x en ambos lados: 15x - 42 - 20x = 20.",
+          "Combina 15x y -20x para obtener -5x: -5x - 42 = 20.",
+          "Agrega 42 a ambos lados: -5x = 20 + 42.",
+          "Suma 20 y 42 para obtener 62: -5x = 62.",
+          "Divide ambos lados por -5: x = 62/-5."
+        ]
+      },
+      {
+        "ecuacion": "Encuentra el valor de x en la ecuación:" +"<br>"+ " (x+3)/2 - 3/4 = (x-2)/5.",
+        "respuestaNumerica": ["Valor de x:", "-23/6 ≈ -3.833333333"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["-23/6", "-3 5/6", "-3.83", "-3.8333"],
+        "pasos": [
+          "Multiplica ambos lados de la ecuación por 20, el mínimo común denominador de 2, 4, 5: 10(x + 3) - 15 = 4(x - 2).",
+          "Usa la propiedad distributiva para multiplicar 10 por x + 3: 10x + 30 - 15 = 4(x - 2).",
+          "Resta 15 de 30 para obtener 15: 10x + 15 = 4(x - 2).",
+          "Usa la propiedad distributiva para multiplicar 4 por x - 2: 10x + 15 = 4x - 8.",
+          "Resta 4x en ambos lados: 10x + 15 - 4x = -8.",
+          "Combina 10x y -4x para obtener 6x: 6x + 15 = -8.",
+          "Resta 15 en ambos lados: 6x = -8 - 15.",
+          "Resta 15 de -8 para obtener -23: 6x = -23.",
+          "Divide ambos lados por 6: x = -23/6."
+        ]
+      },
+      {
+        "ecuacion": "Encuentra el valor de x en la ecuación:" +"<br>"+ " (2x+3)/2 + (3x-4)/4 = (x-2)/5 - (4x+1)/6.",
+        "respuestaNumerica": ["Valor de x:", "-64/133 ≈ -0.481203008"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["-64/133", ,"-0.48", "-0.481", "-0.4812", "-0.48120"],
+        "pasos": [
+          "Multiplica ambos lados de la ecuación por 60, el mínimo común denominador de 2, 4, 5, 6: 30(2x + 3) + 15(3x - 4) = 12(x - 2) - 10(4x + 1).",
+          "Usa la propiedad distributiva para multiplicar 30 por 2x + 3: 60x + 90 + 15(3x - 4) = 12(x - 2) - 10(4x + 1).",
+          "Usa la propiedad distributiva para multiplicar 15 por 3x - 4: 60x + 90 + 45x - 60 = 12(x - 2) - 10(4x + 1).",
+          "Combina 60x y 45x para obtener 105x: 105x + 90 - 60 = 12(x - 2) - 10(4x + 1).",
+          "Resta 60 de 90 para obtener 30: 105x + 30 = 12(x - 2) - 10(4x + 1).",
+          "Usa la propiedad distributiva para multiplicar 12 por x - 2: 105x + 30 = 12x - 24 - 10(4x + 1).",
+          "Usa la propiedad distributiva para multiplicar -10 por 4x + 1: 105x + 30 = 12x - 24 - 40x - 10.",
+          "Combina 12x y -40x para obtener -28x: 105x + 30 = -28x - 24 - 10.",
+          "Agrega 28x a ambos lados: 105x + 30 + 28x = -24 - 10.",
+          "Combina 105x y 28x para obtener 133x: 133x + 30 = -24 - 10.",
+          "Resta 30 en ambos lados: 133x = -24 - 10.",
+          "Resta 10 de -24 para obtener -34: 133x = -34.",
+          "Divide ambos lados por 133: x = -64/133."
+        ]
+      },
+      {
+        "ecuacion": "Encuentra el valor de x en la ecuación:" +"<br>"+ " (x+4)/3 - (2x-1)/4 = (x-3)/5 + (3x+2)/6.",
+        "respuestaNumerica": ["Valor de x:", "111/52 ≈ 2.134615385"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["111/52", "2.13", "2.134", "2.1346", "2.13461"],
+        "pasos": [
+          "Multiplica ambos lados de la ecuación por 60, el mínimo común denominador de 3, 4, 5, 6: 20(x + 4) - 15(2x - 1) = 12(x - 3) + 10(3x + 2).",
+          "Usa la propiedad distributiva para multiplicar 20 por x + 4: 20x + 80 - 15(2x - 1) = 12(x - 3) + 10(3x + 2).",
+          "Usa la propiedad distributiva para multiplicar -15 por 2x - 1: 20x + 80 - 30x + 15 = 12(x - 3) + 10(3x + 2).",
+          "Combina 20x y -30x para obtener -10x: -10x + 80 + 15 = 12(x - 3) + 10(3x + 2).",
+          "Suma 80 y 15 para obtener 95: -10x + 95 = 12(x - 3) + 10(3x + 2).",
+          "Usa la propiedad distributiva para multiplicar 12 por x - 3: -10x + 95 = 12x - 36 + 10(3x + 2).",
+          "Usa la propiedad distributiva para multiplicar 10 por 3x + 2: -10x + 95 = 12x - 36 + 30x + 20.",
+          "Combina 12x y 30x para obtener 42x: -10x + 95 = 42x - 36 + 20.",
+          "Suma -36 y 20 para obtener -16: -10x + 95 = 42x - 16.",
+          "Resta 42x en ambos lados: -10x + 95 - 42x = -16.",
+          "Combina -10x y -42x para obtener -52x: -52x + 95 = -16.",
+          "Resta 95 en ambos lados: -52x = -16 - 95.",
+          "Resta 95 de -16 para obtener -111: -52x = -111.",
+          "Divide ambos lados por -52: x = 111/52."
+        ]
+      },
+      {
+        "ecuacion": "Encuentra el valor de x en la ecuación:" +"<br>"+ " (4x-3)/2 + (x-2)/5 = (x+3)/3 - (2x-1)/6.",
+        "respuestaNumerica": ["Valor de x:", "46/33 ≈ 1.393939394"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["46/33", "1.393", "1.3939", "1.39393"],
+        "pasos": [
+          "Multiplica ambos lados de la ecuación por 30, el mínimo común denominador de 2, 5, 3, 6: 15(4x-3) + 6(x-2) = 10(x+3) - 5(2x-1).",
+          "Usa la propiedad distributiva para multiplicar 15 por 4x-3: 60x-45 + 6(x-2) = 10(x+3) - 5(2x-1).",
+          "Usa la propiedad distributiva para multiplicar 6 por x-2: 60x-45 + 6x-12 = 10(x+3) - 5(2x-1).",
+          "Combina 60x y 6x para obtener 66x: 66x-45-12 = 10(x+3) - 5(2x-1).",
+          "Resta 12 de -45 para obtener -57: 66x-57 = 10(x+3) - 5(2x-1).",
+          "Usa la propiedad distributiva para multiplicar 10 por x+3: 66x-57 = 10x+30 - 5(2x-1).",
+          "Usa la propiedad distributiva para multiplicar -5 por 2x-1: 66x-57 = 10x+30 - 10x+5.",
+          "Combina 10x y -10x para obtener 0: 66x-57 = 30+5.",
+          "Suma 30 y 5 para obtener 35: 66x-57 = 35.",
+          "Agrega 57 a ambos lados: 66x = 35+57.",
+          "Suma 35 y 57 para obtener 92: 66x = 92.",
+          "Divide ambos lados por 66: x = 92/66.",
+          "Reduce la fracción 92/66 a su mínima expresión extrayendo y anulando 2: x = 46/33."
+        ]
+      },
+      {
+        "ecuacion": "Encuentra el valor de x en la ecuación:" +"<br>"+ " (x+2)/3 - (3x-1)/4 = (2x-3)/5 + (x+4)/6.",
+        "respuestaNumerica": ["Valor de x:", "51/59 ≈ 0.86440678"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["51/59", "0.86", "0.864", "0.8644"],
+        "pasos": [
+          "Multiplica ambos lados de la ecuación por 60, el mínimo común denominador de 3, 4, 5, 6: 20(x+2) - 15(3x-1) = 12(2x-3) + 10(x+4).",
+          "Usa la propiedad distributiva para multiplicar 20 por x+2: 20x+40 - 15(3x-1) = 12(2x-3) + 10(x+4).",
+          "Usa la propiedad distributiva para multiplicar -15 por 3x-1: 20x+40 - 45x+15 = 12(2x-3) + 10(x+4).",
+          "Combina 20x y -45x para obtener -25x: -25x+40+15 = 12(2x-3) + 10(x+4).",
+          "Suma 40 y 15 para obtener 55: -25x+55 = 12(2x-3) + 10(x+4).",
+          "Usa la propiedad distributiva para multiplicar 12 por 2x-3: -25x+55 = 24x-36 + 10(x+4).",
+          "Usa la propiedad distributiva para multiplicar 10 por x+4: -25x+55 = 24x-36 + 10x+40.",
+          "Combina 24x y 10x para obtener 34x: -25x+55 = 34x-36+40.",
+          "Suma -36 y 40 para obtener 4: -25x+55 = 34x+4.",
+          "Resta 34x en ambos lados: -25x+55-34x = 4.",
+          "Combina -25x y -34x para obtener -59x: -59x+55 = 4.",
+          "Resta 55 en ambos lados: -59x = 4-55.",
+          "Resta 55 de 4 para obtener -51: -59x = -51.",
+          "Divide ambos lados por -59: x = -51/-59.",
+          "Simplifica la fracción -51/-59: x = 51/59."
+        ]
+      },
+      {
+        "ecuacion": "Encuentra el valor de x en la ecuación:" +"<br>"+ " (x-3)/2 + (x-1)/4 = (2x+4)/5 - (3x+2)/6.",
+        "respuestaNumerica": ["Valor de x:", "133/51 ≈ 2.607843137"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["133/51", "2.607", "2.608", "2.6078"],
+        "pasos": [
+          "Multiplica ambos lados de la ecuación por 60, el mínimo común denominador de 2, 4, 5, 6: 30(x-3) + 15(x-1) = 12(2x+4) - 10(3x+2).",
+          "Usa la propiedad distributiva para multiplicar 30 por x-3: 30x-90 + 15(x-1) = 12(2x+4) - 10(3x+2).",
+          "Usa la propiedad distributiva para multiplicar 15 por x-1: 30x-90 + 15x-15 = 12(2x+4) - 10(3x+2).",
+          "Combina 30x y 15x para obtener 45x: 45x-90-15 = 12(2x+4) - 10(3x+2).",
+          "Resta 15 de -90 para obtener -105: 45x-105 = 12(2x+4) - 10(3x+2).",
+          "Usa la propiedad distributiva para multiplicar 12 por 2x+4: 45x-105 = 24x+48 - 10(3x+2).",
+          "Usa la propiedad distributiva para multiplicar -10 por 3x+2: 45x-105 = 24x+48 - 30x-20.",
+          "Combina 24x y -30x para obtener -6x: 45x-105 = -6x+48-20.",
+          "Resta 20 de 48 para obtener 28: 45x-105 = -6x+28.",
+          "Agrega 6x a ambos lados: 45x-105+6x = 28.",
+          "Combina 45x y 6x para obtener 51x: 51x-105 = 28.",
+          "Agrega 105 a ambos lados: 51x = 28+105.",
+          "Suma 28 y 105 para obtener 133: 51x = 133.",
+          "Divide ambos lados por 51: x = 133/51."
+        ]
+      },
+      {
+        "ecuacion": "Encuentra el valor de x en la ecuación:" +"<br>"+ " (x-4)/3 - (2x-1)/4 = (x+2)/5 + (3x-3)/6.",
+        "respuestaNumerica": ["Valor de x:", "-59/52 ≈ -1.134615385"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["-59/52", "-1.135", "-1.135", "-1.1346"],
+        "pasos": [
+          "Multiplica ambos lados de la ecuación por 60, el mínimo común denominador de 3, 4, 5, 6: 20(x-4) - 15(2x-1) = 12(x+2) + 10(3x-3).",
+          "Usa la propiedad distributiva para multiplicar 20 por x-4: 20x-80 - 15(2x-1) = 12(x+2) + 10(3x-3).",
+          "Usa la propiedad distributiva para multiplicar -15 por 2x-1: 20x-80 - 30x+15 = 12(x+2) + 10(3x-3).",
+          "Combina 20x y -30x para obtener -10x: -10x-80+15 = 12(x+2) + 10(3x-3).",
+          "Suma -80 y 15 para obtener -65: -10x-65 = 12(x+2) + 10(3x-3).",
+          "Usa la propiedad distributiva para multiplicar 12 por x+2: -10x-65 = 12x+24 + 10(3x-3).",
+          "Usa la propiedad distributiva para multiplicar 10 por 3x-3: -10x-65 = 12x+24 + 30x-30.",
+          "Combina 12x y 30x para obtener 42x: -10x-65 = 42x+24-30.",
+          "Resta 30 de 24 para obtener -6: -10x-65 = 42x-6.",
+          "Resta 42x en ambos lados: -10x-65-42x = -6.",
+          "Combina -10x y -42x para obtener -52x: -52x-65 = -6.",
+          "Agrega 65 a ambos lados: -52x = -6+65.",
+          "Suma -6 y 65 para obtener 59: -52x = 59.",
+          "Divide ambos lados por -52: x = 59/-52.",
+          "La fracción 59/-52 se puede reescribir como -59/52 extrayendo el signo negativo: x = -59/52."
+        ]
+      },
+      {
+        "ecuacion": "Encuentra el valor de x en la ecuación:" +"<br>"+ " (3x-2)/2 + (2x-1)/5 = (x+4)/3 - (x-3)/6.",
+        "respuestaNumerica": ["Valor de x:", "7/4 ≈ 1.75"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["7/4", "1.75"],
+        "pasos": [
+          "Multiplica ambos lados de la ecuación por 30, el mínimo común denominador de 2, 5, 3, 6: 15(3x-2) + 6(2x-1) = 10(x+4) - 5(x-3).",
+          "Usa la propiedad distributiva para multiplicar 15 por 3x-2: 45x-30 + 6(2x-1) = 10(x+4) - 5(x-3).",
+          "Usa la propiedad distributiva para multiplicar 6 por 2x-1: 45x-30 + 12x-6 = 10(x+4) - 5(x-3).",
+          "Combina 45x y 12x para obtener 57x: 57x-30-6 = 10(x+4) - 5(x-3).",
+          "Resta 6 de -30 para obtener -36: 57x-36 = 10(x+4) - 5(x-3).",
+          "Usa la propiedad distributiva para multiplicar 10 por x+4: 57x-36 = 10x+40 - 5(x-3).",
+          "Usa la propiedad distributiva para multiplicar -5 por x-3: 57x-36 = 10x+40 - 5x+15.",
+          "Combina 10x y -5x para obtener 5x: 57x-36 = 5x+40+15.",
+          "Suma 40 y 15 para obtener 55: 57x-36 = 5x+55.",
+          "Resta 5x en ambos lados: 57x-36-5x = 55.",
+          "Combina 57x y -5x para obtener 52x: 52x-36 = 55.",
+          "Agrega 36 a ambos lados: 52x = 55+36.",
+          "Suma 55 y 36 para obtener 91: 52x = 91.",
+          "Divide ambos lados por 52: x = 91/52.",
+          "Reduzca la fracción 91/52 a su mínima expresión extrayendo y anulando 13: x = 7/4."
+        ]
+      },
+      {
+        "ecuacion": "Encuentra el valor de x en la ecuación:" +"<br>"+ " (x+1)/3 - (3x-2)/4 = (x+3)/5 + (2x-4)/6.",
+        "respuestaNumerica": ["Valor de x:", "18/19 ≈ 0.947368421"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["18/19", "0.947368421"],
+        "pasos": [
+          "Multiplica ambos lados de la ecuación por 60, el mínimo común denominador de 3, 4, 5, 6: 20(x+1) - 15(3x-2) = 12(x+3) + 10(2x-4).",
+          "Usa la propiedad distributiva para multiplicar 20 por x+1: 20x+20 - 15(3x-2) = 12(x+3) + 10(2x-4).",
+          "Usa la propiedad distributiva para multiplicar -15 por 3x-2: 20x+20 - 45x+30 = 12(x+3) + 10(2x-4).",
+          "Combina 20x y -45x para obtener -25x: -25x+20+30 = 12(x+3) + 10(2x-4).",
+          "Suma 20 y 30 para obtener 50: -25x+50 = 12(x+3) + 10(2x-4).",
+          "Usa la propiedad distributiva para multiplicar 12 por x+3: -25x+50 = 12x+36 + 10(2x-4).",
+          "Usa la propiedad distributiva para multiplicar 10 por 2x-4: -25x+50 = 12x+36 + 20x-40.",
+          "Combina 12x y 20x para obtener 32x: -25x+50 = 32x+36-40.",
+          "Resta 40 de 36 para obtener -4: -25x+50 = 32x-4.",
+          "Resta 32x en ambos lados: -25x+50-32x = -4.",
+          "Combina -25x y -32x para obtener -57x: -57x+50 = -4.",
+          "Resta 50 en ambos lados: -57x = -4 - 50.",
+          "Resta 50 de -4 para obtener -54: -57x = -54.",
+          "Divide ambos lados por -57: x = -54 / -57.",
+          "Reduzca la fracción -54 / -57 a su mínima expresión extrayendo y anulando -3: x = 18/19."
+        ]
+      },
+      {
+        "ecuacion": "Encuentra el valor de x en la ecuación:" +"<br>"+ " (x+3)/2 + (2x-1)/4 = (4x+2)/5 - (x-4)/6.",
+        "respuestaNumerica": ["Valor de x:", "-1/2 = -0.5"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["-1/2", "-0.5"],
+        "pasos": [
+          "Multiplica ambos lados de la ecuación por 60, el mínimo común denominador de 2, 4, 5, 6: 30(x+3) + 15(2x-1) = 12(4x+2) - 10(x-4).",
+          "Usa la propiedad distributiva para multiplicar 30 por x+3: 30x+90 + 15(2x-1) = 12(4x+2) - 10(x-4).",
+          "Usa la propiedad distributiva para multiplicar 15 por 2x-1: 30x+90 + 30x-15 = 12(4x+2) - 10(x-4).",
+          "Combina 30x y 30x para obtener 60x: 60x+90-15 = 12(4x+2) - 10(x-4).",
+          "Resta 15 de 90 para obtener 75: 60x+75 = 12(4x+2) - 10(x-4).",
+          "Usa la propiedad distributiva para multiplicar 12 por 4x+2: 60x+75 = 48x+24 - 10(x-4).",
+          "Usa la propiedad distributiva para multiplicar -10 por x-4: 60x+75 = 48x+24 - 10x+40.",
+          "Combina 48x y -10x para obtener 38x: 60x+75 = 38x+24+40.",
+          "Suma 24 y 40 para obtener 64: 60x+75 = 38x+64.",
+          "Resta 38x en ambos lados: 60x+75-38x = 64.",
+          "Combina 60x y -38x para obtener 22x: 22x+75 = 64.",
+          "Resta 75 en ambos lados: 22x = 64-75.",
+          "Resta 75 de 64 para obtener -11: 22x = -11.",
+          "Divide ambos lados por 22: x = -11 / 22.",
+          "Reduzca la fracción -11 / 22 a su mínima expresión extrayendo y anulando 11: x = -1/2."
+        ]
+      },
+      {
+        "ecuacion": "Encuentra el valor de x en la ecuación:" +"<br>"+ " (2x+1)/3 - (x-2)/4 = (x+3)/5 + (3x-4)/6.",
+        "respuestaNumerica": ["Valor de x:", "54/17 ≈ 3.176470588"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["54/17", "3.176470588"],
+        "pasos": [
+          "Multiplica ambos lados de la ecuación por 60, el mínimo común denominador de 3, 4, 5, 6: 20(2x+1) - 15(x-2) = 12(x+3) + 10(3x-4).",
+          "Usa la propiedad distributiva para multiplicar 20 por 2x+1: 40x+20 - 15(x-2) = 12(x+3) + 10(3x-4).",
+          "Usa la propiedad distributiva para multiplicar -15 por x-2: 40x+20 - 15x+30 = 12(x+3) + 10(3x-4).",
+          "Combina 40x y -15x para obtener 25x: 25x+20+30 = 12(x+3) + 10(3x-4).",
+          "Suma 20 y 30 para obtener 50: 25x+50 = 12(x+3) + 10(3x-4).",
+          "Usa la propiedad distributiva para multiplicar 12 por x+3: 25x+50 = 12x+36 + 10(3x-4).",
+          "Usa la propiedad distributiva para multiplicar 10 por 3x-4: 25x+50 = 12x+36 + 30x-40.",
+          "Combina 12x y 30x para obtener 42x: 25x+50 = 42x+36-40.",
+          "Resta 40 de 36 para obtener -4: 25x+50 = 42x-4.",
+          "Resta 42x en ambos lados: 25x+50-42x = -4.",
+          "Combina 25x y -42x para obtener -17x: -17x+50 = -4.",
+          "Resta 50 en ambos lados: -17x = -4-50.",
+          "Resta 50 de -4 para obtener -54: -17x = -54.",
+          "Divide ambos lados por -17: x = -54 / -17.",
+          "La fracción -54 / -17 se puede simplificar a 54/17 quitando el signo negativo del numerador y el denominador."
+        ]
+      },
+      {
+        "ecuacion": "Encuentra el valor de x en la ecuación:" +"<br>"+ " (x-3)/2 + (x+4)/4 = (2x-1)/5 - (x+2)/6.",
+        "respuestaNumerica": ["Valor de x:", "-2/31 ≈ -0.064516129"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["-2/31", "-0.064516129"],
+        "pasos": [
+          "Multiplica ambos lados de la ecuación por 60, el mínimo común denominador de 2, 4, 5, 6: 30(x-3) + 15(x+4) = 12(2x-1) - 10(x+2).",
+          "Usa la propiedad distributiva para multiplicar 30 por x-3: 30x-90 + 15(x+4) = 12(2x-1) - 10(x+2).",
+          "Usa la propiedad distributiva para multiplicar 15 por x+4: 30x-90 + 15x+60 = 12(2x-1) - 10(x+2).",
+          "Combina 30x y 15x para obtener 45x: 45x-90+60 = 12(2x-1) - 10(x+2).",
+          "Suma -90 y 60 para obtener -30: 45x-30 = 12(2x-1) - 10(x+2).",
+          "Usa la propiedad distributiva para multiplicar 12 por 2x-1: 45x-30 = 24x-12 - 10(x+2).",
+          "Usa la propiedad distributiva para multiplicar -10 por x+2: 45x-30 = 24x-12 - 10x-20.",
+          "Combina 24x y -10x para obtener 14x: 45x-30 = 14x-12-20.",
+          "Resta 20 de -12 para obtener -32: 45x-30 = 14x-32.",
+          "Resta 14x en ambos lados: 45x-30-14x = -32.",
+          "Combina 45x y -14x para obtener 31x: 31x-30 = -32.",
+          "Agrega 30 a ambos lados: 31x = -32+30.",
+          "Suma -32 y 30 para obtener -2: 31x = -2.",
+          "Divide ambos lados por 31: x = -2 / 31.",
+          "La fracción -2 / 31 se puede reescribir como -2 31 extrayendo el signo negativo."
+        ]
+      }
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+      
+      
+
+      
+      
+
+      
+      
+
+      
+
+      
+
+
+
+      
+      
+
+      
+      
+
+      
+
+
+
+
+
+
+
+
+
+
+
+      
+      
+
+      
+      
+      
+      
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+      
+
+      
+      
+      
+
+      
+      
+
+      
+      
+
+    
+    
+
+    
+
+    
+
+    
+
+
+
+    
+
+]
 
 const frasesCelebres = [
-    'No he tenido nunca más que un maestro: el pasado; una sola formación: el estudio del pasado.' + leCobusier,
-    'He sacado del pasado la lección de historia, la razón de ser de las cosas. Todo acontecimiento y todo objeto están “en relación a”.' + leCobusier, 'La historia se halla inscrita en los trazados y en las arquitecturas de las ciudades. Mis ideas revolucionarias están en la historia, en toda época y en todos sus países.' + leCobusier, 'La arquitectura es un acto de voluntad consciente. Hacer arquitectura es poner orden.' + leCobusier, 'La arquitectura es el resultado del estado de espíritu de una época.' + leCobusier, 'La arquitectura está más allá de los hechos utilitarios. La arquitectura es un hecho plástico.' + leCobusier, 'La arquitectura es arte en su sentido más elevado, es orden matemático, es teoría pura, armonía completa gracias a la exacta proporción de todas las relaciones: ésta es la “función” de la arquitectura.' + leCobusier, 'La arquitectura preside los destinos de la ciudad. Ordena la estructura de la vivienda, esa célula esencial del trazado urbano, cuya salubridad, alegría y armonía están sometidas a sus decisiones.' + leCobusier, 'Organizar es hacer geometría; hacer geometría en la naturaleza o en el magma surgido “naturalmente” de las agrupaciones de hombres en aglomeraciones urbanas, equivale a hacer cirugía.' + leCobusier, 'El arte, producto de la ecuación “razón-pasión”, es, para mí, el lugar de la felicidad humana.' + leCobusier, 'Lo maravilloso está en la exactitud. Lo duradero está en la perfección. La vida está hecha con un cálculo exacto.' + leCobusier, 'El sueño sólo se apoya sobre realidades esenciales. La poesía sólo procede mediante hechos exactos.' + leCobusier, 'La poesía es un acto humano: las relaciones concertadas entre imágenes perceptibles.' + leCobusier, 'El lirismo sólo tiene alas sobre la verdad. Sólo lo genuino nos conmueve. La arquitectura se propone emoción.' + leCobusier, 'La cosa más importante del mundo son los espacios vacíos.' + leCobusier, 'Charles Édouard Jeanneret, mejor conocido como Le Corbusier, fue una de las mentes más brillantes de la arquitectura moderna, cuyas obras traspasaron la teoría y el arte.', 'Le Corbusier nacío en Suiza y se formó en París, ahí encontró la manera de plasmar la vanguardia y su fascinación por la pintura de forma autodidacta, en estructuras lisas y blancas con volumen.', 'Le Corbusier se distinguió por la planificación urbana de viviendas sociales, al visualizar edificios sin ostentaciones decorativas para potenciar la imagen las ciudades.','Arquitectura es cosa de arte, un fenómeno de emociones, que queda fuera y más allá de las cuestiones constructivas.' + leCobusier, 'El propósito de la construcción es mantener las cosas juntas y el de la arquitectura es deleitarnos' + leCobusier,  'Siempre me interesó lo creativo, sobre todo, lo que se aplica al hombre y a su medio. Con la pintura pude desarrollar todo eso. Es un medio apasionante y peligroso' + leCobusier, 'La arquitectura es el juego sabio, correcto y magnífico de los volúmenes reunidos bajo la luz' + leCobusier, 'Prefiero dibujar a hablar. Dibujar es más rápido, y deja menos espacio para la mentira' + leCobusier, 'Una casa es una máquina para vivir. La casa debe ser el estuche de la vida, la máquina de felicidad' + leCobusier, 'La arquitectura debe de ser la expresión de nuestro tiempo y no un plagio de las culturas pasadas' + leCobusier, 'La geometría solucionará los problemas de la Arquitectura' + leCobusier, 'La arquitectura está reprimida por la costumbre, los estilos son una mentira' + leCobusier, 'La arquitectura es el punto de partida del que quiera llevar a la humanidad hacia un porvenir mejor' + leCobusier, 'Trabajé por lo que más necesitan los hombres hoy: el silencio y la paz' + leCobusier          
+    'No he tenido nunca más que un maestro: el pasado; una sola formación : el estudio del pasado.' + leCobusier, 'He sacado del pasado la lección de historia, la razón de ser de las cosas. Todo acontecimiento y todo objeto están “en relación a”.' + leCobusier, 'La historia se halla inscrita en los trazados y en las arquitecturas de las ciudades. Mis ideas revolucionarias están en la historia, en toda época y en todos sus países.' + leCobusier, 'La arquitectura es un acto de voluntad consciente. Hacer arquitectura es poner orden.' + leCobusier, 'La arquitectura es el resultado del estado de espíritu de una época.' + leCobusier, 'La arquitectura está más allá de los hechos utilitarios. La arquitectura es un hecho plástico.' + leCobusier, 'La arquitectura es arte en su sentido más elevado, es orden matemático, es teoría pura, armonía completa gracias a la exacta proporción de todas las relaciones: ésta es la “función” de la arquitectura.' + leCobusier, 'La arquitectura preside los destinos de la ciudad. Ordena la estructura de la vivienda, esa célula esencial del trazado urbano, cuya salubridad, alegría y armonía están sometidas a sus decisiones.' + leCobusier, 'Organizar es hacer geometría; hacer geometría en la naturaleza o en el magma surgido “naturalmente” de las agrupaciones de hombres en aglomeraciones urbanas, equivale a hacer cirugía.' + leCobusier, 'El arte, producto de la ecuación “razón-pasión”, es, para mí, el lugar de la felicidad humana.' + leCobusier, 'Lo maravilloso está en la exactitud. Lo duradero está en la perfección. La vida está hecha con un cálculo exacto.' + leCobusier, 'El sueño sólo se apoya sobre realidades esenciales. La poesía sólo procede mediante hechos exactos.' + leCobusier, 'La poesía es un acto humano: las relaciones concertadas entre imágenes perceptibles.' + leCobusier, 'El lirismo sólo tiene alas sobre la verdad. Sólo lo genuino nos conmueve. La arquitectura se propone emoción.' + leCobusier, 'La cosa más importante del mundo son los espacios vacíos.' + leCobusier, 'Charles Édouard Jeanneret, mejor conocido como Le Corbusier, fue una de las mentes más brillantes de la arquitectura moderna, cuyas obras traspasaron la teoría y el arte.', 'Le Corbusier nacío en Suiza y se formó en París, ahí encontró la manera de plasmar la vanguardia y su fascinación por la pintura de forma autodidacta, en estructuras lisas y blancas con volumen.', 'Le Corbusier se distinguió por la planificación urbana de viviendas sociales, al visualizar edificios sin ostentaciones decorativas para potenciar la imagen las ciudades.','Arquitectura es cosa de arte, un fenómeno de emociones, que queda fuera y más allá de las cuestiones constructivas.' + leCobusier, 'El propósito de la construcción es mantener las cosas juntas y el de la arquitectura es deleitarnos' + leCobusier,  'Siempre me interesó lo creativo, sobre todo, lo que se aplica al hombre y a su medio. Con la pintura pude desarrollar todo eso. Es un medio apasionante y peligroso' + leCobusier, 'La arquitectura es el juego sabio, correcto y magnífico de los volúmenes reunidos bajo la luz' + leCobusier, 'Prefiero dibujar a hablar. Dibujar es más rápido, y deja menos espacio para la mentira' + leCobusier, 'Una casa es una máquina para vivir. La casa debe ser el estuche de la vida, la máquina de felicidad' + leCobusier, 'La arquitectura debe de ser la expresión de nuestro tiempo y no un plagio de las culturas pasadas' + leCobusier, 'La geometría solucionará los problemas de la Arquitectura' + leCobusier, 'La arquitectura está reprimida por la costumbre, los estilos son una mentira' + leCobusier, 'La arquitectura es el punto de partida del que quiera llevar a la humanidad hacia un porvenir mejor' + leCobusier, 'Trabajé por lo que más necesitan los hombres hoy: el silencio y la paz' + leCobusier, 'Me impresiona profundamente el diseñador del universo. Estoy convencido de que yo nunca hubiera logrado hacer algo así, ni de lejos. - Richard Buckminster Fuller-','Un proceso de diseño abordado con profundidad puede hacer del promotor, del arquitecto y hasta de un visitante ocasional del edificio seres humanos sensiblemente mejores. -Juhani Pallasmaa-', 'He dicho adiós a la manida idea de que la arquitectura tiene que salvar el mundo. -Peter Zumthor-', 'Nosotros no creamos obras. Creo que, de hecho, somos descubridores.Glenn Murcutt', 'Para mí, cada día es algo nuevo. Me enfrento a cada proyecto con una renovada inseguridad, casi como si fuera el primero, y sudo tinta. Cuando me pongo a ello y empiezo a trabajar, nunca estoy seguro de hacia dónde voy; y si lo supiera, sencillamente no lo haría. -Frank O. Gehry-', 'Cojo el lápiz. El trazo fluye. Aparece un edificio. Ahí está. No hay nada más que decir. -Oscar Niemeyer-', 'Para mí, el lenguaje del dibujo es extremadamente revelador: bastan unos pocos trazos para saber si alguien es un arquitecto de verdad. -Eero Saarinen-', '¿Hay algo más agradable para la mente que el papel inmaculado? ¿Que comparar y estudiar la “variedad” de texturas y colores de tarjetas y papeles? -Frank Lloyd Wright-', 'AMO EL PAPEL. BASTAN UN BUEN MONTÓN DE HOJAS Y UN LÁPIZ PARA HACERME FELIZ. -Cecil Balmond-', 'Prefiero dibujar a hablar. Dibujar es más rápido y deja menos espacio a las mentiras. -Le Corbusier-','He advertido que el ordenador a veces conduce a decisiones y resultados insípidos. Ahora, cualquiera puede proyectar un edificio inestable y en forma de burbuja. -Peter Cook-', 'Siempre digo a mis alumnos: en vuestro trabajo tenéis que poner, en primer lugar, esfuerzo, en segundo, amor y en tercero, sufrimiento. -Glenn Murcutt-', 'Al hacer un proyecto me entra el pánico; eso es bueno, puede ser un método. Primero, el pánico. Segundo, conquistar el pánico con trabajo. Tercero, encontrar formas de resolver tus dudas. Eduardo Souto de Moura', 'Estudié arte y después arquitectura, y nunca sentí la necesidad de definirme claramente como arquitecta profesional o como artista: encontré una especie de terreno intermedio contaminado por ambos campos. -Elizabeth Diller-','Muchos arquitectos no son conscientes de sus propios patrones, como tampoco la mayoría de las personas lo son de los que rigen su vida privada. Nos atrae mucho esa cuestión, pues de repente acerca mucho la arquitectura y la psicología. -Jacques Herzog-', 'Siempre he sentido que lo más importante es encontrar la forma de escapar del esquema mental o de la conciencia estética con los que cargo. -Arata Isozaki-', 'EN UNA ARQUITECTURA PURA, EL MÁS NIMIO DETALLE DEBE TENER UN SENTIDO O SERVIR A ALGÚN PROPÓSITO. -Augustus W. N. Pugin-', 'Recuerda que las cosas más bellas del mundo son las más inútiles, como, por ejemplo, los pavos reales y los lirios. -John Ruskin-', 'No quiero desnudar la arquitectura. Quiero enriquecerla y añadirle capas. Básicamente, como sucede en una catedral gótica, donde el ornamento y la estructura forman una alianza. -Cecil Balmond-', 'Menos es más. -Ludwig Mies van der Rohe-', 'Menos es aburrido. -Robert Venturi-', 'Existe una cualidad genérica en el blanco que nos gusta. -Kazuyo Sejima-', 'Siempre trato de pensar con curvas. -Greg Lynn-', 'La forma siempre sigue a la función. -Louis H. Sullivan-', 'La forma sigue a la forma, no a la función. -Philip Johnson-', 'La forma sigue al beneficio” es el principio estético de nuestros tiempos. -Richard Rogers-', 'Una silla es un objeto muy difícil. Un rascacielos es casi más fácil. Por eso el mobiliario Chippendale es famoso. -Ludwig Mies van der Rohe-', 'EL DESEO DE TOCAR EL CIELO ESTÁ PROFUNDAMENTE ARRAIGADO EN LA PSIQUE HUMANA. -Cesar Pelli -', 'Proyecto cualquier cosa que me pidan, desde una catedral hasta un gallinero. Así es como me gano la vida. -Henry Hobson Richardson-','Nunca rechaces un encargo porque pienses que no está a tu altura. -Julia Morgan-', 'El proyecto ideal no existe. Existe la posibilidad de aproximarse a él en cada ocasión. -Paulo Mendes da Rocha-', 'Cuando le preguntas a un arquitecto cuál es su mejor edificio, suele contestar: el próximo. -Emilio Ambasz-', 'Cuidado con el exceso de confianza; sobre todo en cuestiones de estructura. -Cass Gilbert-', 'TAL VEZ NO SEA EL MÁS INTERESANTE DE LOS ARQUITECTOS, PERO SIGO ESTANDO AHÍ Y HE SABIDO MANTENER CIERTA INTEGRIDAD. -David Chipperfield-', 'Estoy absolutamente en contra de lo heroico. Nosotros hacemos cosas pequeñas. Estamos absolutamente a favor de lo patético. -Michael Meredith-', 'Básicamente, la idea es que, con todo el mundo tratando de ser revolucionario, serás más revolucionario si tratas de ser ordinario. -Denise Scott Brown-', 'La mejor de las formas ya está lista y nadie debería tener miedo de utilizarla, incluso si su idea básica procede de algún otro. Basta de genios y de originalidad. -Adolf Loos-','Si no te ves capaz de hacer del mundo un lugar mejor con tu trabajo, al menos asegúrate de no empeorarlo. -Herman Hertzberger-', 'Nunca reutilizo ideas. Una vez he usado una, se acabó. -Arthur Erickson-', 'Tener 65 ideas para solucionar un problema no es una muestra de creatividad. Es un desperdicio de energía. -Jan Kaplický-', 'Algo tan común como la pintura para una casa puede resultar fascinante cuando se pule hasta lograr un acabado espejado. -Tod Williams-', 'El juego de luces y sombras, de sólidos y huecos, puede apreciarse mejor contra una superficie blanca. -Richard Meier-', 'LA LUZ NO ES ALGO VAGO Y DIFUSO QUE PUEDA DARSE POR SENTADO POR EL MERO HECHO DE QUE ESTÁ SIEMPRE AHÍ. EL SOL NO SALE EN VANO CADA DÍA. -Alberto Campo Baeza-', 'Cada material tiene sus propias sombras. La sombra de la piedra no es la misma que la de una frágil hoja de otoño. La sombra penetra en el material e irradia su mensaje. -Sverre Fehn-', 'El Sol no supo de su grandeza hasta que incidió sobre la cara de un edificio. -Louis I. Kahn-', 'Siempre busco más luz y más espacio. -Santiago Calatrava-', 'LA ARQUITECTURA ESTÁ LIGADA AL EMPLAZAMIENTO Y, EN MI OPINIÓN, EL LUGAR ES COMO UN VÍNCULO METAFÍSICO Y POÉTICO CON AQUELLO QUE UN EDIFICO PUEDE LLEGAR A SER. -Steven Holl-', 'El diseño de edificios en entornos naturales, sean urbanos o rurales, debe responder al terreno sobre el que se levantan y al cielo contra el que se proyectan. -James Polshek-', '¿De dónde sale la idea de que nuestras calles tienen que parecer creadas por el mismo cliente o el mismo arquitecto? La diversidad, y no su contrario, es lo que nos atrae. -Günter Behnisch-', 'La incoherencia en sí genera vitalidad. -Kenzo Tange-', 'PUEDES CERRAR UN LIBRO MALO, PUEDES EVITAR ESCUCHAR MÚSICA MALA, PERO NO PUEDES LIBRARTE DE LA TORRE HORROROSA QUE TIENES FRENTE A TU CASA. -Renzo Piano-', 'Siempre me sorprende el poco énfasis que ponen las escuelas de arquitectura y, de hecho, muchos arquitectos en el proceso de integración de un edificio. -Norman Foster-', 'No puedes limitarte a poner algo nuevo en un lugar. Tienes que absorber lo que ves a tu alrededor, lo que existe ya en el terreno, y después usar ese conocimiento, junto con el pensamiento contemporáneo, para interpretar lo que ves. -Tadao Ando-', 'UN ARQUITECTO QUE PROYECTA REALMENTE PARA UN SER HUMANO TIENE QUE SABER BASTANTE MÁS QUE LOS CINCO CÁNONES DE VITRUVIO. -Richard Neutra-', 'Creo que los edificios deben imitar los sistemas ecológicos. -Ken Yeang-', 'UTILIZO MATERIALES BARATOS. -Herman Hertzberger-', 'Creo que para construir un edificio sólido no hace falta usar un material resistente. La solidez de un edificio no tiene nada que ver con la resistencia del material. -Shigeru Ban-', 'Creo que para construir un edificio sólido no hace falta usar un material resistente. La solidez de un edificio no tiene nada que ver con la resistencia del material. -Shigeru Ban-', 'Trato de contrarrestar la permanencia de los edificios, su imperturbabilidad, con elementos que confieran una inefable cualidad inmaterial. -Toyo Ito-','Con independencia de su belleza, la fachada y los muros de una casa, una iglesia o un palacio tan solo son un continente, una caja formada por paredes.El contenido es el espacio interior. -Bruno Zevi-', 'El espacio, el espacio... ¡los arquitectos siempre hablan del espacio! Pero crear un espacio no comporta, automáticamente, hacer arquitectura. Con el mismo espacio puedes hacer una obra maestra o provocar un desastre. -Jean Nouvel-', 'Recuerdo que, cuando era niño, solíamos tirar el balón desde la ventana del primer piso. Nunca íbamos a un espacio especialmente pensado para jugar; el espacio de juego se establecía en el momento de jugar. El juego era inspiración, no organización. -Louis I. Kahn-', 'Yo mismo estoy instalado en una oficina sin ventanas y con aire acondicionado, una especie de celda. Mis visitantes son conscientes de este hecho, lo que les induce a ser concisos e ir al grano. -Le Corbusier-', 'No sé por qué la gente contrata arquitectos para luego decirles lo que tienen que hacer. -Frank O. Gehry-', 'CREO QUE LAS RESTRICCIONES SON MUY IMPORTANTES. SON POSITIVAS PORQUE TE PERMITEN TRABAJAR A PARTIR DE ALGO. -Charles Gwathmey-', 'Odiábamos a la Bauhaus.Fue un mal momento para la arquitectura. Simplemente no tenían talento; todo lo que tenían era reglas. Hasta para los cuchillos y los tenedores crearon reglas. Picasso nunca hubiera aceptado reglas. ¿La casa es una máquina? ¡No! Lo mecánico es feo. La regla es lo peor que hay. Solo te hace querer romperla. -Oscar Niemeyer-', 'Si tienes libertad total, entonces tienes un problema. Es mucho mejor tener alguna obligación, cierta disciplina, algunas reglas. Cuando no tienes reglas, acabas por construirte las tuyas propias. -Renzo Piano-', 'La gente que construye su propia casa suele ser muy valiente. Son personas con curiosidad por la vida. Piensan en lo que significa vivir en una casa en lugar de limitarse a comprar un bien y darle uso. -Tom Kundig-', 'ODIO LAS VACACIONES. ¿PARA QUÉ ESTAR EN LA PLAYA SI PUEDES ESTAR CONSTRUYENDO EDIFICIOS? -Philip Johnson-', 'Siempre estamos trabajando con coreógrafos y directores, expertos en robótica y diferentes científicos e investigadores. Nos interesan siempre los vínculos y cruces entre disciplinas.-Elizabeth Diller-', 'Deberíamos aprender desde niños las posibilidades que ofrece nuestro entorno, las leyes físicas y psicológicas que gobiernan el mundo visual, y el goce supremo que produce participar del proceso creativo por el que uno da forma a su propio espacio vital. -Walter Gropius-', 'Prefiero trabajar con la holgura del lápiz que con la precisión de la tinta o del ordenador. -Thom Mayne-', 'ENTRE EL AÑO 1990 Y EL 2000 NO TUVE ENCARGOS, Y NO QUISE TAMPOCO UN PUESTO ACADÉMICO O EN EL GOBIERNO. SOLO QUERÍA TRABAJAR CON ARTESANOS, ADQUIRIR EXPERIENCIA SOBRE EL TERRENO Y NO SER RESPONSABLE DEL DISEÑO, SOLO DE LA CONSTRUCCIÓN. -Wang Shu-', 'Deberíamos trabajar para hacer nuestro mundo comprensible y no para volverlo aún más confuso. Cuando algo parece madera debería ser madera, y el hierro ser hierro. -Günter Behnisch-', 'Siempre considero un edificio como parte de un todo, una pieza que crea una acción colectiva: la ciudad. -Christian de Portzamparc-', 'TODA OBRA DE ARQUITECTURA QUE NO EXPRESE SERENIDAD ES UN ERROR. -Luis Barragán-', 'LA ARQUITECTURA QUE RECORDAMOS ES AQUELLA QUE NUNCA NOS CONSUELA O RECONFORTA. -Peter Eisenman-', 'Soy un arquitecto que construye y, por tanto, soy optimista. Ser optimista es un prerrequisito para todo aquel que quiera construir, porque la construcción tiene que ver con el optimismo, con encarar el futuro con confianza. -Cesar Pelli-', 'LO QUE MOTIVA ES TRABAJAR SOBRE LA DESAPARICIÓN, SOBRE LOS LÍMITES ENTRE LA PRESENCIA Y LA AUSENCIA DE LA ARQUITECTURA. -Dominique Perrault-', 'En realidad, algunas imágenes y dibujos tienen un impacto mayor que muchos edificios que llegan a construirse. -Emilio Ambasz-', 'Me gustan las ruinas porque lo que queda en ellas no es el diseño total, sino la claridad del pensamiento, la nuda estructura, el espíritu de la cosa. -Tadao Ando-', 'Piensa hasta el final:considera el final primero. -Leonardo da Vinci-'           
 
 
 
@@ -1217,7 +3077,46 @@ function fraseAleatoria() {
     
 }
 
-//import problemasMatematicos from './script-problemasUnidades.js';
+let problemasMatematicos = "";
+
+function actualizarProblemas() {
+    const seleccion = document.getElementById("tema").value;
+    const selectUnidades = document.getElementById("unidad");
+    const textareaEcuaciones = document.getElementById("texto-encriptado");
+
+    if (seleccion === "unidades") {
+        problemasMatematicos = problemasUnidades;
+        selectUnidades.style.display = "inline";
+        advertencia.innerHTML = `${"¡Importante! Solo escribe respuestas numéricas con punto separadas por una coma. Por ejemplo: 6.9, 5.3, -206/3"}`;
+    } else if (seleccion === "algebra") {
+        problemasMatematicos = problemasAlgebraicos;
+        // Ocultar el select de unidades y aumentar el tamaño del textarea
+        selectUnidades.style.display = "none";
+        textareaEcuaciones.style.width = "90%";
+        advertencia.innerHTML = `${"¡Importante!. Pón atención a los parentesis por ejemplo (3/4)x es lo mismo que 3x/4 pero NO ES IGUAL A 3/4x. Tu respuesta puede incluir simbolos como: parentesis (), / para dividir, ^ para elevar entre otros. Las variables deben ir a la izquierda del valor numérico Por ejemplos: 205(x+3)/4, 103x/2, -3x+1"}`;
+        
+    } else if (seleccion === "ecuaciones") {
+        problemasMatematicos = problemasEcuacionesPrimerGrado;
+        // Ocultar el select de unidades y aumentar el tamaño del textarea
+        selectUnidades.style.display = "none";
+        textareaEcuaciones.style.width = "50%";
+        advertencia.innerHTML = `${"¡Importante! Solo escribe respuestas numéricas con punto separadas por una coma. Por ejemplo: 6.9, 5.3"}`;
+    console.log("Problemas matemáticos seleccionados:", problemasMatematicos);
+    }
+    console.log(problemasMatematicos.length);
+}
+
+function revisarResultado() {
+    const seleccion = document.getElementById("tema").value;
+
+    if (seleccion === "unidades") {
+        revisarResultadoUnidades();
+    } else if (seleccion === "algebra") {
+        revisarResultadoAlgebra(); 
+    } else if (seleccion === "ecuaciones") {
+        revisarResultadoAlgebra(); 
+    }
+}
 
 // Función para mostrar un problema aleatorio
 function mostrarProblemaAleatorio() {
@@ -1232,15 +3131,28 @@ function mostrarProblemaAleatorio() {
     
     document.querySelector(".btnCopiar").classList.add("ocultar");
     document.querySelector(".incorrecta").classList.add("ocultar");
+    document.querySelector(".btnRepaso").classList.add("ocultar");
+    document.querySelector(".repaso").classList.add("ocultar");
 
     // Asignar los valores a las variables globales
     respuestaOficial.innerHTML = `${problemaAleatorio.respuestaNumerica.join("<br>")}`;
     pasoApaso.innerHTML = `${problemaAleatorio.pasos.join("<br><br>")}`;
 }
 
-// Llamada a la función para inicializar las variables globales
+function revisarResultadoAlgebra() {
+    let resultadoUsuario = respuesta.value.trim();
+    // Si contiene letras, verificar si la respuesta es correcta
+    if (esRespuestaCorrectaConLetras(resultadoUsuario)) {
+        mostrarResultadoCorrecto();
+    } else {
+        mostrarResultadoIncorrecto();
+    }
+    return;
+}
 
-function revisarResultado() {
+
+// Revisa resultados de conversion de unidades
+function revisarResultadoUnidades() {
     // Obtener el resultado ingresado por el usuario desde el textarea
     let resultadoUsuario = respuesta.value.trim();
     let unidadUsuario = document.getElementById("unidad").value.trim();
@@ -1248,17 +3160,6 @@ function revisarResultado() {
     // Si no se ingresa ninguna respuesta, mostrar un mensaje de error
     if (!resultadoUsuario) {
         alert("Debes ingresar una respuesta.");
-        return;
-    }
-
-    // Verificar si la respuesta contiene letras
-    if (/[a-zA-Z]/.test(resultadoUsuario)) {
-        // Si contiene letras, verificar si la respuesta es correcta
-        if (esRespuestaCorrectaConLetras(resultadoUsuario)) {
-            mostrarResultadoCorrecto();
-        } else {
-            mostrarResultadoIncorrecto();
-        }
         return;
     }
 
@@ -1271,6 +3172,10 @@ function revisarResultado() {
 
         // Obtener la unidad de la respuesta correcta
         let unidadRespuestaCorrecta = problemaAleatorio.unidadRespuesta.join("");
+
+
+        console.log("Unidad de respuesta correcta",unidadRespuestaCorrecta);
+        console.log(unidadUsuario);
 
         if (unidadUsuario !== unidadRespuestaCorrecta) {
             console.log("Las unidades no coinciden."); // Imprimir solo si las unidades no coinciden
@@ -1305,122 +3210,69 @@ function revisarResultado() {
     }
 }
 
-
 function esRespuestaCorrectaConLetras(resultadoUsuario) {
-    // Respuesta correcta del problema
-    let respuestaCorrecta = problemaAleatorio.respuestaNumerica[1].replace(/\s/g, '');
-    
-    console.log("Respuesta Correcta:", respuestaCorrecta);
+    if (!resultadoUsuario) {
+        alert("Debes ingresar una respuesta.");
+        return;
+    } else {
+   
+    // Respuestas correctas del problema
+    let respuestasCorrectas = problemaAleatorio.combinacionesRespuesta.map(respuesta => respuesta.replace(/\s/g, '').toLowerCase());
+
+    console.log("Respuestas Correctas:", respuestasCorrectas);
 
     // Eliminar espacios y convertir a minúsculas la respuesta del usuario
     resultadoUsuario = resultadoUsuario.replace(/\s/g, '').toLowerCase();
 
     console.log("Resultado usuario sin normalizar:", resultadoUsuario);
-    // Normalizar la respuesta del usuario
-    let resultadoUsuarioNormalizado = normalizarRespuesta(resultadoUsuario);
-
-
-    console.log("Resultado usuario normalizado:", resultadoUsuarioNormalizado);
-    console.log("Resultado correcta normalizado:", normalizarRespuesta(respuestaCorrecta));
-    // Verificar si la respuesta normalizada del usuario coincide con la respuesta correcta
-    return resultadoUsuarioNormalizado === normalizarRespuesta(respuestaCorrecta);
     
+    // Verificar si la respuesta del usuario coincide con alguna de las respuestas correctas
+    return respuestasCorrectas.includes(resultadoUsuario);
+    }
+};
 
-}
-
-
-
-
+// Función para normalizar la respuesta
 function normalizarRespuesta(respuesta) {
     // Dividir la respuesta en términos
     let terminos = respuesta.match(/[-+]?\s*\d*(?:\/\d+)?(?:\^\d+)?\s*[a-z]*|[+*\/-]/gi) || [];
 
-    // Separar términos numéricos y con letras
-    let terminosNumericos = [];
-    let terminosConLetras = [];
-    let operadores = [];
+    // Ordenar términos alfabéticamente
+    terminos.sort();
 
-    terminos.forEach(termino => {
-        if (termino.match(/[a-z]/i)) {
-            terminosConLetras.push(termino);
-        } else if (termino.match(/[+*\/-]/)) {
-            operadores.push(termino);
-        } else {
-            terminosNumericos.push(termino);
-        }
-    });
+    // Normalizar los términos
+    let respuestaNormalizada = normalizarTerminos(terminos);
 
-    // Ordenar términos con letras alfabéticamente
-    terminosConLetras.sort();
+    return respuestaNormalizada;
+}
 
-    // Ordenar términos numéricos de menor a mayor
-    terminosNumericos.sort((a, b) => parseFloat(a) - parseFloat(b));
-
-    // Normalizar términos con letras
-    let terminosObj = {};
-
-    terminosConLetras.forEach(termino => {
-        // Extraer el coeficiente y el término sin el signo
-        let match = termino.match(/([-+]?\s*\d*(?:\/\d+)?(?:\^\d+)?)?\s*([a-z]*)/i);
-        let coeficiente = match[1] ? match[1] : ''; // Si no hay coeficiente, asignar cadena vacía
-        let terminoSinCoeficiente = match[2];
-
-        // Normalizar término sin coeficiente
-        let terminoNormalizado = terminoSinCoeficiente.split('').sort().join('');
-
-        // Almacenar el término y su coeficiente
-        if (terminosObj[terminoNormalizado]) {
-            terminosObj[terminoNormalizado] += ` ${coeficiente}`;
-        } else {
-            terminosObj[terminoNormalizado] = coeficiente;
-        }
-    });
-
+// Función para normalizar los términos
+function normalizarTerminos(terminos) {
     // Construir la respuesta normalizada
     let respuestaNormalizada = '';
 
-    // Agregar términos con letras normalizados
-    Object.keys(terminosObj).forEach(terminoNormalizado => {
-        let coeficiente = terminosObj[terminoNormalizado];
-        respuestaNormalizada += `${coeficiente}${terminoNormalizado}`;
-    });
+    // Iterar sobre cada término
+    for (let i = 0; i < terminos.length; i++) {
+        let termino = terminos[i];
 
-    // Agregar operadores
-    operadores.forEach(operador => {
-        respuestaNormalizada += `${operador}`;
-    });
-
-    // Agregar términos numéricos
-    terminosNumericos.forEach(termino => {
-        // Agregar signo "+" si el término no es el primero y hay un espacio antes de él
-        if (respuestaNormalizada && respuestaNormalizada.charAt(respuestaNormalizada.length - 1) === ' ') {
-            respuestaNormalizada += '+';
+        // Verificar si el término es un operador
+        if (termino.match(/[+*\/-]/)) {
+            respuestaNormalizada += termino;
+            continue;
         }
-        respuestaNormalizada += `${termino}`;
-    });
 
-    // Reemplazar espacios vacíos entre términos por un signo "+"
-    respuestaNormalizada = respuestaNormalizada.replace(/\s+/g, '+');
+        // Obtener el signo de este término
+        let signo = '+';
+        if (termino.charAt(0) === '-') {
+            signo = '-';
+            termino = termino.slice(1);
+        }
 
-    // Eliminar signo "+" al principio o al final de la cadena
-    respuestaNormalizada = respuestaNormalizada.trim().replace(/^(\+)|(\+)$/, '');
+        // Agregar el término normalizado
+        respuestaNormalizada += signo + termino;
+    }
 
     return respuestaNormalizada.trim();
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 function inicializar(){
     problemaAleatorio = mostrarProblemaAleatorio();
@@ -1441,7 +3293,7 @@ function mostrarResultadoCorrecto() {
 }
 
 let intentos = 3;
-let pasoActual = 1;
+
 
 function mostrarResultadoIncorrecto() {
     // Ocultar el mensaje de bienvenida en ambos casos
@@ -1449,26 +3301,31 @@ function mostrarResultadoIncorrecto() {
   if (intentos > 0) {
     intentos--;
 
+    document.querySelector(".incorrecta").classList.remove("ocultar"); 
+
     if (intentos === 2) {
       document.querySelector(".incorrecta").textContent = "La respuesta es incorrecta. Intenta nuevamente";
     } else if (intentos === 1) {
-      document.querySelector(".incorrecta").textContent = "Te quedan 2 intentos";
+      document.querySelector(".incorrecta").textContent = "Creo que es momento de repasar la materia";
+      document.querySelector(".arquitecto").classList.add("ocultar");
+      document.querySelector(".repaso").classList.remove("ocultar");
+  
     } else if (intentos === 0) {
-      document.querySelector(".incorrecta").textContent = "Te queda 1 intento";
+        document.querySelector(".incorrecta").classList.add("ocultar");
+       
+        document.querySelector(".btnRepaso").classList.remove("ocultar");
     }
-
-    document.querySelector(".incorrecta").classList.remove("ocultar");
     
+   
   } else {
     // Desactivar botón y mostrar mensaje final
-    
+    document.querySelector(".btnRepaso").classList.add("ocultar");
     document.querySelector(".btnCopiar").classList.remove("ocultar");
     btnCopiar.removeAttribute("disabled"); // Activa el botón
     document.querySelector(".incorrecta").classList.add("ocultar");
-    
+    document.querySelector(".btnEncriptar").classList.add("desactivar");
   }
 }
-
 
 // Función para mostrar un mensaje de error
 function mostrarError(mensajeError) {
@@ -1477,6 +3334,7 @@ function mostrarError(mensajeError) {
 
 // Función para mostrar los pasos
 function mostrarPasos() {
+    document.querySelector(".repaso").classList.add("ocultar");
     document.querySelector(".arquitecto").classList.add("ocultar");
     document.querySelector(".intentos").classList.add("ocultar");
     document.querySelector(".fin-intentos").classList.remove("ocultar"); 
@@ -1486,6 +3344,21 @@ function mostrarPasos() {
     document.querySelector(".pasoApaso").classList.remove("ocultar");
     document.querySelector(".btnEncriptar").classList.add("desactivar");
 
+}
+
+function quieroRepasar(){
+    const seleccion = document.getElementById("tema").value;
+    
+    if (seleccion === "unidades") {
+        window.open("https://edu.gcfglobal.org/es/unidades-de-medida/conversion-de-unidades-/1/");
+    } else if (seleccion === "algebra") {
+        window.open("https://edu.gcfglobal.org/es/algebra/expresiones-algebraicas/1/");
+        
+    } else if (seleccion === "ecuaciones") {
+        window.open("https://edu.gcfglobal.org/es/algebra/como-resolver-ecuaciones-algebraicas/1/");
+    }
+    console.log(seleccion)
+    
 }
 
 // Reiniciar
@@ -1504,7 +3377,7 @@ function probarOtraVez() {
     document.querySelector(".excelente").classList.add("ocultar");
 
     //Borrar texto del textarea
-    //textarea.textContent = "";
+    textarea.value = "";
     
 }
 
