@@ -121,6 +121,8 @@ body{
     -ms-overflow-style: none;
     scrollbar-width: none;
     border-radius: 5px;
+    border: #c2bcbc solid 0.2px;
+    padding: 0.4em;
     box-shadow: 3px 3px 30px #888181;
 }
 
@@ -276,8 +278,8 @@ body{
 #sinTexto {
     position: absolute;
     top: 60%;
-    
-    transform: translate(0%, 200%);
+    left:50%;
+    transform: translate(-50%, 125%);
     max-width: 88%; /* Asegura que la imagen no se desborde del contenedor */
     max-height: 50%; /* Asegura que la imagen no se desborde del contenedor */
     
@@ -291,7 +293,7 @@ body{
 .excelente{
     position: absolute;
     width: 100%;
-    top: 55%;
+    top: 60%;
     text-align: center;
     left: 0%;
     transform: translate(0%, 110%);
@@ -511,8 +513,8 @@ footer {
     #sinTexto {
         position: absolute;
         top: 50%;
-        
-        transform: translate(00%, 200%);
+        left:50%;
+        transform: translate(-50%, 100%);
         max-width: 90%; /* Asegura que la imagen no se desborde del contenedor */
         max-height: 100%; /* Asegura que la imagen no se desborde del contenedor */
         white-space: normal; /* Permite que el texto se ajuste a varias líneas */
@@ -664,7 +666,7 @@ footer {
       
     #sinTexto {
         position: absolute;
-        top: 50%;
+        top: 60%;
         left: 50%;
         transform: translate(-50%, 50%);
         max-width: 90%; /* Asegura que la imagen no se desborde del contenedor */

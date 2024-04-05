@@ -3058,22 +3058,619 @@ const problemasEcuacionesPrimerGrado =[
 
 ]
 
+const problemasSistemasEcuaciones =[
+    {
+        "ecuacion": "Encuentra los valores de x e y en el sistema de ecuaciones:"+"<br>"+ "8x + 2y = 46"+"<br>"+"7x + 3y = 47}",
+        "respuestaNumerica": ["Valor de x:", "22/5 ≈ 4.4", "Valor de y:", "27/5 ≈ 5.4"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["22/5", "4.4", "27/5", "5.4"],
+        "pasos": [
+          "Para resolver un par de ecuaciones con sustituciones, primero resuelva una de las ecuaciones para una de las variables. Después, sustituya el resultado de esa variable en la otra ecuación.",
+          "Elija una de las ecuaciones y solucione el x mediante el aislamiento de x en el lado izquierdo del signo igual: 8x + 2y = 46.",
+          "Resta 2y en ambos lados de la ecuación: 8x = -2y + 46.",
+          "Divide ambos lados por 8: x = (-2y + 46) / 8.",
+          "Multiplica 1/8 por -2y + 46: x = -1/4y + 23/4.",
+          "Sustituye -y + 23/4 por x en la otra ecuación, 7x + 3y = 47.",
+          "Multiplica 7 por -1/4y + 23/4: -7/4y + 161/4 + 3y = 47.",
+          "Suma -7y/4 y 3y: 5y/4 + 161/4 = 47.",
+          "Resta 161/4 en ambos lados de la ecuación: 5y/4 = 27/4.",
+          "Divide ambos lados de la ecuación por 5/4, que es lo mismo que multiplicar los dos lados por el recíproco de la fracción: y = 27/5.",
+          "Sustituye 27/5 por y en x = -1/4y + 23/4.",
+          "Multiplica -1/4 por 27/5: x = -27/20 + 23/4.",
+          "Suma 23/4 y -27/20: x = 22/5.",
+          "El sistema ya funciona correctamente."
+        ]
+      },
+      {
+        "ecuacion": "Encuentra los valores de x e y en el sistema de ecuaciones:"+"<br>"+ "3x+4y=20"+"<br>"+ "5x-2y=10",
+        "respuestaNumerica": ["Valor de x:", "40/13 ≈ 3.076923077", "Valor de y:", "35/13 ≈ 2.692307692"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["40/13", "3.07", "35/13", "2.69"],
+        "pasos": [
+          "Para resolver un par de ecuaciones con sustituciones, primero resuelva una de las ecuaciones para una de las variables. Después, sustituya el resultado de esa variable en la otra ecuación.",
+          "Elija una de las ecuaciones y solucione el x mediante el aislamiento de x en el lado izquierdo del signo igual: 3x + 4y = 20.",
+          "Resta 4y en ambos lados de la ecuación: 3x = -4y + 20.",
+          "Divide ambos lados por 3: x = (-4y + 20) / 3.",
+          "Multiplica 1/3 por -4y + 20: x = -4/3y + 20/3.",
+          "Sustituye -4y+20/3 por x en la otra ecuación, 5x - 2y = 10.",
+          "Multiplica 5 por -4/3y + 20/3: -20/3y + 100/3 - 2y = 10.",
+          "Suma -20y/3 y -2y: -26y/3 + 100/3 = 10.",
+          "Resta 100/3 en ambos lados de la ecuación: -26y/3 = -70/3.",
+          "Divide ambos lados de la ecuación por -26/3, que es lo mismo que multiplicar los dos lados por el recíproco de la fracción: y = 35/13.",
+          "Sustituye 35/13 por y en x = -4/3y + 20/3. Como la ecuación resultante solo contiene una variable, se puede resolver para x directamente.",
+          "Multiplica -4/3 por 35/13: x = -140/39 + 20/3.",
+          "Suma 20/3 y -140/39: x = 40/13.",
+          "El sistema ya funciona correctamente."
+        ]
+      },
+      {
+        "ecuacion": "Encuentra los valores de x e y en el sistema de ecuaciones:"+"<br>"+ "2x-3y=15"+"<br>"+ "4x+5y=35",
+        "respuestaNumerica": ["Valor de x:", "90/11 ≈ 8.181818182", "Valor de y:", "5/11 ≈ 0.454545455"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["90/11", "8.18", "5/11", "0.45"],
+        "pasos": [
+          "Para resolver un par de ecuaciones con sustituciones, primero resuelva una de las ecuaciones para una de las variables. Después, sustituya el resultado de esa variable en la otra ecuación.",
+          "Elija una de las ecuaciones y solucione el x mediante el aislamiento de x en el lado izquierdo del signo igual: 2x - 3y = 15.",
+          "Resta 3y en ambos lados de la ecuación: 2x = 3y + 15.",
+          "Divide ambos lados por 2: x = (3y + 15) / 2.",
+          "Sustituye 3y+15/2 por x en la otra ecuación, 4x + 5y = 35.",
+          "Multiplica 4 por 3y+15/2: 4(3y + 15)/2 + 5y = 35.",
+          "Simplifica la expresión: 6y + 30 + 5y = 35.",
+          "Suma 6y y 5y: 11y + 30 = 35.",
+          "Resta 30 en ambos lados de la ecuación: 11y = 5.",
+          "Divide ambos lados de la ecuación por 11: y = 5/11.",
+          "Sustituye 5/11 por y en x = (3y + 15) / 2. Como la ecuación resultante solo contiene una variable, se puede resolver para x directamente.",
+          "Sustituye 5/11 en la ecuación: x = (3(5/11) + 15) / 2.",
+          "Realiza las operaciones: x = 90/11.",
+          "El sistema ya funciona correctamente."
+        ]
+      },
+      {
+        "ecuacion": "Encuentra los valores de x e y en el sistema de ecuaciones:"+"<br>"+"6x+7y=50"+"<br>"+"3x-2y=15",
+        "respuestaNumerica": ["Valor de x:", "205/33 ≈ 6.212121212", "Valor de y:", "20/11 ≈ 1.818181818"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["205/33", "6.212121212", "20/11", "1.818181818"],
+        "pasos": [
+          "Para resolver un par de ecuaciones con sustituciones, primero resuelva una de las ecuaciones para una de las variables. Después, sustituya el resultado de esa variable en la otra ecuación.",
+          "Elija una de las ecuaciones y solucione el x mediante el aislamiento de x en el lado izquierdo del signo igual: 6x + 7y = 50.",
+          "Resta 7y en ambos lados de la ecuación: 6x = -7y + 50.",
+          "Divide ambos lados por 6: x = (-7y + 50)/6.",
+          "Sustituye (-7y + 50)/6 por x en la otra ecuación, 3x - 2y = 15.",
+          "Multiplica 3 por (-7y + 50)/6: 3((-7y + 50)/6) - 2y = 15.",
+          "Simplifica la expresión: (-21y + 150)/6 - 2y = 15.",
+          "Multiplica ambos lados de la ecuación por 6 para deshacerse del denominador: -21y + 150 - 12y = 90.",
+          "Suma -21y y -12y: -33y + 150 = 90.",
+          "Resta 150 en ambos lados de la ecuación: -33y = -60.",
+          "Divide ambos lados de la ecuación por -33: y = 20/11.",
+          "Sustituye 20/11 por y en x = (-7y + 50)/6. Como la ecuación resultante solo contiene una variable, se puede resolver para x directamente.",
+          "Sustituye 20/11 en la ecuación: x = (-7(20/11) + 50)/6.",
+          "Realiza las operaciones: x = 205/33.",
+          "El sistema ya funciona correctamente.",
+          "x=205/33, y=20/11"
+        ]
+      },
+      {
+        "ecuacion": "Encuentra los valores de x e y en el sistema de ecuaciones:"+"<br>"+"9x-4y=30"+"<br>"+"2x+6y=10",
+        "respuestaNumerica": ["Valor de x:", "110/31 ≈ 3.548387097", "Valor de y:", "15/31 ≈ 0.483870968"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["110/31", "3.548387097", "15/31", "0.483870968"],
+        "pasos": [
+          "Para resolver un par de ecuaciones con sustituciones, primero resuelva una de las ecuaciones para una de las variables. Después, sustituya el resultado de esa variable en la otra ecuación.",
+          "Elija una de las ecuaciones y solucione el x mediante el aislamiento de x en el lado izquierdo del signo igual: 9x - 4y = 30.",
+          "Resta 4y en ambos lados de la ecuación: 9x = 4y + 30.",
+          "Divide ambos lados por 9: x = (4y + 30) / 9.",
+          "Sustituye (4y+30)/9 por x en la otra ecuación, 2x + 6y = 10.",
+          "Multiplica 2 por (4y+30)/9: 2((4y + 30)/9) + 6y = 10.",
+          "Simplifica la expresión: (8y + 60)/9 + 6y = 10.",
+          "Multiplica ambos lados de la ecuación por 9 para deshacerse del denominador: 8y + 60 + 54y = 90.",
+          "Suma 8y y 54y: 62y + 60 = 90.",
+          "Resta 60 en ambos lados de la ecuación: 62y = 30.",
+          "Divide ambos lados de la ecuación por 62: y = 15/31.",
+          "Sustituye 15/31 por y en x = (4y + 30) / 9. Como la ecuación resultante solo contiene una variable, se puede resolver para x directamente.",
+          "Sustituye 15/31 en la ecuación: x = (4(15/31) + 30) / 9.",
+          "Realiza las operaciones: x = 110/31.",
+          "El sistema ya funciona correctamente.",
+          "x=110/31, y=15/31"  
+        ]
+      },
+      {
+        "ecuacion": "Encuentra los valores de x e y en el sistema de ecuaciones:"+"<br>"+"5x+3y=25"+"<br>"+"8x-2y=50",
+        "respuestaNumerica": ["Valor de x:", "100/17 ≈ 5.882352941", "Valor de y:", "-25/17 ≈ -1.470588235"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["100/17", "5.882352941", "-25/17", "-1.470588235"],
+        "pasos": [
+          "Para resolver un par de ecuaciones con sustituciones, primero resuelve una de las ecuaciones para una de las variables. Después, sustituye el resultado de esa variable en la otra ecuación.",
+          "Elige una de las ecuaciones y resuelve para x, aislándolo en el lado izquierdo del signo igual: 5x + 3y = 25.",
+          "Resta 3y en ambos lados de la ecuación: 5x = -3y + 25.",
+          "Divide ambos lados por 5: x = (-3y + 25) / 5.",
+          "Sustituye (-3y+25)/5 por x en la otra ecuación, 8x - 2y = 50.",
+          "Multiplica 8 por (-3y+25)/5: 8((-3y + 25) / 5) - 2y = 50.",
+          "Simplifica la expresión: (-24y + 200)/5 - 2y = 50.",
+          "Multiplica ambos lados de la ecuación por 5 para deshacerte del denominador: -24y + 200 - 10y = 250.",
+          "Combina términos semejantes: -34y + 200 = 250.",
+          "Resta 200 en ambos lados de la ecuación: -34y = 50.",
+          "Divide ambos lados de la ecuación por -34: y = -25/17.",
+          "Sustituye -25/17 por y en x = (-3y + 25) / 5. Como la ecuación resultante solo contiene una variable, se puede resolver para x directamente.",
+          "Sustituye -25/17 en la ecuación: x = (-3(-25/17) + 25) / 5.",
+          "Realiza las operaciones: x = 100/17.",
+          "El sistema ya funciona correctamente.",
+          "x=100/17, y=-25/17"
+        ]
+      },
+      {
+        "ecuacion": "Encuentra los valores de x e y en el sistema de ecuaciones:"+"<br>"+"4x+9y=60"+"<br>"+"6x-5y=30",
+        "respuestaNumerica": ["Valor de x:", "285/37 ≈ 7.702702703", "Valor de y:", "120/37 ≈ 3.243243243"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["285/37", "7.702702703", "120/37", "3.243243243"],
+        "pasos": [
+          "Para resolver un par de ecuaciones con sustituciones, primero resuelve una de las ecuaciones para una de las variables. Después, sustituye el resultado de esa variable en la otra ecuación.",
+          "Elige una de las ecuaciones y resuelve para x mediante el aislamiento de x en el lado izquierdo del signo igual.",
+          "Resta 9y en ambos lados de la ecuación: 4x = -9y + 60.",
+          "Divide ambos lados por 4: x = (-9y + 60) / 4.",
+          "Sustituye (-9y+60)/4 por x en la otra ecuación, 6x - 5y = 30.",
+          "Multiplica 6 por (-9y+60)/4: 6((-9y + 60) / 4) - 5y = 30.",
+          "Simplifica la expresión: (-27y + 90)/2 - 5y = 30.",
+          "Multiplica ambos lados de la ecuación por 2 para deshacerte del denominador: -27y + 90 - 10y = 60.",
+          "Combina términos semejantes: -37y + 90 = 60.",
+          "Resta 90 en ambos lados de la ecuación: -37y = -30.",
+          "Divide ambos lados de la ecuación por -37: y = 120/37.",
+          "Sustituye 120/37 por y en x = (-9y + 60) / 4. Como la ecuación resultante solo contiene una variable, se puede resolver para x directamente.",
+          "Sustituye 120/37 en la ecuación: x = (-9(120/37) + 60) / 4.",
+          "Realiza las operaciones: x = 285/37.",
+          "El sistema ya funciona correctamente.",
+          "x = 285/37, y=120/37"
+        ]
+      },
+      {
+        "ecuacion": "Encuentra los valores de x e y en el sistema de ecuaciones:"+"<br>"+"7x-2y=40"+"<br>"+"3x+8y=25",
+        "respuestaNumerica": ["Valor de x:", "185/31 ≈ 5.967741935", "Valor de y:", "55/62 ≈ 0.887096774"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["185/31", "5.967741935", "55/62", "0.887096774"],
+        "pasos": [
+          "Para resolver un par de ecuaciones con sustituciones, primero resuelve una de las ecuaciones para una de las variables. Después, sustituya el resultado de esa variable en la otra ecuación.",
+          "Elige una de las ecuaciones y resuelve para x mediante el aislamiento de x en el lado izquierdo del signo igual.",
+          "Suma 2y a ambos lados de la ecuación: 7x = 2y + 40.",
+          "Divide ambos lados por 7: x = (2y + 40) / 7.",
+          "Sustituye (2y+40)/7 por x en la otra ecuación, 3x + 8y = 25.",
+          "Multiplica 3 por (2y+40)/7: 3((2y + 40) / 7) + 8y = 25.",
+          "Simplifica la expresión: (6y + 120)/7 + 8y = 25.",
+          "Multiplica ambos lados de la ecuación por 7 para deshacerte del denominador: 6y + 120 + 56y = 175.",
+          "Combina términos semejantes: 62y + 120 = 175.",
+          "Resta 120 en ambos lados de la ecuación: 62y = 55.",
+          "Divide ambos lados de la ecuación por 62: y = 55/62.",
+          "Sustituye 55/62 por y en x = (2y + 40) / 7. Como la ecuación resultante solo contiene una variable, se puede resolver para x directamente.",
+          "Sustituye 55/62 en la ecuación: x = (2(55/62) + 40) / 7.",
+          "Realiza las operaciones: x = 185/31.",
+          "El sistema ya funciona correctamente.",
+          "x = 185/31, y=55/62"
+        ]
+      },
+      {
+        "ecuacion": "Encuentra los valores de x e y en el sistema de ecuaciones:"+"<br>"+"6x-8y=10"+"<br>"+"4x+7y=45",
+        "respuestaNumerica": ["Valor de x:", "215/37 ≈ 5.810810811", "Valor de y:", "115/37 ≈ 3.108108108"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["215/37", "5.810810811", "115/37", "3.108108108"],
+        "pasos": [
+          "Para resolver un par de ecuaciones con sustituciones, primero resuelve una de las ecuaciones para una de las variables. Después, sustituya el resultado de esa variable en la otra ecuación.",
+          "Elige una de las ecuaciones y resuelve para x mediante el aislamiento de x en el lado izquierdo del signo igual.",
+          "Suma 8y a ambos lados de la ecuación: 6x = 8y + 10.",
+          "Divide ambos lados por 6: x = (8y + 10) / 6.",
+          "Sustituye (8y+10)/6 por x en la otra ecuación, 4x + 7y = 45.",
+          "Multiplica 4 por (8y+10)/6: 4((8y + 10) / 6) + 7y = 45.",
+          "Simplifica la expresión: (16y + 20)/3 + 7y = 45.",
+          "Multiplica ambos lados de la ecuación por 3 para deshacerte del denominador: 16y + 20 + 21y = 135.",
+          "Combina términos semejantes: 37y + 20 = 135.",
+          "Resta 20 en ambos lados de la ecuación: 37y = 115.",
+          "Divide ambos lados de la ecuación por 37: y = 115/37.",
+          "Sustituye 115/37 por y en x = (8y + 10) / 6. Como la ecuación resultante solo contiene una variable, se puede resolver para x directamente.",
+          "Sustituye 115/37 en la ecuación: x = (8(115/37) + 10) / 6.",
+          "Realiza las operaciones: x = 215/37.",
+          "El sistema ya funciona correctamente.",
+          "x = 215/37, y=115/37 "
+        ]
+      },
+      {
+        "ecuacion": "Encuentra los valores de x e y en el sistema de ecuaciones:"+"<br>"+"2x+3y=10"+"<br>"+"4x-2y=8",
+        "respuestaNumerica": ["Valor de x:", "11/4 ≈ 2.75", "Valor de y:", "3/2 ≈ 1.5"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["11/4", "2.75", "3/2", "1.5"],
+        "pasos": [
+          "Para resolver un par de ecuaciones con sustituciones, primero resuelve una de las ecuaciones para una de las variables. Después, sustituye el resultado de esa variable en la otra ecuación.",
+          "Elige una de las ecuaciones y resuelve para x mediante el aislamiento de x en el lado izquierdo del signo igual.",
+          "Resta 3y en ambos lados de la ecuación: 2x = -3y + 10.",
+          "Divide ambos lados por 2: x = (-3y + 10) / 2.",
+          "Sustituye (-3y+10)/2 por x en la otra ecuación, 4x - 2y = 8.",
+          "Multiplica 4 por (-3y+10)/2: 4((-3y + 10) / 2) - 2y = 8.",
+          "Simplifica la expresión: -6y + 20 - 2y = 8.",
+          "Combina términos semejantes: -8y + 20 = 8.",
+          "Resta 20 en ambos lados de la ecuación: -8y = -12.",
+          "Divide ambos lados de la ecuación por -8: y = 3/2.",
+          "Sustituye 3/2 por y en x = (-3/2)y + 5. Como la ecuación resultante solo contiene una variable, se puede resolver para x directamente.",
+          "Sustituye 3/2 en la ecuación: x = (-3/2)(3/2) + 5.",
+          "Realiza las operaciones: x = 11/4.",
+          "El sistema ya funciona correctamente.",
+          "x = 11/4, y=3/2."
+        ]
+      },
+      {
+        "ecuacion": "Encuentra los valores de x e y en el sistema de ecuaciones:"+"<br>"+"5x-2y=15"+"<br>"+"3x+4y=25",
+        "respuestaNumerica": ["Valor de x:", "55/13 ≈ 4.23", "Valor de y:", "40/13 ≈ 3.08"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["55/13", "4.23", "40/13", "3.08"],
+        "pasos": [
+          "Para resolver por eliminación, los coeficientes de una de las variables han de coincidir en las dos ecuaciones, de forma que la variable se anule cuando una ecuación se reste de la otra.",
+          "Para que 5x y 3x sean iguales, multiplica todos los términos de cada lado de la primera ecuación por 3 y todos los términos de cada lado de la segunda por 5.",
+          "Simplifica: 15x - 6y = 45, 15x + 20y = 125.",
+          "Resta 15x + 20y = 125 de 15x - 6y = 45.",
+          "Suma y resta términos semejantes: -6y - 20y = 45 - 125.",
+          "Combina términos: -26y = -80.",
+          "Divide ambos lados por -26: y = 40/13.",
+          "Sustituye 40/13 por y en 3x + 4y = 25.",
+          "Multiplica 4 por 40/13: 3x + 160/13 = 25.",
+          "Resta 160/13 en ambos lados: 3x = 165/13.",
+          "Divide ambos lados por 3: x = 55/13.",
+          "El sistema ya funciona correctamente.",
+          "x=55/13, y=40/13"
+        ]
+      },
+      {
+        "ecuacion": "Encuentra los valores de x e y en el sistema de ecuaciones:"+"<br>"+"6x+7y=30"+"<br>"+"2x-5y=-5",
+        "respuestaNumerica": ["Valor de x:", "115/44 ≈ 2.614", "Valor de y:", "45/22 ≈ 2.045"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["115/44", "2.614", "45/22", "2.045"],
+        "pasos": [
+          "Para resolver por eliminación, los coeficientes de una de las variables deben coincidir en las dos ecuaciones, de forma que la variable se anule cuando una ecuación se reste de la otra.",
+          "Para que 6x y 2x sean iguales, multiplica todos los términos de cada lado de la primera ecuación por 2 y todos los términos de cada lado de la segunda por 6.",
+          "Simplifica: 12x + 14y = 60, 12x - 30y = -30.",
+          "Resta 12x - 30y = -30 de 12x + 14y = 60.",
+          "Suma y resta términos semejantes: 14y + 30y = 60 + 30.",
+          "Combina términos: 44y = 90.",
+          "Divide ambos lados por 44: y = 45/22.",
+          "Sustituye 45/22 por y en 2x - 5y = -5.",
+          "Multiplica -5 por 45/22: 2x - 225/22 = -5.",
+          "Suma 225/22 a ambos lados de la ecuación: 2x = 115/22.",
+          "Divide ambos lados por 2: x = 115/44.",
+          "El sistema ya funciona correctamente.",
+          "x = 115/44, y=45/22"
+        ]
+      },
+      {
+        "ecuacion": "Encuentra los valores de x e y en el sistema de ecuaciones:"+"<br>"+"x+y=5"+"<br>"+"3x-2y=10",
+        "respuestaNumerica": ["Valor de x:", "4", "Valor de y:", "1"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["4", "1"],
+        "pasos": [
+          "Para resolver por eliminación, los coeficientes de una de las variables deben coincidir en las dos ecuaciones.",
+          "Multiplica todos los términos de cada lado de la primera ecuación por 3 y todos los términos de cada lado de la segunda por 1 para que los coeficientes de x sean iguales en ambas ecuaciones.",
+          "Esto resulta en: 3x + 3y = 15 y 3x - 2y = 10.",
+          "Resta la segunda ecuación de la primera para eliminar x. Obtenemos 5y = 5.",
+          "Divide ambos lados por 5 para encontrar el valor de y, que es 1.",
+          "Sustituye el valor de y en la segunda ecuación: 3x - 2(1) = 10.",
+          "Resuelve para x. Suma 2 a ambos lados y luego divide por 3 para obtener x = 4."
+        ]
+      },
+      {
+        "ecuacion": "Encuentra los valores de x e y en el sistema de ecuaciones:"+"<br>"+"2x+3y=10"+"<br>"+"4x-2y=8",
+        "respuestaNumerica": ["Valor de x:", "11/4", "Valor de y:", "3/2"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["11/4", "2.75","1.5", "3/2"],
+        "pasos": [
+          "Para resolver por eliminación, los coeficientes de una de las variables deben coincidir en las dos ecuaciones.",
+          "Multiplica todos los términos de cada lado de la primera ecuación por 4 y todos los términos de cada lado de la segunda por 2 para que los coeficientes de x sean iguales en ambas ecuaciones.",
+          "Esto resulta en: 8x + 12y = 40 y 8x - 4y = 16.",
+          "Resta la segunda ecuación de la primera para eliminar x. Obtenemos 16y = 24.",
+          "Divide ambos lados por 16 para encontrar el valor de y, que es 3/2.",
+          "Sustituye 3/2 por y en 4x - 2y = 8. Como la ecuación resultante solo contiene una variable, se puede resolver para x directamente.",
+          "Resuelve para x. Resta 3 de ambos lados y luego divide por 4 para obtener x = 11/4."
+        ]
+      },
+      {
+        "ecuacion": "Encuentra los valores de x e y en el sistema de ecuaciones por el método de eliminación:"+"<br>"+"3x-y=5"+"<br>"+"x+2y=8",
+        "respuestaNumerica": ["Valor de x:", "18/7 ≈ 2.57", "Valor de y:", "19/7 ≈ 2.71"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["18/7","2.57","2.71", "19/7"],
+        "pasos": [
+          "Para resolver por eliminación, los coeficientes de una de las variables deben coincidir en las dos ecuaciones.",
+          "Multiplica todos los términos de cada lado de la primera ecuación por 2 y todos los términos de cada lado de la segunda por 3 para que los coeficientes de y sean iguales en ambas ecuaciones.",
+          "Esto resulta en: 6x - 2y = 10 y 3x + 6y = 24.",
+          "Resta la primera ecuación de la segunda para eliminar y. Obtenemos 9x = 14.",
+          "Divide ambos lados por 9 para encontrar el valor de x, que es 18/7.",
+          "Sustituye 18/7 por x en la primera ecuación para encontrar el valor de y.",
+          "Resuelve para y. Resta 3x de ambos lados y luego divide por -1 para obtener y = 19/7."
+        ]
+      },
+      {
+        "ecuacion": "Encuentra los valores de x e y en el sistema de ecuaciones:"+"<br>"+"4x+y=5"+"<br>"+"2x-3y=-8",
+        "respuestaNumerica": ["Valor de x:", "1/2 = 0.5", "Valor de y:", "3"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["1/2","0.5", "3"],
+        "pasos": [
+          "Para resolver por eliminación, los coeficientes de una de las variables deben coincidir en las dos ecuaciones.",
+          "Multiplica todos los términos de cada lado de la primera ecuación por 3 y todos los términos de cada lado de la segunda por 1 para que los coeficientes de y sean iguales en ambas ecuaciones.",
+          "Esto resulta en: 12x + 3y = 15 y 2x - 3y = -8.",
+          "Resta la segunda ecuación de la primera para eliminar y. Obtenemos 10x = 23.",
+          "Divide ambos lados por 10 para encontrar el valor de x, que es 1/2.",
+          "Sustituye 1/2 por x en la segunda ecuación para encontrar el valor de y.",
+          "Resuelve para y. Multiplica -3 por 1/2 y luego suma 2x a ambos lados para obtener y = 3."
+        ]
+      },
+      {
+        "ecuacion": "Encuentra los valores de x e y en el sistema de ecuaciones por eliminación:"+"<br>"+"5x-2y=11"+"<br>"+"3x+4y=1",
+        "respuestaNumerica": ["Valor de x:", "23/13 ≈ 1.769230769", "Valor de y:", "-14/13 ≈ -1.076923077"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["23/13","1.76","-1.07", "-14/13"],
+        "pasos": [
+          "Para resolver por eliminación, los coeficientes de una de las variables deben coincidir en las dos ecuaciones.",
+          "Multiplica todos los términos de cada lado de la primera ecuación por 3 y todos los términos de cada lado de la segunda por 5 para que los coeficientes de x sean iguales en ambas ecuaciones.",
+          "Esto resulta en: 15x - 6y = 33 y 15x + 20y = 5.",
+          "Resta la segunda ecuación de la primera para eliminar x. Obtenemos -26y = 28.",
+          "Divide ambos lados por -26 para encontrar el valor de y, que es -14/13.",
+          "Sustituye -14/13 por y en 3x + 4y = 1 para encontrar el valor de x.",
+          "Resuelve para x. Multiplica 4 por -14/13 y luego suma 3x a ambos lados para obtener x = 23/13."
+        ]
+      },
+      {
+        "ecuacion": "Encuentra los valores de x e y en el sistema de ecuaciones por eliminación:"+"<br>"+"x+2y=10"+"<br>"+"2x-3y=5",
+        "respuestaNumerica": ["Valor de x:", "40/7 ≈ 5.714285714", "Valor de y:", "15/7 ≈ 2.142857143"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["40/7","5.71","2.14", "15/7"],
+        "pasos": [
+          "Para resolver por eliminación, los coeficientes de una de las variables deben coincidir en las dos ecuaciones.",
+          "Multiplica todos los términos de cada lado de la primera ecuación por 2 y todos los términos de cada lado de la segunda por 1 para que los coeficientes de x sean iguales en ambas ecuaciones.",
+          "Esto resulta en: 2x + 4y = 20 y 2x - 3y = 5.",
+          "Resta la segunda ecuación de la primera para eliminar x. Obtenemos 7y = 15.",
+          "Divide ambos lados por 7 para encontrar el valor de y, que es 15/7.",
+          "Sustituye 15/7 por y en x + 2y = 10 para encontrar el valor de x.",
+          "Resuelve para x. Resta 2y de ambos lados y luego divide por 1 para obtener x = 40/7."
+        ]
+      },
+      {
+        "ecuacion": "Encuentra los valores de x e y en el sistema de ecuaciones por eliminación:"+"<br>"+"3x+y=9"+"<br>"+"2x-4y=-2",
+        "respuestaNumerica": ["Valor de x:", "17/7 ≈ 2.428571429", "Valor de y:", "12/7 ≈ 1.714285714"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["17/7","0.14","1.71", "12/7"],
+        "pasos": [
+          "Para resolver por eliminación, los coeficientes de una de las variables deben coincidir en las dos ecuaciones.",
+          "Multiplica todos los términos de cada lado de la primera ecuación por 2 y todos los términos de cada lado de la segunda por 3 para que los coeficientes de x sean iguales en ambas ecuaciones.",
+          "Esto resulta en: 6x + 2y = 18 y 6x - 12y = -6.",
+          "Resta la segunda ecuación de la primera para eliminar x. Obtenemos 14y = 24.",
+          "Divide ambos lados por 14 para encontrar el valor de y, que es 12/7.",
+          "Sustituye 12/7 por y en 2x - 4y = -2 para encontrar el valor de x.",
+          "Resuelve para x. Suma 4y a ambos lados y luego divide por 2 para obtener x = 17/7."
+        ]
+      },
+      {
+        "ecuacion": "Encuentra los valores de x e y en el sistema de ecuaciones por eliminación:"+"<br>"+"2x-y=4"+"<br>"+"x+3y=9",
+        "respuestaNumerica": ["Valor de x:", "3", "Valor de y:", "2"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["3", "2"],
+        "pasos": [
+          "Para resolver por sustitución, despeja una de las variables en una de las ecuaciones.",
+          "Despeja y en la primera ecuación: y = 2x - 4.",
+          "Sustituye esta expresión de y en la segunda ecuación.",
+          "Obtendrás x + 3(2x - 4) = 9.",
+          "Resuelve para x: 7x - 12 = 9.",
+          "Entonces, x = 3.",
+          "Sustituye el valor de x en la primera ecuación para encontrar y: 2(3) - y = 4.",
+          "Por lo tanto, y = 2."
+        ]
+      },
+      {
+        "ecuacion": "Encuentra los valores de x e y en el sistema de ecuaciones por eliminación:"+"<br>"+"3x-2y=14"+"<br>"+"x-y=3",
+        "respuestaNumerica": ["Valor de x:", "8", "Valor de y:", "5"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["8", "5"],
+        "pasos": [
+          "Para resolver por eliminación, asegúrate de que los coeficientes de una de las variables sean iguales en ambas ecuaciones.",
+          "Multiplica todos los términos de la segunda ecuación por 3 para igualar los coeficientes de x.",
+          "Obtendrás: 3x - 3y = 9.",
+          "Resta esta ecuación de la primera: (3x - 2y) - (3x - 3y) = 14 - 9.",
+          "Resuelve para y: y = 5.",
+          "Sustituye el valor de y en la segunda ecuación: x - 5 = 3.",
+          "Entonces, x = 8."
+        ]
+      },
+      {
+        "ecuacion": "Encuentra los valores de x e y en el sistema de ecuaciones:"+"<br>"+"(3/2)x = 4 - 2x"+"<br>"+"(5/3)x - 2y = 7",
+        "respuestaNumerica": ["Valor de x:", "8/7 ≈ 1.142857143", "Valor de y:", "-107/42 ≈ -2.547619048"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["8/7","1.14","-2.54", "-107/42"],
+        "pasos": [
+          "Para resolver el sistema, primero considera la primera ecuación: 3/2x = 4 - 2x.",
+          "Suma 2x a ambos lados para obtener 7/2x = 4.",
+          "Multiplica ambos lados por 2/7 para despejar x, resultando en x = 8/7 ≈ 1.142857143.",
+          "Ahora, inserta el valor de x en la segunda ecuación: 5/3(8/7) - 2y = 7.",
+          "Resuelve para obtener -107/42 como el valor de y.",
+          "Por lo tanto, los valores de x e y en el sistema de ecuaciones son x = 8/7 y y = -107/42."
+        ]
+      },
+      {
+        "ecuacion": "Encuentra los valores de x e y en el sistema de ecuaciones:"+"<br>"+"x/2 + 3y = 6"+"<br>"+"2 - y/4 = x",
+        "respuestaNumerica": ["Valor de x:", "36/23 ≈ 1.565217391", "Valor de y:", "40/23 ≈ 1.739130435"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["36/23","1.56","1.73", "40/23"],
+        "pasos": [
+          "Para resolver el sistema de ecuaciones, usa el método de sustitución.",
+          "Despeja x en la segunda ecuación: x = 2 - y/4.",
+          "Sustituye x en la primera ecuación: (2 - y/4)/2 + 3y = 6.",
+          "Resuelve para y.",
+          "Después de encontrar y, sustitúyelo de nuevo en la segunda ecuación para encontrar el valor de x.",
+          "Por lo tanto, los valores de x e y en el sistema de ecuaciones son x=36/23 ≈ 1.565217391 y y=40/23 ≈ 1.739130435."
+        ]
+      },
+      {
+        "ecuacion": "Encuentra los valores de x e y en el sistema de ecuaciones:"+"<br>"+"(4/3)y + 2 = x"+"<br>"+"5 - (3/2)x = y",
+        "respuestaNumerica": ["Valor de x:", "26/9 ≈ 2.888888889", "Valor de y:", "2/3 ≈ 0.666666667"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["26/9","2.88","0.66", "2/3"],
+        "pasos": [
+          "Para resolver el sistema de ecuaciones, usa el método de sustitución.",
+          "Despeja x en la primera ecuación: x = 4/3y + 2.",
+          "Sustituye x en la segunda ecuación: 5 - 3/2(4/3y + 2) = y.",
+          "Resuelve para y.",
+          "Después de encontrar y, sustitúyelo de nuevo en la primera ecuación para encontrar el valor de x.",
+          "Por lo tanto, los valores de x e y en el sistema de ecuaciones son x=26/9 ≈ 2.888888889 y y=2/3 ≈ 0.666666667."
+        ]
+      },
+      {
+        "ecuacion": "Encuentra los valores de x e y en el sistema de ecuaciones:"+"<br>"+"3x + y/2 = 10"+"<br>"+"x/4 - 3/2y = 4",
+        "respuestaNumerica": ["Valor de x:", "136/37 ≈ 3.675675676", "Valor de y:", "-76/37 ≈ -2.054054054"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["136/37","3.67","-2.05", "-76/37"],
+        "pasos": [
+          "Para resolver el sistema de ecuaciones, puedes utilizar el método de eliminación.",
+          "Multiplica todos los términos de la primera ecuación por 4 y los de la segunda por 2 para eliminar los denominadores.",
+          "Obtienes las ecuaciones: 12x + 4y = 40 y 2x - 6y = 16.",
+          "Ahora puedes sumar o restar las ecuaciones para eliminar una variable.",
+          "Resta la segunda ecuación de la primera: (12x + 4y) - (2x - 6y) = 40 - 16.",
+          "Esto te da la ecuación 10x + 10y = 24.",
+          "Resuelve esta nueva ecuación para encontrar el valor de una de las variables.",
+          "Luego, sustituye este valor en una de las ecuaciones originales para encontrar el valor de la otra variable.",
+          "Por lo tanto, los valores de x e y en el sistema de ecuaciones son x=136/37 ≈ 3.675675676 y y=-76/37 ≈ -2.054054054."
+        ]
+      },
+      {
+        "ecuacion": "Encuentra los valores de x e y en el sistema de ecuaciones:"+"<br>"+"2 - y/3 = x"+"<br>"+"(2/3)x + (1/2)y = 3",
+        "respuestaNumerica": ["Valor de x:", "0", "Valor de y:", "6"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["0", "6"],
+        "pasos": [
+          "Para resolver el sistema de ecuaciones, puedes utilizar el método de sustitución o eliminación.",
+          "Por la primera ecuación, despeja x: x = 2 - y/3.",
+          "Sustituye este valor de x en la segunda ecuación: 2/3(2 - y/3) + 1/2y = 3.",
+          "Resuelve esta ecuación para encontrar el valor de y.",
+          "Una vez que encuentres el valor de y, sustitúyelo en la primera ecuación para hallar el valor de x.",
+          "Por lo tanto, los valores de x e y en el sistema de ecuaciones son x = 0 e y = 6."
+        ]
+      },
+      {
+        "ecuacion": "Encuentra los valores de x e y en el sistema de ecuaciones:"+"<br>"+"4 - y/5 = x"+"<br>"+"(3/2)x + (2/3)y = 7",
+        "respuestaNumerica": ["Valor de x:", "38/11 ≈ 3.454545455", "Valor de y:", "30/11 ≈ 2.727272727"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["38/11", "3.454545455", "30/11", "2.727272727"],
+        "pasos": [
+          "Para resolver el sistema de ecuaciones, puedes utilizar el método de sustitución o eliminación.",
+          "Por la primera ecuación, despeja x: x = 4 - y/5.",
+          "Sustituye este valor de x en la segunda ecuación: 3/2(4 - y/5) + 2/3y = 7.",
+          "Resuelve esta ecuación para encontrar el valor de y.",
+          "Una vez que encuentres el valor de y, sustitúyelo en la primera ecuación para hallar el valor de x.",
+          "Por lo tanto, los valores de x e y en el sistema de ecuaciones son x=38/11 ≈ 3.454545455 e y=30/11 ≈ 2.727272727."
+        ]
+      },
+      {
+        "ecuacion": "Encuentra los valores de x e y en el sistema de ecuaciones:"+"<br>"+"(1/2)x - (2/3)y = 3"+"<br>"+"(3/4)y + 2x = 9",
+        "respuestaNumerica": ["Valor de x:", "198/41 ≈ 4.829268293", "Valor de y:", "-36/41 ≈ -0.87804878"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["198/41","4.829268293", "-36/41","-0.87804878"],
+        "pasos": [
+          "Para resolver el sistema de ecuaciones, puedes utilizar el método de sustitución o eliminación.",
+          "Por la primera ecuación, despeja x: x = 6 - y/3.",
+          "Sustituye este valor de x en la segunda ecuación: 3/4y + 2(6 - y/3) = 9.",
+          "Resuelve esta ecuación para encontrar el valor de y.",
+          "Una vez que encuentres el valor de y, sustitúyelo en la primera ecuación para hallar el valor de x.",
+          "Por lo tanto, los valores de x e y en el sistema de ecuaciones son x ≈ 4.829268293 e y ≈ -0.87804878."
+        ]
+      },
+      {
+        "ecuacion": "Encuentra los valores de x e y en el sistema de ecuaciones:"+"<br>"+"(2(x+1))/3 - y = -3"+"<br>"+"3(x+5-y) + 3x = 12",
+        "respuestaNumerica": ["Valor de x:", "2", "Valor de y:", "5"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["2", "5"],
+        "pasos": [
+          "Para resolver el sistema de ecuaciones, puedes utilizar el método de sustitución o eliminación.",
+          "Por la primera ecuación, despeja x: x = 3(y + 3) - 1.",
+          "Sustituye este valor de x en la segunda ecuación: 3(y + 3) + 3(y + 3) - 1 + 3 = 12.",
+          "Resuelve esta ecuación para encontrar el valor de y.",
+          "Una vez que encuentres el valor de y, sustitúyelo en la primera ecuación para hallar el valor de x.",
+          "Por lo tanto, los valores de x e y en el sistema de ecuaciones son x = 2 e y = 5."
+        ]
+      },
+      {
+        "ecuacion": "Encuentra los valores de x e y en el sistema de ecuaciones:"+"<br>"+"(7x-9y)/2 - (2x+4)/2 = -15"+"<br>"+"5(x - 1 + y) = 25",
+        "respuestaNumerica": ["Valor de x:", "2", "Valor de y:", "4"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["2", "4"],
+        "pasos": [
+          "Para resolver el sistema de ecuaciones, puedes utilizar el método de sustitución o eliminación.",
+          "Por la primera ecuación, despeja x: x = 2(y - 1) - 1.",
+          "Sustituye este valor de x en la segunda ecuación: 5(2(y - 1) - 1 - 1 + y) = 25.",
+          "Resuelve esta ecuación para encontrar el valor de y.",
+          "Una vez que encuentres el valor de y, sustitúyelo en la primera ecuación para hallar el valor de x.",
+          "Por lo tanto, los valores de x e y en el sistema de ecuaciones son x = 2 e y = 4."
+        ]
+      }
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+      
+      
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+      
+
+      
+      
+      
+      
+
+      
+
+      
+
+        
+]
+
 const frasesCelebres = [
     'No he tenido nunca más que un maestro: el pasado; una sola formación : el estudio del pasado.' + leCobusier, 'He sacado del pasado la lección de historia, la razón de ser de las cosas. Todo acontecimiento y todo objeto están “en relación a”.' + leCobusier, 'La historia se halla inscrita en los trazados y en las arquitecturas de las ciudades. Mis ideas revolucionarias están en la historia, en toda época y en todos sus países.' + leCobusier, 'La arquitectura es un acto de voluntad consciente. Hacer arquitectura es poner orden.' + leCobusier, 'La arquitectura es el resultado del estado de espíritu de una época.' + leCobusier, 'La arquitectura está más allá de los hechos utilitarios. La arquitectura es un hecho plástico.' + leCobusier, 'La arquitectura es arte en su sentido más elevado, es orden matemático, es teoría pura, armonía completa gracias a la exacta proporción de todas las relaciones: ésta es la “función” de la arquitectura.' + leCobusier, 'La arquitectura preside los destinos de la ciudad. Ordena la estructura de la vivienda, esa célula esencial del trazado urbano, cuya salubridad, alegría y armonía están sometidas a sus decisiones.' + leCobusier, 'Organizar es hacer geometría; hacer geometría en la naturaleza o en el magma surgido “naturalmente” de las agrupaciones de hombres en aglomeraciones urbanas, equivale a hacer cirugía.' + leCobusier, 'El arte, producto de la ecuación “razón-pasión”, es, para mí, el lugar de la felicidad humana.' + leCobusier, 'Lo maravilloso está en la exactitud. Lo duradero está en la perfección. La vida está hecha con un cálculo exacto.' + leCobusier, 'El sueño sólo se apoya sobre realidades esenciales. La poesía sólo procede mediante hechos exactos.' + leCobusier, 'La poesía es un acto humano: las relaciones concertadas entre imágenes perceptibles.' + leCobusier, 'El lirismo sólo tiene alas sobre la verdad. Sólo lo genuino nos conmueve. La arquitectura se propone emoción.' + leCobusier, 'La cosa más importante del mundo son los espacios vacíos.' + leCobusier, 'Charles Édouard Jeanneret, mejor conocido como Le Corbusier, fue una de las mentes más brillantes de la arquitectura moderna, cuyas obras traspasaron la teoría y el arte.', 'Le Corbusier nacío en Suiza y se formó en París, ahí encontró la manera de plasmar la vanguardia y su fascinación por la pintura de forma autodidacta, en estructuras lisas y blancas con volumen.', 'Le Corbusier se distinguió por la planificación urbana de viviendas sociales, al visualizar edificios sin ostentaciones decorativas para potenciar la imagen las ciudades.','Arquitectura es cosa de arte, un fenómeno de emociones, que queda fuera y más allá de las cuestiones constructivas.' + leCobusier, 'El propósito de la construcción es mantener las cosas juntas y el de la arquitectura es deleitarnos' + leCobusier,  'Siempre me interesó lo creativo, sobre todo, lo que se aplica al hombre y a su medio. Con la pintura pude desarrollar todo eso. Es un medio apasionante y peligroso' + leCobusier, 'La arquitectura es el juego sabio, correcto y magnífico de los volúmenes reunidos bajo la luz' + leCobusier, 'Prefiero dibujar a hablar. Dibujar es más rápido, y deja menos espacio para la mentira' + leCobusier, 'Una casa es una máquina para vivir. La casa debe ser el estuche de la vida, la máquina de felicidad' + leCobusier, 'La arquitectura debe de ser la expresión de nuestro tiempo y no un plagio de las culturas pasadas' + leCobusier, 'La geometría solucionará los problemas de la Arquitectura' + leCobusier, 'La arquitectura está reprimida por la costumbre, los estilos son una mentira' + leCobusier, 'La arquitectura es el punto de partida del que quiera llevar a la humanidad hacia un porvenir mejor' + leCobusier, 'Trabajé por lo que más necesitan los hombres hoy: el silencio y la paz' + leCobusier, 'Me impresiona profundamente el diseñador del universo. Estoy convencido de que yo nunca hubiera logrado hacer algo así, ni de lejos. - Richard Buckminster Fuller-','Un proceso de diseño abordado con profundidad puede hacer del promotor, del arquitecto y hasta de un visitante ocasional del edificio seres humanos sensiblemente mejores. -Juhani Pallasmaa-', 'He dicho adiós a la manida idea de que la arquitectura tiene que salvar el mundo. -Peter Zumthor-', 'Nosotros no creamos obras. Creo que, de hecho, somos descubridores.Glenn Murcutt', 'Para mí, cada día es algo nuevo. Me enfrento a cada proyecto con una renovada inseguridad, casi como si fuera el primero, y sudo tinta. Cuando me pongo a ello y empiezo a trabajar, nunca estoy seguro de hacia dónde voy; y si lo supiera, sencillamente no lo haría. -Frank O. Gehry-', 'Cojo el lápiz. El trazo fluye. Aparece un edificio. Ahí está. No hay nada más que decir. -Oscar Niemeyer-', 'Para mí, el lenguaje del dibujo es extremadamente revelador: bastan unos pocos trazos para saber si alguien es un arquitecto de verdad. -Eero Saarinen-', '¿Hay algo más agradable para la mente que el papel inmaculado? ¿Que comparar y estudiar la “variedad” de texturas y colores de tarjetas y papeles? -Frank Lloyd Wright-', 'AMO EL PAPEL. BASTAN UN BUEN MONTÓN DE HOJAS Y UN LÁPIZ PARA HACERME FELIZ. -Cecil Balmond-', 'Prefiero dibujar a hablar. Dibujar es más rápido y deja menos espacio a las mentiras. -Le Corbusier-','He advertido que el ordenador a veces conduce a decisiones y resultados insípidos. Ahora, cualquiera puede proyectar un edificio inestable y en forma de burbuja. -Peter Cook-', 'Siempre digo a mis alumnos: en vuestro trabajo tenéis que poner, en primer lugar, esfuerzo, en segundo, amor y en tercero, sufrimiento. -Glenn Murcutt-', 'Al hacer un proyecto me entra el pánico; eso es bueno, puede ser un método. Primero, el pánico. Segundo, conquistar el pánico con trabajo. Tercero, encontrar formas de resolver tus dudas. Eduardo Souto de Moura', 'Estudié arte y después arquitectura, y nunca sentí la necesidad de definirme claramente como arquitecta profesional o como artista: encontré una especie de terreno intermedio contaminado por ambos campos. -Elizabeth Diller-','Muchos arquitectos no son conscientes de sus propios patrones, como tampoco la mayoría de las personas lo son de los que rigen su vida privada. Nos atrae mucho esa cuestión, pues de repente acerca mucho la arquitectura y la psicología. -Jacques Herzog-', 'Siempre he sentido que lo más importante es encontrar la forma de escapar del esquema mental o de la conciencia estética con los que cargo. -Arata Isozaki-', 'EN UNA ARQUITECTURA PURA, EL MÁS NIMIO DETALLE DEBE TENER UN SENTIDO O SERVIR A ALGÚN PROPÓSITO. -Augustus W. N. Pugin-', 'Recuerda que las cosas más bellas del mundo son las más inútiles, como, por ejemplo, los pavos reales y los lirios. -John Ruskin-', 'No quiero desnudar la arquitectura. Quiero enriquecerla y añadirle capas. Básicamente, como sucede en una catedral gótica, donde el ornamento y la estructura forman una alianza. -Cecil Balmond-', 'Menos es más. -Ludwig Mies van der Rohe-', 'Menos es aburrido. -Robert Venturi-', 'Existe una cualidad genérica en el blanco que nos gusta. -Kazuyo Sejima-', 'Siempre trato de pensar con curvas. -Greg Lynn-', 'La forma siempre sigue a la función. -Louis H. Sullivan-', 'La forma sigue a la forma, no a la función. -Philip Johnson-', 'La forma sigue al beneficio” es el principio estético de nuestros tiempos. -Richard Rogers-', 'Una silla es un objeto muy difícil. Un rascacielos es casi más fácil. Por eso el mobiliario Chippendale es famoso. -Ludwig Mies van der Rohe-', 'EL DESEO DE TOCAR EL CIELO ESTÁ PROFUNDAMENTE ARRAIGADO EN LA PSIQUE HUMANA. -Cesar Pelli -', 'Proyecto cualquier cosa que me pidan, desde una catedral hasta un gallinero. Así es como me gano la vida. -Henry Hobson Richardson-','Nunca rechaces un encargo porque pienses que no está a tu altura. -Julia Morgan-', 'El proyecto ideal no existe. Existe la posibilidad de aproximarse a él en cada ocasión. -Paulo Mendes da Rocha-', 'Cuando le preguntas a un arquitecto cuál es su mejor edificio, suele contestar: el próximo. -Emilio Ambasz-', 'Cuidado con el exceso de confianza; sobre todo en cuestiones de estructura. -Cass Gilbert-', 'TAL VEZ NO SEA EL MÁS INTERESANTE DE LOS ARQUITECTOS, PERO SIGO ESTANDO AHÍ Y HE SABIDO MANTENER CIERTA INTEGRIDAD. -David Chipperfield-', 'Estoy absolutamente en contra de lo heroico. Nosotros hacemos cosas pequeñas. Estamos absolutamente a favor de lo patético. -Michael Meredith-', 'Básicamente, la idea es que, con todo el mundo tratando de ser revolucionario, serás más revolucionario si tratas de ser ordinario. -Denise Scott Brown-', 'La mejor de las formas ya está lista y nadie debería tener miedo de utilizarla, incluso si su idea básica procede de algún otro. Basta de genios y de originalidad. -Adolf Loos-','Si no te ves capaz de hacer del mundo un lugar mejor con tu trabajo, al menos asegúrate de no empeorarlo. -Herman Hertzberger-', 'Nunca reutilizo ideas. Una vez he usado una, se acabó. -Arthur Erickson-', 'Tener 65 ideas para solucionar un problema no es una muestra de creatividad. Es un desperdicio de energía. -Jan Kaplický-', 'Algo tan común como la pintura para una casa puede resultar fascinante cuando se pule hasta lograr un acabado espejado. -Tod Williams-', 'El juego de luces y sombras, de sólidos y huecos, puede apreciarse mejor contra una superficie blanca. -Richard Meier-', 'LA LUZ NO ES ALGO VAGO Y DIFUSO QUE PUEDA DARSE POR SENTADO POR EL MERO HECHO DE QUE ESTÁ SIEMPRE AHÍ. EL SOL NO SALE EN VANO CADA DÍA. -Alberto Campo Baeza-', 'Cada material tiene sus propias sombras. La sombra de la piedra no es la misma que la de una frágil hoja de otoño. La sombra penetra en el material e irradia su mensaje. -Sverre Fehn-', 'El Sol no supo de su grandeza hasta que incidió sobre la cara de un edificio. -Louis I. Kahn-', 'Siempre busco más luz y más espacio. -Santiago Calatrava-', 'LA ARQUITECTURA ESTÁ LIGADA AL EMPLAZAMIENTO Y, EN MI OPINIÓN, EL LUGAR ES COMO UN VÍNCULO METAFÍSICO Y POÉTICO CON AQUELLO QUE UN EDIFICO PUEDE LLEGAR A SER. -Steven Holl-', 'El diseño de edificios en entornos naturales, sean urbanos o rurales, debe responder al terreno sobre el que se levantan y al cielo contra el que se proyectan. -James Polshek-', '¿De dónde sale la idea de que nuestras calles tienen que parecer creadas por el mismo cliente o el mismo arquitecto? La diversidad, y no su contrario, es lo que nos atrae. -Günter Behnisch-', 'La incoherencia en sí genera vitalidad. -Kenzo Tange-', 'PUEDES CERRAR UN LIBRO MALO, PUEDES EVITAR ESCUCHAR MÚSICA MALA, PERO NO PUEDES LIBRARTE DE LA TORRE HORROROSA QUE TIENES FRENTE A TU CASA. -Renzo Piano-', 'Siempre me sorprende el poco énfasis que ponen las escuelas de arquitectura y, de hecho, muchos arquitectos en el proceso de integración de un edificio. -Norman Foster-', 'No puedes limitarte a poner algo nuevo en un lugar. Tienes que absorber lo que ves a tu alrededor, lo que existe ya en el terreno, y después usar ese conocimiento, junto con el pensamiento contemporáneo, para interpretar lo que ves. -Tadao Ando-', 'UN ARQUITECTO QUE PROYECTA REALMENTE PARA UN SER HUMANO TIENE QUE SABER BASTANTE MÁS QUE LOS CINCO CÁNONES DE VITRUVIO. -Richard Neutra-', 'Creo que los edificios deben imitar los sistemas ecológicos. -Ken Yeang-', 'UTILIZO MATERIALES BARATOS. -Herman Hertzberger-', 'Creo que para construir un edificio sólido no hace falta usar un material resistente. La solidez de un edificio no tiene nada que ver con la resistencia del material. -Shigeru Ban-', 'Creo que para construir un edificio sólido no hace falta usar un material resistente. La solidez de un edificio no tiene nada que ver con la resistencia del material. -Shigeru Ban-', 'Trato de contrarrestar la permanencia de los edificios, su imperturbabilidad, con elementos que confieran una inefable cualidad inmaterial. -Toyo Ito-','Con independencia de su belleza, la fachada y los muros de una casa, una iglesia o un palacio tan solo son un continente, una caja formada por paredes.El contenido es el espacio interior. -Bruno Zevi-', 'El espacio, el espacio... ¡los arquitectos siempre hablan del espacio! Pero crear un espacio no comporta, automáticamente, hacer arquitectura. Con el mismo espacio puedes hacer una obra maestra o provocar un desastre. -Jean Nouvel-', 'Recuerdo que, cuando era niño, solíamos tirar el balón desde la ventana del primer piso. Nunca íbamos a un espacio especialmente pensado para jugar; el espacio de juego se establecía en el momento de jugar. El juego era inspiración, no organización. -Louis I. Kahn-', 'Yo mismo estoy instalado en una oficina sin ventanas y con aire acondicionado, una especie de celda. Mis visitantes son conscientes de este hecho, lo que les induce a ser concisos e ir al grano. -Le Corbusier-', 'No sé por qué la gente contrata arquitectos para luego decirles lo que tienen que hacer. -Frank O. Gehry-', 'CREO QUE LAS RESTRICCIONES SON MUY IMPORTANTES. SON POSITIVAS PORQUE TE PERMITEN TRABAJAR A PARTIR DE ALGO. -Charles Gwathmey-', 'Odiábamos a la Bauhaus.Fue un mal momento para la arquitectura. Simplemente no tenían talento; todo lo que tenían era reglas. Hasta para los cuchillos y los tenedores crearon reglas. Picasso nunca hubiera aceptado reglas. ¿La casa es una máquina? ¡No! Lo mecánico es feo. La regla es lo peor que hay. Solo te hace querer romperla. -Oscar Niemeyer-', 'Si tienes libertad total, entonces tienes un problema. Es mucho mejor tener alguna obligación, cierta disciplina, algunas reglas. Cuando no tienes reglas, acabas por construirte las tuyas propias. -Renzo Piano-', 'La gente que construye su propia casa suele ser muy valiente. Son personas con curiosidad por la vida. Piensan en lo que significa vivir en una casa en lugar de limitarse a comprar un bien y darle uso. -Tom Kundig-', 'ODIO LAS VACACIONES. ¿PARA QUÉ ESTAR EN LA PLAYA SI PUEDES ESTAR CONSTRUYENDO EDIFICIOS? -Philip Johnson-', 'Siempre estamos trabajando con coreógrafos y directores, expertos en robótica y diferentes científicos e investigadores. Nos interesan siempre los vínculos y cruces entre disciplinas.-Elizabeth Diller-', 'Deberíamos aprender desde niños las posibilidades que ofrece nuestro entorno, las leyes físicas y psicológicas que gobiernan el mundo visual, y el goce supremo que produce participar del proceso creativo por el que uno da forma a su propio espacio vital. -Walter Gropius-', 'Prefiero trabajar con la holgura del lápiz que con la precisión de la tinta o del ordenador. -Thom Mayne-', 'ENTRE EL AÑO 1990 Y EL 2000 NO TUVE ENCARGOS, Y NO QUISE TAMPOCO UN PUESTO ACADÉMICO O EN EL GOBIERNO. SOLO QUERÍA TRABAJAR CON ARTESANOS, ADQUIRIR EXPERIENCIA SOBRE EL TERRENO Y NO SER RESPONSABLE DEL DISEÑO, SOLO DE LA CONSTRUCCIÓN. -Wang Shu-', 'Deberíamos trabajar para hacer nuestro mundo comprensible y no para volverlo aún más confuso. Cuando algo parece madera debería ser madera, y el hierro ser hierro. -Günter Behnisch-', 'Siempre considero un edificio como parte de un todo, una pieza que crea una acción colectiva: la ciudad. -Christian de Portzamparc-', 'TODA OBRA DE ARQUITECTURA QUE NO EXPRESE SERENIDAD ES UN ERROR. -Luis Barragán-', 'LA ARQUITECTURA QUE RECORDAMOS ES AQUELLA QUE NUNCA NOS CONSUELA O RECONFORTA. -Peter Eisenman-', 'Soy un arquitecto que construye y, por tanto, soy optimista. Ser optimista es un prerrequisito para todo aquel que quiera construir, porque la construcción tiene que ver con el optimismo, con encarar el futuro con confianza. -Cesar Pelli-', 'LO QUE MOTIVA ES TRABAJAR SOBRE LA DESAPARICIÓN, SOBRE LOS LÍMITES ENTRE LA PRESENCIA Y LA AUSENCIA DE LA ARQUITECTURA. -Dominique Perrault-', 'En realidad, algunas imágenes y dibujos tienen un impacto mayor que muchos edificios que llegan a construirse. -Emilio Ambasz-', 'Me gustan las ruinas porque lo que queda en ellas no es el diseño total, sino la claridad del pensamiento, la nuda estructura, el espíritu de la cosa. -Tadao Ando-', 'Piensa hasta el final:considera el final primero. -Leonardo da Vinci-'           
 
 
 
 ]
-
 // Función para mostrar un problema aleatorio
 function fraseAleatoria() {
-    // Seleccionar aleatoriamente un problema
-    fraseRandom = frasesCelebres[Math.floor(Math.random() * frasesCelebres.length)];
-
+    // Seleccionar aleatoriamente una frase
+    //fraseRandom = frasesCelebres[Math.floor(Math.random() * frasesCelebres.length)];
     //console.log(fraseRandom);
 
+
+    let fechaHoraActual = new Date();
+    // Extraer los componentes de la fecha y hora
+    let dia = fechaHoraActual.getDate();
+    let hora = fechaHoraActual.getHours();
+    let minutos = fechaHoraActual.getMinutes();
+    let segundos = fechaHoraActual.getSeconds();
+    
+
+    // Concatenar y formatear el número
+    let numeroUnico = `${dia}${hora}${minutos}${segundos}`;
+
+    let fechaHoraEncriptada = Math.floor(numeroUnico/Math.PI); 
+    fraseRandom = fechaHoraEncriptada;
+    
+
+    //console.log("Fecha y Hora Encriptada:", fechaHoraEncriptada);
+    
     // Actualizar el contenido del elemento problemaMat
-    fraseElegida.innerHTML = `${fraseRandom}`;
+    fraseElegida.innerHTML = "Tu código es : " + `${fraseRandom}` + "<br>" + " Este código es único, no se repite nunca. Anótalo en tu guía para verificar tu resultado";
     
 }
 
@@ -3101,6 +3698,13 @@ function actualizarProblemas() {
         selectUnidades.style.display = "none";
         textareaEcuaciones.style.width = "50%";
         advertencia.innerHTML = `${"¡Importante! Solo escribe respuestas numéricas con punto separadas por una coma. Por ejemplo: 6.9, 5.3"}`;
+
+    } else if (seleccion === "sistemasEcuaciones") {
+        problemasMatematicos = problemasSistemasEcuaciones;
+        // Ocultar el select de unidades y aumentar el tamaño del textarea
+        selectUnidades.style.display = "none";
+        textareaEcuaciones.style.width = "50%";
+        advertencia.innerHTML = `${"¡Importante! Debes ingresar dos valores(x e y) separados por una coma (sin letras), estos pueden ser fracciones o numeros. Por ejemplo 35/56, 25/3 "}`;
     console.log("Problemas matemáticos seleccionados:", problemasMatematicos);
     }
     console.log(problemasMatematicos.length);
@@ -3115,8 +3719,10 @@ function revisarResultado() {
         revisarResultadoAlgebra(); 
     } else if (seleccion === "ecuaciones") {
         revisarResultadoAlgebra(); 
+    } else if (seleccion === "sistemasEcuaciones") {
+        revisarResultadosSistemasEcuaciones()
     }
-}
+}    
 
 // Función para mostrar un problema aleatorio
 function mostrarProblemaAleatorio() {
@@ -3149,7 +3755,6 @@ function revisarResultadoAlgebra() {
     }
     return;
 }
-
 
 // Revisa resultados de conversion de unidades
 function revisarResultadoUnidades() {
@@ -3209,6 +3814,145 @@ function revisarResultadoUnidades() {
         mostrarError(error.message);
     }
 }
+
+function revisarResultadosSistemasEcuaciones() {
+    let resultadoUsuario = respuesta.value.trim().replace(/\s/g, ''); // Eliminar espacios en blanco
+
+    // Separar cada una de las respuestas por una coma
+    let respuestasUsuario = resultadoUsuario.split(',');
+
+    // Verificar si el usuario ingresó exactamente dos respuestas
+    if (respuestasUsuario.length !== 2) {
+        mostrarResultadoIncorrecto();
+        return;
+    }
+
+        // Convertir fracciones en números decimales para las respuestas del usuario
+    respuestasUsuario = respuestasUsuario.map(respuesta => {
+        let fraccion = respuesta.match(/^(-?\d+)\/(\d+)$/); // Verificar si es una fracción
+        if (fraccion) {
+            let numerador = parseInt(fraccion[1], 10);
+            let denominador = parseInt(fraccion[2], 10);
+            let numeroDecimal = numerador / denominador; // Convertir a decimal
+            return respuesta.includes('-') ? -numeroDecimal : numeroDecimal; // Mantener el signo negativo si es una fracción negativa
+        } else {
+            return parseFloat(respuesta); // Convertir a decimal si no es una fracción
+        }
+    });
+
+    console.log("Respuestas del Usuario:", respuestasUsuario);
+
+    // Obtener las respuestas correctas y convertir fracciones en números decimales
+    let respuestasCorrectas = problemaAleatorio.combinacionesRespuesta.map(respuesta => {
+        let fraccion = respuesta.match(/^(-?\d+)\/(\d+)$/); // Verificar si es una fracción
+        if (fraccion) {
+            let numerador = parseInt(fraccion[1], 10);
+            let denominador = parseInt(fraccion[2], 10);
+            let numeroDecimal = numerador / denominador; // Convertir a decimal
+            return respuesta.includes('-') ? -numeroDecimal : numeroDecimal; // Mantener el signo negativo si es una fracción negativa
+        } else {
+            return parseFloat(respuesta); // Convertir a decimal si no es una fracción
+        }
+    });
+
+    console.log("Respuestas Correctas:", respuestasCorrectas);
+
+
+    // Calcular el margen de error individual para cada respuesta del usuario en comparación con cada respuesta correcta
+    let margenError = 0.05; // 5% de margen de error
+    let respuestasCorrectasConMargen = respuestasCorrectas.map(respuesta => {
+        return {
+            minimo: respuesta * (1 - margenError),
+            maximo: respuesta * (1 + margenError)
+        };
+    });
+
+    console.log("Respuesta Correctas con Margen", respuestasCorrectasConMargen);
+
+    // Verificar si las respuestas del usuario están contenidas en las respuestas correctas con margen de error
+    let todasLasRespuestasCorrectas = respuestasUsuario.every(respuestaUsuario => {
+        return respuestasCorrectasConMargen.some(respuestaCorrectaConMargen => {
+            return respuestaUsuario >= respuestaCorrectaConMargen.minimo && respuestaUsuario <= respuestaCorrectaConMargen.maximo;
+        });
+    });
+
+    console.log("Todas las repuestas Correctas:", todasLasRespuestasCorrectas);
+
+    // Si todas las respuestas del usuario están dentro del margen de error de al menos una respuesta correcta, mostrar resultado correcto
+    if (todasLasRespuestasCorrectas) {
+        mostrarResultadoCorrecto();
+    } else {
+        mostrarResultadoIncorrecto();
+    }
+    return;
+}
+
+/*
+function revisarResultadosSistemasEcuaciones() {
+    let resultadoUsuario = respuesta.value.trim().replace(/\s/g, ''); // Eliminar espacios en blanco
+
+    // Separar cada una de las respuestas por una coma
+    let respuestasUsuario = resultadoUsuario.split(',');
+
+    // Convertir fracciones en números decimales para las respuestas del usuario
+    respuestasUsuario = respuestasUsuario.map(respuesta => {
+        let fraccion = respuesta.match(/^(\d+)\/(\d+)$/); // Verificar si es una fracción
+        if (fraccion) {
+            let numerador = parseInt(fraccion[1], 10);
+            let denominador = parseInt(fraccion[2], 10);
+            return numerador / denominador; // Convertir a decimal
+        } else {
+            return parseFloat(respuesta); // Convertir a decimal si no es una fracción
+        }
+    });
+
+    console.log("Repuestas Usuario:",respuestasUsuario);
+
+    // Obtener las respuestas correctas y convertir fracciones en números decimales
+    let respuestasCorrectas = problemaAleatorio.combinacionesRespuesta.map(respuesta => {
+        let fraccion = respuesta.match(/^(\d+)\/(\d+)$/); // Verificar si es una fracción
+        if (fraccion) {
+            let numerador = parseInt(fraccion[1], 10);
+            let denominador = parseInt(fraccion[2], 10);
+            return numerador / denominador; // Convertir a decimal
+        } else {
+            return parseFloat(respuesta); // Convertir a decimal si no es una fracción
+        }
+    });
+
+    console.log(respuestasCorrectas);
+
+    // Calcular el margen de error individual para cada respuesta del usuario en comparación con cada respuesta correcta
+    let margenError = 0.05; // 5% de margen de error
+    let respuestasCorrectasConMargen = respuestasCorrectas.map(respuesta => {
+        return {
+            minimo: respuesta * (1 - margenError),
+            maximo: respuesta * (1 + margenError)
+        };
+    });
+
+
+    console.log("Respuesta Correctas con Margen", respuestasCorrectasConMargen);
+
+    // Verificar si las respuestas del usuario están dentro de los márgenes de error de las respuestas correctas
+    let todasLasRespuestasCorrectas = respuestasUsuario.every((respuestaUsuario, indexUsuario) => {
+        return respuestasCorrectasConMargen.some((respuestaCorrectaConMargen, indexCorrecta) => {
+            return respuestaUsuario >= respuestaCorrectaConMargen.minimo && respuestaUsuario <= respuestaCorrectaConMargen.maximo;
+        });
+    });
+
+    console.log("Todas las repuestas Correctas:",todasLasRespuestasCorrectas);
+
+    // Si todas las respuestas del usuario están dentro del margen de error de al menos una respuesta correcta, mostrar resultado correcto
+    if (todasLasRespuestasCorrectas) {
+        mostrarResultadoCorrecto();
+    } else {
+        mostrarResultadoIncorrecto();
+    }
+    return;
+}
+*/
+
 
 function esRespuestaCorrectaConLetras(resultadoUsuario) {
     if (!resultadoUsuario) {
@@ -3292,6 +4036,7 @@ function mostrarResultadoCorrecto() {
     document.querySelector(".btnEncriptar").classList.add("desactivar");
 }
 
+
 let intentos = 3;
 
 
@@ -3356,7 +4101,11 @@ function quieroRepasar(){
         
     } else if (seleccion === "ecuaciones") {
         window.open("https://edu.gcfglobal.org/es/algebra/como-resolver-ecuaciones-algebraicas/1/");
+
+    } else if (seleccion === "sistemasEcuaciones") {
+        window.open("https://es.khanacademy.org/math/algebra/x2f8bb11595b61c86:systems-of-equations/x2f8bb11595b61c86:introduction-to-systems-of-equations/v/trolls-tolls-and-systems-of-equations");
     }
+    
     console.log(seleccion)
     
 }
@@ -3412,8 +4161,4 @@ function limpiarYAproximarRespuestasConMargen(respuestasConLetrasYNumeros) {
         };
     });
 }
-
-
-
-
 
