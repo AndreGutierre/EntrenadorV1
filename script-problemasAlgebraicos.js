@@ -1160,6 +1160,8 @@ const problemasUnidades = [
       
 ];
 
+
+//Problemas malos revisar o remplazar
 const problemasAlgebraicos = [
     {
         ecuacion: "Desarrolla la expresión y reduce sus términos semenjantes:" +"<br>"+ "-3(3x - 4).",
@@ -3639,6 +3641,650 @@ const problemasSistemasEcuaciones =[
         
 ]
 
+const problemasEcuacionesSegundoGrado =[
+    {
+        "ecuacion": "Resolver x^2 - 3x = 28",
+        "respuestaNumerica": ["Valor de x:", "-4", "Valor de x:", "7"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["-4", "7"],
+        "pasos": [
+          "Para resolver la ecuación cuadrática, primero lleva todos los términos a un lado de la ecuación para que quede en la forma estándar ax^2 + bx + c = 0.",
+          "Entonces, tenemos x^2 - 3x - 28 = 0.",
+          "Usa la fórmula cuadrática: x = (-b ± √(b^2 - 4ac)) / (2a).",
+          "En este caso, a = 1, b = -3 y c = -28.",
+          "Sustituye estos valores en la fórmula cuadrática para obtener las soluciones para x.",
+          "Calcula las soluciones: x = (-(-3) ± √((-3)^2 - 4(1)(-28))) / (2(1)).",
+          "Esto se simplifica a x = (3 ± √(9 + 112)) / 2.",
+          "Por lo tanto, las soluciones son x = (3 ± √121) / 2.",
+          "Esto da como resultado dos soluciones: x = (3 + 11) / 2 y x = (3 - 11) / 2.",
+          "Por lo tanto, las soluciones son x = 7 y x = -4."
+        ]
+      },
+      {
+        "ecuacion": "Resolver x^2 - 10x + 25 = 0",
+        "respuestaNumerica": ["Valor de x:", "5"],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["5"],
+        "pasos": [
+          "Para resolver la ecuación cuadrática, primero lleva todos los términos a un lado de la ecuación para que quede en la forma estándar ax^2 + bx + c = 0.",
+          "Entonces, tenemos x^2 - 10x + 25 = 0.",
+          "Observa que esta ecuación es un trinomio cuadrado perfecto, ya que (x - 5)^2 = x^2 - 10x + 25.",
+          "Por lo tanto, la ecuación se puede reescribir como (x - 5)^2 = 0.",
+          "La única forma en que un cuadrado pueda ser igual a cero es si el término interior también es cero, entonces x - 5 = 0.",
+          "Resuelve para x: x = 5.",
+          "Por lo tanto, la única solución es x = 5."
+        ]
+      },
+      {
+        "ecuacion": "Resolver x^2 - 5x = -6 + 2x",
+        "respuestaNumerica": [
+          "Valores de x:", "1", "6"
+        ],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["1", "6"],
+        "pasos": [
+          "Para resolver la ecuación, primero lleva todos los términos a un lado de la ecuación para que quede en la forma estándar ax^2 + bx + c = 0.",
+          "Entonces, tenemos la ecuación x^2 - 5x = -6 + 2x.",
+          "Resta 2x en ambos lados de la ecuación para obtener todos los términos en un solo lado.",
+          "Esto nos da x^2 - 7x + 6 = 0.",
+          "Ahora podemos resolver esta ecuación cuadrática utilizando la fórmula cuadrática.",
+          "Aplicando la fórmula cuadrática, obtenemos las siguientes soluciones para 'x'.",
+          "Cuando resolvemos la ecuación obtenemos:",
+          "x = 6 y x = 1."
+        ]
+      },
+      {
+        "ecuacion": "Resolver (a + 5)^2 = 100",
+        "respuestaNumerica": [
+          "Valores de a:", "5", "-15"
+        ],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["5", "-15"],
+        "pasos": [
+          "Para resolver la ecuación, primero expandimos el binomio al cuadrado (a + 5)^2 utilizando el teorema binomial.",
+          "Esto nos da a^2 + 10a + 25 = 100.",
+          "Restamos 100 en ambos lados de la ecuación para llevar todos los términos a un solo lado.",
+          "Así obtenemos a^2 + 10a + 25 - 100 = 0, que se simplifica a a^2 + 10a - 75 = 0.",
+          "Ahora, sustituimos los valores de a, b y c en la fórmula cuadrática: a = -b ± √(b^2 - 4ac) / (2a).",
+          "Desarrollamos los cálculos paso a paso:",
+          "a = (-10 ± √(10^2 - 4 * 1 * (-75))) / (2 * 1)",
+          "a = (-10 ± √(100 + 300)) / 2",
+          "a = (-10 ± √400) / 2",
+          "a = (-10 ± 20) / 2",
+          "Esto nos da dos soluciones:",
+          "Cuando resolvemos para el signo positivo, obtenemos a = (10 + 20) / 2, que es a = 30 / 2 = 15.",
+          "Cuando resolvemos para el signo negativo, obtenemos a = (10 - 20) / 2, que es a = -10 / 2 = -5.",
+          "Por lo tanto, las soluciones de la ecuación son a = 15 y a = -5."
+        ]
+      },
+      {
+        "ecuacion": "Resolver (a - 3)^2 = 576",
+        "respuestaNumerica": [
+          "Valores de a:", "27", "-21"
+        ],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["27", "-21"],
+        "pasos": [
+          "Para resolver la ecuación, primero expandimos el binomio al cuadrado (a - 3)^2 utilizando el teorema binomial.",
+          "Esto nos da a^2 - 6a + 9 = 576.",
+          "Restamos 576 en ambos lados de la ecuación para llevar todos los términos a un solo lado.",
+          "Así obtenemos a^2 - 6a + 9 - 576 = 0, que se simplifica a a^2 - 6a - 567 = 0.",
+          "Ahora, sustituimos los valores de a, b y c en la fórmula cuadrática: a = -b ± √(b^2 - 4ac) / (2a).",
+          "Desarrollamos los cálculos paso a paso:",
+          "a = (6 ± √(6^2 - 4 * 1 * (-567))) / (2 * 1)",
+          "a = (6 ± √(36 + 2268)) / 2",
+          "a = (6 ± √2304) / 2",
+          "a = (6 ± 48) / 2",
+          "Esto nos da dos soluciones:",
+          "Cuando resolvemos para el signo positivo, obtenemos a = (6 + 48) / 2, que es a = 54 / 2 = 27.",
+          "Cuando resolvemos para el signo negativo, obtenemos a = (6 - 48) / 2, que es a = -42 / 2 = -21.",
+          "Por lo tanto, las soluciones de la ecuación son a = 27 y a = -21."
+        ]
+      },
+      {
+        "ecuacion": "Resolver (w - 4)^2 = 16",
+        "respuestaNumerica": [
+          "Valores de w:", "8", "0"
+        ],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["8", "0"],
+        "pasos": [
+          "Para resolver la ecuación, primero expandimos el binomio al cuadrado (w - 4)^2 utilizando el teorema binomial.",
+          "Esto nos da w^2 - 8w + 16 = 16.",
+          "Restamos 16 en ambos lados de la ecuación para llevar todos los términos a un solo lado.",
+          "Así obtenemos w^2 - 8w + 16 - 16 = 0, que se simplifica a w^2 - 8w = 0.",
+          "Factorizamos la ecuación para encontrar las soluciones, obteniendo w(w - 8) = 0.",
+          "Esto nos da dos posibilidades: w = 0 y w - 8 = 0, que nos lleva a w = 8.",
+          "Por lo tanto, las soluciones de la ecuación son w = 8 y w = 0."
+        ]
+      },
+      {
+        "ecuacion": "Resolver -2q^2 + 18q - 28 = 0",
+        "respuestaNumerica": [
+          "Valores de q:", "2", "7"
+        ],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["2", "7"],
+        "pasos": [
+          "Para resolver la ecuación, primero aplicamos la fórmula cuadrática, que se aplica a ecuaciones de la forma ax^2 + bx + c = 0.",
+          "Identificamos los coeficientes a = -2, b = 18 y c = -28.",
+          "Sustituimos estos valores en la fórmula cuadrática: q = (-b ± sqrt(b^2 - 4ac)) / (2a).",
+          "Calculamos el discriminante, b^2 - 4ac, que en este caso es (18^2 - 4*(-2)*(-28)) = 324.",
+          "Obtenemos las soluciones utilizando la fórmula cuadrática: q = (-18 ± sqrt(324)) / (-4).",
+          "Esto nos da dos soluciones: q = ( -18 ± 18) / -4.",
+          "Resolviendo cada una de las posibilidades, obtenemos q = 2 y q = 7.",
+          "Por lo tanto, las soluciones de la ecuación son q = 2 y q = 7."
+        ]
+      },
+      {
+        "ecuacion": "Resolver -4x^2 + 20x - 24 = 0",
+        "respuestaNumerica": [
+          "Valores de x:", "2", "3"
+        ],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["2", "3"],
+        "pasos": [
+          "Para resolver la ecuación, primero aplicamos la fórmula cuadrática, que se aplica a ecuaciones de la forma ax^2 + bx + c = 0.",
+          "Identificamos los coeficientes a = -4, b = 20 y c = -24.",
+          "Sustituimos estos valores en la fórmula cuadrática: x = (-b ± sqrt(b^2 - 4ac)) / (2a).",
+          "Calculamos el discriminante, b^2 - 4ac, que en este caso es (20^2 - 4*(-4)*(-24)) = 400.",
+          "Obtenemos las soluciones utilizando la fórmula cuadrática: x = (-20 ± sqrt(400)) / (-8).",
+          "Esto nos da dos soluciones: x = ( -20 ± 20) / -8.",
+          "Resolviendo cada una de las posibilidades, obtenemos x = 2 y x = 3.",
+          "Por lo tanto, las soluciones de la ecuación son x = 2 y x = 3."
+        ]
+      },
+      {
+        "ecuacion": "Resolver -7x^2 + 49x - 70 = 0",
+        "respuestaNumerica": [
+          "Valores de x:", "2", "5"
+        ],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["2", "5"],
+        "pasos": [
+          "Para resolver la ecuación, primero aplicamos la fórmula cuadrática, que se aplica a ecuaciones de la forma ax^2 + bx + c = 0.",
+          "Identificamos los coeficientes a = -7, b = 49 y c = -70.",
+          "Sustituimos estos valores en la fórmula cuadrática: x = (-b ± sqrt(b^2 - 4ac)) / (2a).",
+          "Calculamos el discriminante, b^2 - 4ac, que en este caso es (49^2 - 4*(-7)*(-70)) = 2401.",
+          "Obtenemos las soluciones utilizando la fórmula cuadrática: x = (-49 ± sqrt(2401)) / (-14).",
+          "Esto nos da dos soluciones: x = ( -49 ± 49) / -14.",
+          "Resolviendo cada una de las posibilidades, obtenemos x = 2 y x = 5.",
+          "Por lo tanto, las soluciones de la ecuación son x = 2 y x = 5."
+        ]
+      },
+      {
+        "ecuacion": "Resolver 6a^2 - 60a + 150 = 0",
+        "respuestaNumerica": [
+          "Valores de a:", "5"
+        ],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["5"],
+        "pasos": [
+          "Para resolver la ecuación, primero aplicamos la fórmula cuadrática, que se aplica a ecuaciones de la forma ax^2 + bx + c = 0.",
+          "Identificamos los coeficientes a = 6, b = -60 y c = 150.",
+          "Sustituimos estos valores en la fórmula cuadrática: a = (-b ± sqrt(b^2 - 4ac)) / (2a).",
+          "Calculamos el discriminante, b^2 - 4ac, que en este caso es (-60)^2 - 4 * 6 * 150 = 0.",
+          "Obtenemos las soluciones utilizando la fórmula cuadrática: a = (-(-60) ± sqrt(0)) / (2 * 6).",
+          "Esto nos da una sola solución: a = (60) / (12).",
+          "Por lo tanto, la única solución de la ecuación es a = 5."
+        ]
+      },
+      {
+        "ecuacion": "Resolver -6a^2 + 48a - 42 = 0",
+        "respuestaNumerica": [
+          "Valores de a:", "7","y", "1"
+        ],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["7","1"],
+        "pasos": [
+          "Para resolver la ecuación, primero aplicamos la fórmula cuadrática, que se aplica a ecuaciones de la forma ax^2 + bx + c = 0.",
+          "Identificamos los coeficientes a = -6, b = 48 y c = -42.",
+          "Sustituimos estos valores en la fórmula cuadrática: a = (-b ± sqrt(b^2 - 4ac)) / (2a).",
+          "Calculamos el discriminante, b^2 - 4ac, que en este caso es (48)^2 - 4 * (-6) * (-42) = 1296.",
+          "Obtenemos las soluciones utilizando la fórmula cuadrática: a = (48 ± sqrt(1296)) / (-12).",
+          "Esto nos da dos soluciones: a = (48 ± 36) / (-12).",
+          "Simplificando, obtenemos dos soluciones: a = (48 + 36) / (-12) = 7 y a = (48 - 36) / (-12) = 1.",
+          "Por lo tanto, las soluciones de la ecuación son a = 7 y a = 1."
+        ]
+      },
+      {
+        "ecuacion": "Resolver -5a^2 + 15a - 10 = 0",
+        "respuestaNumerica": [
+          "Valores de a:", "1", "y", "2"
+        ],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["1", "2"],
+        "pasos": [
+          "Para resolver la ecuación, primero aplicamos la fórmula cuadrática, que se aplica a ecuaciones de la forma ax^2 + bx + c = 0.",
+          "Identificamos los coeficientes a = -5, b = 15 y c = -10.",
+          "Sustituimos estos valores en la fórmula cuadrática: a = (-b ± sqrt(b^2 - 4ac)) / (2a).",
+          "Calculamos el discriminante, b^2 - 4ac, que en este caso es (15)^2 - 4 * (-5) * (-10) = 225.",
+          "Obtenemos las soluciones utilizando la fórmula cuadrática: a = (15 ± sqrt(225)) / (-10).",
+          "Esto nos da dos soluciones: a = (15 + 15) / (-10) = 1 y a = (15 - 15) / (-10) = 2.",
+          "Por lo tanto, las soluciones de la ecuación son a = 1 y a = 2."
+        ]
+      },
+      {
+        "ecuacion": "Resolver 7x^2 - 70x + 147 = 0",
+        "respuestaNumerica": [
+          "Valores de x:", "3", "y", "7"
+        ],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["3", "7"],
+        "pasos": [
+          "Para resolver la ecuación, aplicamos la fórmula cuadrática, que se utiliza para ecuaciones de la forma ax^2 + bx + c = 0.",
+          "Identificamos los coeficientes a = 7, b = -70 y c = 147.",
+          "Sustituimos estos valores en la fórmula cuadrática: x = (-b ± sqrt(b^2 - 4ac)) / (2a).",
+          "Calculamos el discriminante, b^2 - 4ac, que en este caso es (-70)^2 - 4 * 7 * 147 = 784.",
+          "Obtenemos las soluciones utilizando la fórmula cuadrática: x = (70 ± sqrt(784)) / (2 * 7).",
+          "Esto nos da dos soluciones: x = (70 + 28) / 14 = 7 y x = (70 - 28) / 14 = 3.",
+          "Por lo tanto, las soluciones de la ecuación son x = 7 y x = 3."
+        ]
+      },
+      {
+        "ecuacion": "Resolver -6x^2 + 60x - 144 = 0",
+        "respuestaNumerica": [
+          "Valores de x:", "4", "y", "6"
+        ],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["4", "6"],
+        "pasos": [
+          "Para resolver la ecuación, aplicamos la fórmula cuadrática, que se utiliza para ecuaciones de la forma ax^2 + bx + c = 0.",
+          "Identificamos los coeficientes a = -6, b = 60 y c = -144.",
+          "Sustituimos estos valores en la fórmula cuadrática: x = (-b ± sqrt(b^2 - 4ac)) / (2a).",
+          "Calculamos el discriminante, b^2 - 4ac, que en este caso es (60)^2 - 4 * (-6) * (-144) = 3600.",
+          "Obtenemos las soluciones utilizando la fórmula cuadrática: x = (-60 ± sqrt(3600)) / (2 * (-6)).",
+          "Esto nos da dos soluciones: x = (-60 + sqrt(3600)) / -12 = 4 y x = (-60 - sqrt(3600)) / -12 = 6.",
+          "Por lo tanto, las soluciones de la ecuación son x = 4 y x = 6."
+        ]
+      },
+      {
+        "ecuacion": "Resolver 5x^2 - 25x + 20 = 0",
+        "respuestaNumerica": [
+          "Valores de x:", "1", "y", "4"
+        ],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["1", "4"],
+        "pasos": [
+          "Para resolver la ecuación, aplicamos la fórmula cuadrática, que se utiliza para ecuaciones de la forma ax^2 + bx + c = 0.",
+          "Identificamos los coeficientes a = 5, b = -25 y c = 20.",
+          "Sustituimos estos valores en la fórmula cuadrática: x = (-b ± sqrt(b^2 - 4ac)) / (2a).",
+          "Calculamos el discriminante, b^2 - 4ac, que en este caso es (-25)^2 - 4 * 5 * 20 = 25.",
+          "Obtenemos las soluciones utilizando la fórmula cuadrática: x = (-(-25) ± sqrt(25)) / (2 * 5).",
+          "Esto nos da dos soluciones: x = (25 + 5) / 10 = 1 y x = (25 - 5) / 10 = 4.",
+          "Por lo tanto, las soluciones de la ecuación son x = 1 y x = 4."
+        ]
+      },
+      {
+        "ecuacion": "Resolver -5x^2 + 45x - 100 = 0",
+        "respuestaNumerica": [
+          "Valores de x:", "4", "y", "5"
+        ],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["4", "5"],
+        "pasos": [
+          "Para resolver la ecuación, aplicamos la fórmula cuadrática, que se utiliza para ecuaciones de la forma ax^2 + bx + c = 0.",
+          "Identificamos los coeficientes a = -5, b = 45 y c = -100.",
+          "Sustituimos estos valores en la fórmula cuadrática: x = (-b ± sqrt(b^2 - 4ac)) / (2a).",
+          "Calculamos el discriminante, b^2 - 4ac, que en este caso es (45)^2 - 4 * (-5) * (-100) = 2025.",
+          "Obtenemos las soluciones utilizando la fórmula cuadrática: x = (45 ± sqrt(2025)) / (-10).",
+          "Esto nos da dos soluciones: x = (45 + 45) / (-10) = 4 y x = (45 - 45) / (-10) = 5.",
+          "Por lo tanto, las soluciones de la ecuación son x = 4 y x = 5."
+        ]
+      },
+      {
+        "ecuacion": "Resolver -9x^2 - 144x - 540 = 0",
+        "respuestaNumerica": [
+          "Valores de x:", "-10", "y", "-6"
+        ],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["-10", "-6"],
+        "pasos": [
+          "Para resolver la ecuación, aplicamos la fórmula cuadrática, que se utiliza para ecuaciones de la forma ax^2 + bx + c = 0.",
+          "Identificamos los coeficientes a = -9, b = -144 y c = -540.",
+          "Sustituimos estos valores en la fórmula cuadrática: x = (-b ± sqrt(b^2 - 4ac)) / (2a).",
+          "Calculamos el discriminante, b^2 - 4ac, que en este caso es (-144)^2 - 4 * (-9) * (-540) = 20736.",
+          "Obtenemos las soluciones utilizando la fórmula cuadrática: x = (144 ± sqrt(20736)) / (-18).",
+          "Esto nos da dos soluciones: x = (144 + 144) / (-18) = -10 y x = (144 - 144) / (-18) = -6.",
+          "Por lo tanto, las soluciones de la ecuación son x = -10 y x = -6."
+        ]
+      },
+      {
+        "ecuacion": "Resolver -5x^2 - 70x - 225 = 0",
+        "respuestaNumerica": [
+          "Valores de x:", "-9", "y", "-5"
+        ],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["-9", "-5"],
+        "pasos": [
+          "Para resolver la ecuación, aplicamos la fórmula cuadrática, que se utiliza para ecuaciones de la forma ax^2 + bx + c = 0.",
+          "Identificamos los coeficientes a = -5, b = -70 y c = -225.",
+          "Sustituimos estos valores en la fórmula cuadrática: x = (-b ± sqrt(b^2 - 4ac)) / (2a).",
+          "Calculamos el discriminante, b^2 - 4ac, que en este caso es (-70)^2 - 4 * (-5) * (-225) = 4900.",
+          "Obtenemos las soluciones utilizando la fórmula cuadrática: x = (70 ± sqrt(4900)) / (-10).",
+          "Esto nos da dos soluciones: x = (70 + 70) / (-10) = -9 y x = (70 - 70) / (-10) = -5.",
+          "Por lo tanto, las soluciones de la ecuación son x = -9 y x = -5."
+        ]
+      },
+      {
+        "ecuacion": "Resolver 9m^2 + 9m - 270 = 0",
+        "respuestaNumerica": [
+          "Valores de m:", "-6", "y", "5"
+        ],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["-6", "5"],
+        "pasos": [
+          "Para resolver la ecuación, aplicamos la fórmula cuadrática, que se utiliza para ecuaciones de la forma ax^2 + bx + c = 0.",
+          "Identificamos los coeficientes a = 9, b = 9 y c = -270.",
+          "Sustituimos estos valores en la fórmula cuadrática: m = (-b ± sqrt(b^2 - 4ac)) / (2a).",
+          "Calculamos el discriminante, b^2 - 4ac, que en este caso es (9)^2 - 4 * 9 * (-270) = 2916.",
+          "Obtenemos las soluciones utilizando la fórmula cuadrática: m = (-9 ± sqrt(2916)) / (18).",
+          "Esto nos da dos soluciones: m = (-9 + 54) / 18 = -6 y m = (-9 - 54) / 18 = 5.",
+          "Por lo tanto, las soluciones de la ecuación son m = -6 y m = 5."
+        ]
+      },
+      {
+        "ecuacion": "Resolver -4m^2 + 68m - 288 = 0",
+        "respuestaNumerica": [
+          "Valores de m:", "8", "y", "9"
+        ],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["8", "9"],
+        "pasos": [
+          "Para resolver la ecuación, aplicamos la fórmula cuadrática, que se utiliza para ecuaciones de la forma ax^2 + bx + c = 0.",
+          "Identificamos los coeficientes a = -4, b = 68 y c = -288.",
+          "Sustituimos estos valores en la fórmula cuadrática: m = (-b ± sqrt(b^2 - 4ac)) / (2a).",
+          "Calculamos el discriminante, b^2 - 4ac, que en este caso es (68)^2 - 4 * (-4) * (-288) = 4624.",
+          "Obtenemos las soluciones utilizando la fórmula cuadrática: m = (-68 ± sqrt(4624)) / (-8).",
+          "Esto nos da dos soluciones: m = (-68 + 68) / (-8) = 8 y m = (-68 - 68) / (-8) = 9.",
+          "Por lo tanto, las soluciones de la ecuación son m = 8 y m = 9."
+        ]
+      },
+      {
+        "ecuacion": "Resolver 7n^2 - 63n + 140 = 0",
+        "respuestaNumerica": [
+          "Valores de n:", "4", "y", "5"
+        ],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["4", "5"],
+        "pasos": [
+          "Para resolver esta ecuación cuadrática, utilizamos la fórmula cuadrática.",
+          "Identificamos los coeficientes: a = 7, b = -63 y c = 140.",
+          "Sustituimos estos valores en la fórmula cuadrática: n = (-b ± sqrt(b^2 - 4ac)) / (2a).",
+          "Calculamos el discriminante, b^2 - 4ac, que en este caso es (-63)^2 - 4 * 7 * 140 = 3969 - 3920 = 49.",
+          "Obtenemos las soluciones utilizando la fórmula cuadrática: n = (63 ± sqrt(49)) / (2 * 7).",
+          "Esto nos da dos soluciones: n = (63 + 7) / 14 = 70 / 14 = 5 y n = (63 - 7) / 14 = 56 / 14 = 4.",
+          "Por lo tanto, las soluciones de la ecuación son n = 4 y n = 5."
+        ]
+      },
+      {
+        "ecuacion": "Resolver -5n^2 + 30n = -560",
+        "respuestaNumerica": [
+          "Valores de n:", "-8", "y", "14"
+        ],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["-8", "14"],
+        "pasos": [
+          "Para resolver esta ecuación cuadrática, primero llevamos todos los términos al mismo lado de la ecuación, de modo que quede en la forma estándar ax^2 + bx + c = 0.",
+          "Entonces, reescribimos la ecuación como -5n^2 + 30n + 560 = 0.",
+          "Ahora, utilizamos la fórmula cuadrática, que es n = (-b ± sqrt(b^2 - 4ac)) / (2a), donde a = -5, b = 30 y c = 560.",
+          "Calculamos el discriminante, que es b^2 - 4ac, y obtenemos (30)^2 - 4 * (-5) * 560 = 900 - (-11200) = 12100.",
+          "Luego, sustituimos los valores en la fórmula cuadrática: n = (-30 ± sqrt(12100)) / (2 * -5).",
+          "Esto nos da dos soluciones: n = (-30 + 110) / -10 = 80 / -10 = -8 y n = (-30 - 110) / -10 = -140 / -10 = 14.",
+          "Por lo tanto, las soluciones de la ecuación son n = -8 y n = 14."
+        ]
+      },
+      {
+        "ecuacion": "Resolver -13n^2 + 936 = 13n",
+        "respuestaNumerica": [
+          "Valores de n:", "-9", "y", "8"
+        ],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["-9", "8"],
+        "pasos": [
+          "Para resolver esta ecuación cuadrática, primero llevamos todos los términos al mismo lado de la ecuación, de modo que quede en la forma estándar ax^2 + bx + c = 0.",
+          "Entonces, reescribimos la ecuación como -13n^2 + 13n + 936 = 0.",
+          "Ahora, utilizamos la fórmula cuadrática, que es n = (-b ± sqrt(b^2 - 4ac)) / (2a), donde a = -13, b = 13 y c = 936.",
+          "Calculamos el discriminante, que es b^2 - 4ac, y obtenemos (13)^2 - 4 * (-13) * 936 = 169 - (-48624) = 48793.",
+          "Luego, sustituimos los valores en la fórmula cuadrática: n = (-13 ± sqrt(48793)) / (2 * -13).",
+          "Esto nos da dos soluciones: n = (-13 + sqrt(48793)) / -26 ≈ -8.9999 y n = (-13 - sqrt(48793)) / -26 ≈ 8.0001.",
+          "Sin embargo, debido a la precisión limitada de los cálculos, redondeamos estas soluciones a n = -9 y n = 8.",
+          "Por lo tanto, las soluciones de la ecuación son n = -9 y n = 8."
+        ]
+      },
+      {
+        "ecuacion": "5n^2 - 80n + 240 = 0",
+        "respuestaNumerica": [
+          "Valores de n:", "4", "y", "12"
+        ],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["4", "12"],
+        "pasos": [
+          "Para resolver esta ecuación cuadrática, primero llevamos todos los términos al mismo lado de la ecuación, de modo que quede en la forma estándar ax^2 + bx + c = 0.",
+          "Entonces, reescribimos la ecuación como 5n^2 - 80n + 240 = 0.",
+          "Ahora, utilizamos la fórmula cuadrática, que es n = (-b ± sqrt(b^2 - 4ac)) / (2a), donde a = 5, b = -80 y c = 240.",
+          "Calculamos el discriminante, que es b^2 - 4ac, y obtenemos (-80)^2 - 4 * 5 * 240 = 6400 - 4800 = 1600.",
+          "Como el discriminante es positivo, la ecuación tiene dos raíces reales distintas.",
+          "Luego, sustituimos los valores en la fórmula cuadrática: n = (80 ± sqrt(1600)) / 10.",
+          "Esto nos da dos soluciones: n = (80 ± 40) / 10.",
+          "Después de simplificar, obtenemos las soluciones n = 12 y n = 4.",
+          "Por lo tanto, las soluciones de la ecuación son n = 12 y n = 4."
+        ]
+      },
+      {
+        "ecuacion": "9x^2 + 153x + 648 = 0",
+        "respuestaNumerica": [
+          "Valores de x:", "-9", "y", "-8"
+        ],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["-9", "-8"],
+        "pasos": [
+          "Para resolver esta ecuación cuadrática, primero llevamos todos los términos al mismo lado de la ecuación, de modo que quede en la forma estándar ax^2 + bx + c = 0.",
+          "Entonces, reescribimos la ecuación como 9x^2 + 153x + 648 = 0.",
+          "Ahora, utilizamos la fórmula cuadrática, que es x = (-b ± sqrt(b^2 - 4ac)) / (2a), donde a = 9, b = 153 y c = 648.",
+          "Calculamos el discriminante, que es b^2 - 4ac, y obtenemos (153)^2 - 4 * 9 * 648 = 23409 - 23328 = 81.",
+          "Como el discriminante es positivo, la ecuación tiene dos raíces reales distintas.",
+          "Luego, sustituimos los valores en la fórmula cuadrática: x = (-153 ± sqrt(81)) / 18.",
+          "Esto nos da dos soluciones: x = (-153 ± 9) / 18.",
+          "Después de simplificar, obtenemos las soluciones x = -9 y x = -8.",
+          "Por lo tanto, las soluciones de la ecuación son x = -9 y x = -8."
+        ]
+      },
+      {
+        "ecuacion": "-11x^2 + 22x + 264 = 0",
+        "respuestaNumerica": [
+          "Valores de x:", "-4", "y", "6"
+        ],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["-4", "6"],
+        "pasos": [
+          "Primero, llevamos todos los términos al mismo lado de la ecuación para que quede en la forma estándar ax^2 + bx + c = 0.",
+          "Entonces, reescribimos la ecuación como -11x^2 + 22x + 264 = 0.",
+          "Utilizamos la fórmula cuadrática, que es x = (-b ± sqrt(b^2 - 4ac)) / (2a), donde a = -11, b = 22 y c = 264.",
+          "Calculamos el discriminante, que es b^2 - 4ac, y obtenemos (22)^2 - 4 * (-11) * 264 = 484 + 11616 = 12100.",
+          "Como el discriminante es positivo, la ecuación tiene dos raíces reales distintas.",
+          "Sustituimos los valores en la fórmula cuadrática: x = (-22 ± sqrt(12100)) / (-22).",
+          "Esto nos da dos soluciones: x = (-22 ± 110) / (-22).",
+          "Simplificando, obtenemos las soluciones x = -4 y x = 6.",
+          "Por lo tanto, las soluciones de la ecuación son x = -4 y x = 6."
+        ]
+      },
+      {
+        "ecuacion": "-7x^2 + 112x - 441 = 0",
+        "respuestaNumerica": [
+          "Valores de x:", "7", "y", "9"
+        ],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["7", "9"],
+        "pasos": [
+          "Primero, llevamos todos los términos al mismo lado de la ecuación para que quede en la forma estándar ax^2 + bx + c = 0.",
+          "Entonces, reescribimos la ecuación como -7x^2 + 112x - 441 = 0.",
+          "Utilizamos la fórmula cuadrática, que es x = (-b ± sqrt(b^2 - 4ac)) / (2a), donde a = -7, b = 112 y c = -441.",
+          "Calculamos el discriminante, que es b^2 - 4ac, y obtenemos (112)^2 - 4 * (-7) * (-441) = 12544 - 12348 = 196.",
+          "Como el discriminante es positivo, la ecuación tiene dos raíces reales distintas.",
+          "Sustituimos los valores en la fórmula cuadrática: x = (-112 ± sqrt(196)) / (-14).",
+          "Esto nos da dos soluciones: x = (-112 ± 14) / (-14).",
+          "Simplificando, obtenemos las soluciones x = 7 y x = 9.",
+          "Por lo tanto, las soluciones de la ecuación son x = 7 y x = 9."
+        ]
+      },
+      {
+        "ecuacion": "6x^2 + 6x - 180 = 0",
+        "respuestaNumerica": [
+          "Valores de x:", "-6", "y", "5"
+        ],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["-6", "5"],
+        "pasos": [
+          "Primero, llevamos todos los términos al mismo lado de la ecuación para que quede en la forma estándar ax^2 + bx + c = 0.",
+          "Entonces, reescribimos la ecuación como 6x^2 + 6x - 180 = 0.",
+          "Utilizamos la fórmula cuadrática, que es x = (-b ± sqrt(b^2 - 4ac)) / (2a), donde a = 6, b = 6 y c = -180.",
+          "Calculamos el discriminante, que es b^2 - 4ac, y obtenemos (6)^2 - 4 * (6) * (-180) = 36 + 4320 = 4356.",
+          "Como el discriminante es positivo, la ecuación tiene dos raíces reales distintas.",
+          "Sustituimos los valores en la fórmula cuadrática: x = (-6 ± sqrt(4356)) / (2 * 6).",
+          "Esto nos da dos soluciones: x = (-6 ± 66) / 12.",
+          "Simplificando, obtenemos las soluciones x = (-6 + 66) / 12 y x = (-6 - 66) / 12.",
+          "Por lo tanto, las soluciones de la ecuación son x = 5 y x = -6."
+        ]
+      },
+      {
+        "ecuacion": "4x^2 - 28x - 176 = 0",
+        "respuestaNumerica": [
+          "Valores de x:", "-4", "y", "11"
+        ],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["-4", "11"],
+        "pasos": [
+          "Primero, llevamos todos los términos al mismo lado de la ecuación para que quede en la forma estándar ax^2 + bx + c = 0.",
+          "Entonces, reescribimos la ecuación como 4x^2 - 28x - 176 = 0.",
+          "Utilizamos la fórmula cuadrática, que es x = (-b ± sqrt(b^2 - 4ac)) / (2a), donde a = 4, b = -28 y c = -176.",
+          "Calculamos el discriminante, que es b^2 - 4ac, y obtenemos (-28)^2 - 4 * 4 * (-176) = 784 + 2816 = 3600.",
+          "Como el discriminante es positivo, la ecuación tiene dos raíces reales distintas.",
+          "Sustituimos los valores en la fórmula cuadrática: x = (-(-28) ± sqrt(3600)) / (2 * 4).",
+          "Esto nos da dos soluciones: x = (28 ± 60) / 8.",
+          "Simplificando, obtenemos las soluciones x = (28 + 60) / 8 y x = (28 - 60) / 8.",
+          "Por lo tanto, las soluciones de la ecuación son x = 11 y x = -4."
+        ]
+      },
+      {
+        "ecuacion": "-9x^2 + 99x - 270 = 0",
+        "respuestaNumerica": [
+          "Valores de x:", "5", "y", "6"
+        ],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["5", "6"],
+        "pasos": [
+          "Primero, llevamos todos los términos al mismo lado de la ecuación para que quede en la forma estándar ax^2 + bx + c = 0.",
+          "Entonces, reescribimos la ecuación como -9x^2 + 99x - 270 = 0.",
+          "Utilizamos la fórmula cuadrática, que es x = (-b ± sqrt(b^2 - 4ac)) / (2a), donde a = -9, b = 99 y c = -270.",
+          "Calculamos el discriminante, que es b^2 - 4ac, y obtenemos (99)^2 - 4 * (-9) * (-270) = 9801 - 9720 = 81.",
+          "Como el discriminante es positivo, la ecuación tiene dos raíces reales distintas.",
+          "Sustituimos los valores en la fórmula cuadrática: x = (-99 ± sqrt(81)) / (2 * (-9)).",
+          "Esto nos da dos soluciones: x = (-99 + 9) / (-18) y x = (-99 - 9) / (-18).",
+          "Simplificando, obtenemos las soluciones x = (-90) / (-18) y x = (-108) / (-18).",
+          "Por lo tanto, las soluciones de la ecuación son x = 5 y x = 6."
+        ]
+      },
+      {
+        "ecuacion": "10x^2 - 140x + 480 = 0",
+        "respuestaNumerica": [
+          "Valores de x:", "6", "y", "8"
+        ],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["6", "8"],
+        "pasos": [
+          "Primero, llevamos todos los términos al mismo lado de la ecuación para que quede en la forma estándar ax^2 + bx + c = 0.",
+          "Entonces, reescribimos la ecuación como 10x^2 - 140x + 480 = 0.",
+          "Utilizamos la fórmula cuadrática, que es x = (-b ± sqrt(b^2 - 4ac)) / (2a), donde a = 10, b = -140 y c = 480.",
+          "Calculamos el discriminante, que es b^2 - 4ac, y obtenemos (-140)^2 - 4 * 10 * 480 = 19600 - 19200 = 400.",
+          "Como el discriminante es positivo, la ecuación tiene dos raíces reales distintas.",
+          "Sustituimos los valores en la fórmula cuadrática: x = (140 ± sqrt(400)) / (2 * 10).",
+          "Esto nos da dos soluciones: x = (140 + 20) / 20 y x = (140 - 20) / 20.",
+          "Simplificando, obtenemos las soluciones x = 160 / 20 y x = 120 / 20.",
+          "Por lo tanto, las soluciones de la ecuación son x = 8 y x = 6."
+        ]
+      },
+      {
+        "ecuacion": "4x^2 + 60x + 224 = 0",
+        "respuestaNumerica": [
+          "Valores de x:", "-8", "y", "-7"
+        ],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["-8", "-7"],
+        "pasos": [
+          "Primero, llevamos todos los términos al mismo lado de la ecuación para que quede en la forma estándar ax^2 + bx + c = 0.",
+          "Entonces, reescribimos la ecuación como 4x^2 + 60x + 224 = 0.",
+          "Utilizamos la fórmula cuadrática, que es x = (-b ± sqrt(b^2 - 4ac)) / (2a), donde a = 4, b = 60 y c = 224.",
+          "Calculamos el discriminante, que es b^2 - 4ac, y obtenemos (60)^2 - 4 * 4 * 224 = 3600 - 3584 = 16.",
+          "Como el discriminante es positivo, la ecuación tiene dos raíces reales distintas.",
+          "Sustituimos los valores en la fórmula cuadrática: x = (-60 ± sqrt(16)) / (2 * 4).",
+          "Esto nos da dos soluciones: x = (-60 + 4) / 8 y x = (-60 - 4) / 8.",
+          "Simplificando, obtenemos las soluciones x = -56 / 8 y x = -64 / 8.",
+          "Por lo tanto, las soluciones de la ecuación son x = -7 y x = -8."
+        ]
+      },
+      {
+        "ecuacion": "11x^2 - 231x + 1188 = 0",
+        "respuestaNumerica": [
+          "Valores de x:", "9", "y", "12"
+        ],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["9", "12"],
+        "pasos": [
+          "Primero, llevamos todos los términos al mismo lado de la ecuación para que quede en la forma estándar ax^2 + bx + c = 0.",
+          "Entonces, reescribimos la ecuación como 11x^2 - 231x + 1188 = 0.",
+          "Utilizamos la fórmula cuadrática, que es x = (-b ± sqrt(b^2 - 4ac)) / (2a), donde a = 11, b = -231 y c = 1188.",
+          "Calculamos el discriminante, que es b^2 - 4ac, y obtenemos (-231)^2 - 4 * 11 * 1188 = 53361 - 52272 = 1089.",
+          "Como el discriminante es positivo, la ecuación tiene dos raíces reales distintas.",
+          "Sustituimos los valores en la fórmula cuadrática: x = (231 ± sqrt(1089)) / (2 * 11).",
+          "Esto nos da dos soluciones: x = (231 + 33) / 22 y x = (231 - 33) / 22.",
+          "Simplificando, obtenemos las soluciones x = 264 / 22 y x = 198 / 22.",
+          "Por lo tanto, las soluciones de la ecuación son x = 12 y x = 9."
+        ]
+      },
+      {
+        "ecuacion": "4x^2 + 16x - 180 = 0",
+        "respuestaNumerica": [
+          "Valores de x:", "-9", "y", "5"
+        ],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["-9", "5"],
+        "pasos": [
+          "Primero, llevamos todos los términos al mismo lado de la ecuación para que quede en la forma estándar ax^2 + bx + c = 0.",
+          "Entonces, reescribimos la ecuación como 4x^2 + 16x - 180 = 0.",
+          "Utilizamos la fórmula cuadrática, que es x = (-b ± sqrt(b^2 - 4ac)) / (2a), donde a = 4, b = 16 y c = -180.",
+          "Calculamos el discriminante, que es b^2 - 4ac, y obtenemos (16)^2 - 4 * 4 * (-180) = 256 + 2880 = 3136.",
+          "Como el discriminante es positivo, la ecuación tiene dos raíces reales distintas.",
+          "Sustituimos los valores en la fórmula cuadrática: x = (-16 ± sqrt(3136)) / (2 * 4).",
+          "Esto nos da dos soluciones: x = (-16 + 56) / 8 y x = (-16 - 56) / 8.",
+          "Simplificando, obtenemos las soluciones x = 40 / 8 y x = -72 / 8.",
+          "Por lo tanto, las soluciones de la ecuación son x = 5 y x = -9."
+        ]
+      },
+      {
+        "ecuacion": "9x^2 - 153x + 648 = 0",
+        "respuestaNumerica": [
+          "Valores de x:", "8", "y", "9"
+        ],
+        "unidadRespuesta": [],
+        "combinacionesRespuesta": ["8", "9"],
+        "pasos": [
+          "Primero, llevamos todos los términos al mismo lado de la ecuación para que quede en la forma estándar ax^2 + bx + c = 0.",
+          "Entonces, reescribimos la ecuación como 9x^2 - 153x + 648 = 0.",
+          "Utilizamos la fórmula cuadrática, que es x = (-b ± sqrt(b^2 - 4ac)) / (2a), donde a = 9, b = -153 y c = 648.",
+          "Calculamos el discriminante, que es b^2 - 4ac, y obtenemos (-153)^2 - 4 * 9 * 648 = 23409 - 23328 = 81.",
+          "Como el discriminante es positivo, la ecuación tiene dos raíces reales distintas.",
+          "Sustituimos los valores en la fórmula cuadrática: x = (153 ± sqrt(81)) / (2 * 9).",
+          "Esto nos da dos soluciones: x = (153 + 9) / 18 y x = (153 - 9) / 18.",
+          "Simplificando, obtenemos las soluciones x = 162 / 18 y x = 144 / 18.",
+          "Por lo tanto, las soluciones de la ecuación son x = 9 y x = 8."
+        ]
+      },
+
+
+
+]
+
 const frasesCelebres = [
     'No he tenido nunca más que un maestro: el pasado; una sola formación : el estudio del pasado.' + leCobusier, 'He sacado del pasado la lección de historia, la razón de ser de las cosas. Todo acontecimiento y todo objeto están “en relación a”.' + leCobusier, 'La historia se halla inscrita en los trazados y en las arquitecturas de las ciudades. Mis ideas revolucionarias están en la historia, en toda época y en todos sus países.' + leCobusier, 'La arquitectura es un acto de voluntad consciente. Hacer arquitectura es poner orden.' + leCobusier, 'La arquitectura es el resultado del estado de espíritu de una época.' + leCobusier, 'La arquitectura está más allá de los hechos utilitarios. La arquitectura es un hecho plástico.' + leCobusier, 'La arquitectura es arte en su sentido más elevado, es orden matemático, es teoría pura, armonía completa gracias a la exacta proporción de todas las relaciones: ésta es la “función” de la arquitectura.' + leCobusier, 'La arquitectura preside los destinos de la ciudad. Ordena la estructura de la vivienda, esa célula esencial del trazado urbano, cuya salubridad, alegría y armonía están sometidas a sus decisiones.' + leCobusier, 'Organizar es hacer geometría; hacer geometría en la naturaleza o en el magma surgido “naturalmente” de las agrupaciones de hombres en aglomeraciones urbanas, equivale a hacer cirugía.' + leCobusier, 'El arte, producto de la ecuación “razón-pasión”, es, para mí, el lugar de la felicidad humana.' + leCobusier, 'Lo maravilloso está en la exactitud. Lo duradero está en la perfección. La vida está hecha con un cálculo exacto.' + leCobusier, 'El sueño sólo se apoya sobre realidades esenciales. La poesía sólo procede mediante hechos exactos.' + leCobusier, 'La poesía es un acto humano: las relaciones concertadas entre imágenes perceptibles.' + leCobusier, 'El lirismo sólo tiene alas sobre la verdad. Sólo lo genuino nos conmueve. La arquitectura se propone emoción.' + leCobusier, 'La cosa más importante del mundo son los espacios vacíos.' + leCobusier, 'Charles Édouard Jeanneret, mejor conocido como Le Corbusier, fue una de las mentes más brillantes de la arquitectura moderna, cuyas obras traspasaron la teoría y el arte.', 'Le Corbusier nacío en Suiza y se formó en París, ahí encontró la manera de plasmar la vanguardia y su fascinación por la pintura de forma autodidacta, en estructuras lisas y blancas con volumen.', 'Le Corbusier se distinguió por la planificación urbana de viviendas sociales, al visualizar edificios sin ostentaciones decorativas para potenciar la imagen las ciudades.','Arquitectura es cosa de arte, un fenómeno de emociones, que queda fuera y más allá de las cuestiones constructivas.' + leCobusier, 'El propósito de la construcción es mantener las cosas juntas y el de la arquitectura es deleitarnos' + leCobusier,  'Siempre me interesó lo creativo, sobre todo, lo que se aplica al hombre y a su medio. Con la pintura pude desarrollar todo eso. Es un medio apasionante y peligroso' + leCobusier, 'La arquitectura es el juego sabio, correcto y magnífico de los volúmenes reunidos bajo la luz' + leCobusier, 'Prefiero dibujar a hablar. Dibujar es más rápido, y deja menos espacio para la mentira' + leCobusier, 'Una casa es una máquina para vivir. La casa debe ser el estuche de la vida, la máquina de felicidad' + leCobusier, 'La arquitectura debe de ser la expresión de nuestro tiempo y no un plagio de las culturas pasadas' + leCobusier, 'La geometría solucionará los problemas de la Arquitectura' + leCobusier, 'La arquitectura está reprimida por la costumbre, los estilos son una mentira' + leCobusier, 'La arquitectura es el punto de partida del que quiera llevar a la humanidad hacia un porvenir mejor' + leCobusier, 'Trabajé por lo que más necesitan los hombres hoy: el silencio y la paz' + leCobusier, 'Me impresiona profundamente el diseñador del universo. Estoy convencido de que yo nunca hubiera logrado hacer algo así, ni de lejos. - Richard Buckminster Fuller-','Un proceso de diseño abordado con profundidad puede hacer del promotor, del arquitecto y hasta de un visitante ocasional del edificio seres humanos sensiblemente mejores. -Juhani Pallasmaa-', 'He dicho adiós a la manida idea de que la arquitectura tiene que salvar el mundo. -Peter Zumthor-', 'Nosotros no creamos obras. Creo que, de hecho, somos descubridores.Glenn Murcutt', 'Para mí, cada día es algo nuevo. Me enfrento a cada proyecto con una renovada inseguridad, casi como si fuera el primero, y sudo tinta. Cuando me pongo a ello y empiezo a trabajar, nunca estoy seguro de hacia dónde voy; y si lo supiera, sencillamente no lo haría. -Frank O. Gehry-', 'Cojo el lápiz. El trazo fluye. Aparece un edificio. Ahí está. No hay nada más que decir. -Oscar Niemeyer-', 'Para mí, el lenguaje del dibujo es extremadamente revelador: bastan unos pocos trazos para saber si alguien es un arquitecto de verdad. -Eero Saarinen-', '¿Hay algo más agradable para la mente que el papel inmaculado? ¿Que comparar y estudiar la “variedad” de texturas y colores de tarjetas y papeles? -Frank Lloyd Wright-', 'AMO EL PAPEL. BASTAN UN BUEN MONTÓN DE HOJAS Y UN LÁPIZ PARA HACERME FELIZ. -Cecil Balmond-', 'Prefiero dibujar a hablar. Dibujar es más rápido y deja menos espacio a las mentiras. -Le Corbusier-','He advertido que el ordenador a veces conduce a decisiones y resultados insípidos. Ahora, cualquiera puede proyectar un edificio inestable y en forma de burbuja. -Peter Cook-', 'Siempre digo a mis alumnos: en vuestro trabajo tenéis que poner, en primer lugar, esfuerzo, en segundo, amor y en tercero, sufrimiento. -Glenn Murcutt-', 'Al hacer un proyecto me entra el pánico; eso es bueno, puede ser un método. Primero, el pánico. Segundo, conquistar el pánico con trabajo. Tercero, encontrar formas de resolver tus dudas. Eduardo Souto de Moura', 'Estudié arte y después arquitectura, y nunca sentí la necesidad de definirme claramente como arquitecta profesional o como artista: encontré una especie de terreno intermedio contaminado por ambos campos. -Elizabeth Diller-','Muchos arquitectos no son conscientes de sus propios patrones, como tampoco la mayoría de las personas lo son de los que rigen su vida privada. Nos atrae mucho esa cuestión, pues de repente acerca mucho la arquitectura y la psicología. -Jacques Herzog-', 'Siempre he sentido que lo más importante es encontrar la forma de escapar del esquema mental o de la conciencia estética con los que cargo. -Arata Isozaki-', 'EN UNA ARQUITECTURA PURA, EL MÁS NIMIO DETALLE DEBE TENER UN SENTIDO O SERVIR A ALGÚN PROPÓSITO. -Augustus W. N. Pugin-', 'Recuerda que las cosas más bellas del mundo son las más inútiles, como, por ejemplo, los pavos reales y los lirios. -John Ruskin-', 'No quiero desnudar la arquitectura. Quiero enriquecerla y añadirle capas. Básicamente, como sucede en una catedral gótica, donde el ornamento y la estructura forman una alianza. -Cecil Balmond-', 'Menos es más. -Ludwig Mies van der Rohe-', 'Menos es aburrido. -Robert Venturi-', 'Existe una cualidad genérica en el blanco que nos gusta. -Kazuyo Sejima-', 'Siempre trato de pensar con curvas. -Greg Lynn-', 'La forma siempre sigue a la función. -Louis H. Sullivan-', 'La forma sigue a la forma, no a la función. -Philip Johnson-', 'La forma sigue al beneficio” es el principio estético de nuestros tiempos. -Richard Rogers-', 'Una silla es un objeto muy difícil. Un rascacielos es casi más fácil. Por eso el mobiliario Chippendale es famoso. -Ludwig Mies van der Rohe-', 'EL DESEO DE TOCAR EL CIELO ESTÁ PROFUNDAMENTE ARRAIGADO EN LA PSIQUE HUMANA. -Cesar Pelli -', 'Proyecto cualquier cosa que me pidan, desde una catedral hasta un gallinero. Así es como me gano la vida. -Henry Hobson Richardson-','Nunca rechaces un encargo porque pienses que no está a tu altura. -Julia Morgan-', 'El proyecto ideal no existe. Existe la posibilidad de aproximarse a él en cada ocasión. -Paulo Mendes da Rocha-', 'Cuando le preguntas a un arquitecto cuál es su mejor edificio, suele contestar: el próximo. -Emilio Ambasz-', 'Cuidado con el exceso de confianza; sobre todo en cuestiones de estructura. -Cass Gilbert-', 'TAL VEZ NO SEA EL MÁS INTERESANTE DE LOS ARQUITECTOS, PERO SIGO ESTANDO AHÍ Y HE SABIDO MANTENER CIERTA INTEGRIDAD. -David Chipperfield-', 'Estoy absolutamente en contra de lo heroico. Nosotros hacemos cosas pequeñas. Estamos absolutamente a favor de lo patético. -Michael Meredith-', 'Básicamente, la idea es que, con todo el mundo tratando de ser revolucionario, serás más revolucionario si tratas de ser ordinario. -Denise Scott Brown-', 'La mejor de las formas ya está lista y nadie debería tener miedo de utilizarla, incluso si su idea básica procede de algún otro. Basta de genios y de originalidad. -Adolf Loos-','Si no te ves capaz de hacer del mundo un lugar mejor con tu trabajo, al menos asegúrate de no empeorarlo. -Herman Hertzberger-', 'Nunca reutilizo ideas. Una vez he usado una, se acabó. -Arthur Erickson-', 'Tener 65 ideas para solucionar un problema no es una muestra de creatividad. Es un desperdicio de energía. -Jan Kaplický-', 'Algo tan común como la pintura para una casa puede resultar fascinante cuando se pule hasta lograr un acabado espejado. -Tod Williams-', 'El juego de luces y sombras, de sólidos y huecos, puede apreciarse mejor contra una superficie blanca. -Richard Meier-', 'LA LUZ NO ES ALGO VAGO Y DIFUSO QUE PUEDA DARSE POR SENTADO POR EL MERO HECHO DE QUE ESTÁ SIEMPRE AHÍ. EL SOL NO SALE EN VANO CADA DÍA. -Alberto Campo Baeza-', 'Cada material tiene sus propias sombras. La sombra de la piedra no es la misma que la de una frágil hoja de otoño. La sombra penetra en el material e irradia su mensaje. -Sverre Fehn-', 'El Sol no supo de su grandeza hasta que incidió sobre la cara de un edificio. -Louis I. Kahn-', 'Siempre busco más luz y más espacio. -Santiago Calatrava-', 'LA ARQUITECTURA ESTÁ LIGADA AL EMPLAZAMIENTO Y, EN MI OPINIÓN, EL LUGAR ES COMO UN VÍNCULO METAFÍSICO Y POÉTICO CON AQUELLO QUE UN EDIFICO PUEDE LLEGAR A SER. -Steven Holl-', 'El diseño de edificios en entornos naturales, sean urbanos o rurales, debe responder al terreno sobre el que se levantan y al cielo contra el que se proyectan. -James Polshek-', '¿De dónde sale la idea de que nuestras calles tienen que parecer creadas por el mismo cliente o el mismo arquitecto? La diversidad, y no su contrario, es lo que nos atrae. -Günter Behnisch-', 'La incoherencia en sí genera vitalidad. -Kenzo Tange-', 'PUEDES CERRAR UN LIBRO MALO, PUEDES EVITAR ESCUCHAR MÚSICA MALA, PERO NO PUEDES LIBRARTE DE LA TORRE HORROROSA QUE TIENES FRENTE A TU CASA. -Renzo Piano-', 'Siempre me sorprende el poco énfasis que ponen las escuelas de arquitectura y, de hecho, muchos arquitectos en el proceso de integración de un edificio. -Norman Foster-', 'No puedes limitarte a poner algo nuevo en un lugar. Tienes que absorber lo que ves a tu alrededor, lo que existe ya en el terreno, y después usar ese conocimiento, junto con el pensamiento contemporáneo, para interpretar lo que ves. -Tadao Ando-', 'UN ARQUITECTO QUE PROYECTA REALMENTE PARA UN SER HUMANO TIENE QUE SABER BASTANTE MÁS QUE LOS CINCO CÁNONES DE VITRUVIO. -Richard Neutra-', 'Creo que los edificios deben imitar los sistemas ecológicos. -Ken Yeang-', 'UTILIZO MATERIALES BARATOS. -Herman Hertzberger-', 'Creo que para construir un edificio sólido no hace falta usar un material resistente. La solidez de un edificio no tiene nada que ver con la resistencia del material. -Shigeru Ban-', 'Creo que para construir un edificio sólido no hace falta usar un material resistente. La solidez de un edificio no tiene nada que ver con la resistencia del material. -Shigeru Ban-', 'Trato de contrarrestar la permanencia de los edificios, su imperturbabilidad, con elementos que confieran una inefable cualidad inmaterial. -Toyo Ito-','Con independencia de su belleza, la fachada y los muros de una casa, una iglesia o un palacio tan solo son un continente, una caja formada por paredes.El contenido es el espacio interior. -Bruno Zevi-', 'El espacio, el espacio... ¡los arquitectos siempre hablan del espacio! Pero crear un espacio no comporta, automáticamente, hacer arquitectura. Con el mismo espacio puedes hacer una obra maestra o provocar un desastre. -Jean Nouvel-', 'Recuerdo que, cuando era niño, solíamos tirar el balón desde la ventana del primer piso. Nunca íbamos a un espacio especialmente pensado para jugar; el espacio de juego se establecía en el momento de jugar. El juego era inspiración, no organización. -Louis I. Kahn-', 'Yo mismo estoy instalado en una oficina sin ventanas y con aire acondicionado, una especie de celda. Mis visitantes son conscientes de este hecho, lo que les induce a ser concisos e ir al grano. -Le Corbusier-', 'No sé por qué la gente contrata arquitectos para luego decirles lo que tienen que hacer. -Frank O. Gehry-', 'CREO QUE LAS RESTRICCIONES SON MUY IMPORTANTES. SON POSITIVAS PORQUE TE PERMITEN TRABAJAR A PARTIR DE ALGO. -Charles Gwathmey-', 'Odiábamos a la Bauhaus.Fue un mal momento para la arquitectura. Simplemente no tenían talento; todo lo que tenían era reglas. Hasta para los cuchillos y los tenedores crearon reglas. Picasso nunca hubiera aceptado reglas. ¿La casa es una máquina? ¡No! Lo mecánico es feo. La regla es lo peor que hay. Solo te hace querer romperla. -Oscar Niemeyer-', 'Si tienes libertad total, entonces tienes un problema. Es mucho mejor tener alguna obligación, cierta disciplina, algunas reglas. Cuando no tienes reglas, acabas por construirte las tuyas propias. -Renzo Piano-', 'La gente que construye su propia casa suele ser muy valiente. Son personas con curiosidad por la vida. Piensan en lo que significa vivir en una casa en lugar de limitarse a comprar un bien y darle uso. -Tom Kundig-', 'ODIO LAS VACACIONES. ¿PARA QUÉ ESTAR EN LA PLAYA SI PUEDES ESTAR CONSTRUYENDO EDIFICIOS? -Philip Johnson-', 'Siempre estamos trabajando con coreógrafos y directores, expertos en robótica y diferentes científicos e investigadores. Nos interesan siempre los vínculos y cruces entre disciplinas.-Elizabeth Diller-', 'Deberíamos aprender desde niños las posibilidades que ofrece nuestro entorno, las leyes físicas y psicológicas que gobiernan el mundo visual, y el goce supremo que produce participar del proceso creativo por el que uno da forma a su propio espacio vital. -Walter Gropius-', 'Prefiero trabajar con la holgura del lápiz que con la precisión de la tinta o del ordenador. -Thom Mayne-', 'ENTRE EL AÑO 1990 Y EL 2000 NO TUVE ENCARGOS, Y NO QUISE TAMPOCO UN PUESTO ACADÉMICO O EN EL GOBIERNO. SOLO QUERÍA TRABAJAR CON ARTESANOS, ADQUIRIR EXPERIENCIA SOBRE EL TERRENO Y NO SER RESPONSABLE DEL DISEÑO, SOLO DE LA CONSTRUCCIÓN. -Wang Shu-', 'Deberíamos trabajar para hacer nuestro mundo comprensible y no para volverlo aún más confuso. Cuando algo parece madera debería ser madera, y el hierro ser hierro. -Günter Behnisch-', 'Siempre considero un edificio como parte de un todo, una pieza que crea una acción colectiva: la ciudad. -Christian de Portzamparc-', 'TODA OBRA DE ARQUITECTURA QUE NO EXPRESE SERENIDAD ES UN ERROR. -Luis Barragán-', 'LA ARQUITECTURA QUE RECORDAMOS ES AQUELLA QUE NUNCA NOS CONSUELA O RECONFORTA. -Peter Eisenman-', 'Soy un arquitecto que construye y, por tanto, soy optimista. Ser optimista es un prerrequisito para todo aquel que quiera construir, porque la construcción tiene que ver con el optimismo, con encarar el futuro con confianza. -Cesar Pelli-', 'LO QUE MOTIVA ES TRABAJAR SOBRE LA DESAPARICIÓN, SOBRE LOS LÍMITES ENTRE LA PRESENCIA Y LA AUSENCIA DE LA ARQUITECTURA. -Dominique Perrault-', 'En realidad, algunas imágenes y dibujos tienen un impacto mayor que muchos edificios que llegan a construirse. -Emilio Ambasz-', 'Me gustan las ruinas porque lo que queda en ellas no es el diseño total, sino la claridad del pensamiento, la nuda estructura, el espíritu de la cosa. -Tadao Ando-', 'Piensa hasta el final:considera el final primero. -Leonardo da Vinci-'           
 
@@ -3650,7 +4296,6 @@ function fraseAleatoria() {
     // Seleccionar aleatoriamente una frase
     //fraseRandom = frasesCelebres[Math.floor(Math.random() * frasesCelebres.length)];
     //console.log(fraseRandom);
-
 
     let fechaHoraActual = new Date();
     // Extraer los componentes de la fecha y hora
@@ -3705,6 +4350,15 @@ function actualizarProblemas() {
         selectUnidades.style.display = "none";
         textareaEcuaciones.style.width = "50%";
         advertencia.innerHTML = `${"¡Importante! Debes ingresar dos valores(x e y) separados por una coma (sin letras), estos pueden ser fracciones o numeros. Por ejemplo 35/56, 25/3 "}`;
+
+    } else if (seleccion === "ecuacionesSegundoGrado") {
+        problemasMatematicos = problemasEcuacionesSegundoGrado;
+        // Ocultar el select de unidades y aumentar el tamaño del textarea
+        selectUnidades.style.display = "none";
+        textareaEcuaciones.style.width = "50%";
+        advertencia.innerHTML = `${"¡Importante! Si aparece x^2 esto equivale a x elevado a 2. Si aparece sqrt(x+2) esto equivale a raiz cuadrada de (x+2). Debes ingresar dos valores separados por una coma (sin letras). Si el ejercicio tiene un solo resultado ingresalo dos veces separado por una coma."}`;
+
+
     console.log("Problemas matemáticos seleccionados:", problemasMatematicos);
     }
     console.log(problemasMatematicos.length);
@@ -3720,7 +4374,9 @@ function revisarResultado() {
     } else if (seleccion === "ecuaciones") {
         revisarResultadoAlgebra(); 
     } else if (seleccion === "sistemasEcuaciones") {
-        revisarResultadosSistemasEcuaciones()
+        revisarResultadosSistemasEcuaciones();
+    } else if (seleccion === "ecuacionesSegundoGrado") {
+        revisarResultadosEcuacionesSegundoGrado();
     }
 }    
 
@@ -3815,7 +4471,9 @@ function revisarResultadoUnidades() {
     }
 }
 
+//Aun tiene problemas para revisar fracciones negativas
 function revisarResultadosSistemasEcuaciones() {
+
     let resultadoUsuario = respuesta.value.trim().replace(/\s/g, ''); // Eliminar espacios en blanco
 
     // Separar cada una de las respuestas por una coma
@@ -3860,10 +4518,11 @@ function revisarResultadosSistemasEcuaciones() {
 
     // Calcular el margen de error individual para cada respuesta del usuario en comparación con cada respuesta correcta
     let margenError = 0.05; // 5% de margen de error
-    let respuestasCorrectasConMargen = respuestasCorrectas.map(respuesta => {
+    let respuestasCorrectasConMargen = respuestasCorrectas.map((respuesta, index) => {
+        let margen = Math.abs(respuesta) * margenError; // Calcula el margen de error basado en el valor absoluto de la respuesta correcta
         return {
-            minimo: respuesta * (1 - margenError),
-            maximo: respuesta * (1 + margenError)
+            minimo: respuesta - margen,
+            maximo: respuesta + margen
         };
     });
 
@@ -3887,61 +4546,69 @@ function revisarResultadosSistemasEcuaciones() {
     return;
 }
 
-/*
-function revisarResultadosSistemasEcuaciones() {
+function revisarResultadosEcuacionesSegundoGrado() {
+
     let resultadoUsuario = respuesta.value.trim().replace(/\s/g, ''); // Eliminar espacios en blanco
 
     // Separar cada una de las respuestas por una coma
     let respuestasUsuario = resultadoUsuario.split(',');
 
+    // Verificar si el usuario ingresó exactamente dos respuestas
+    if (respuestasUsuario.length !== 2) {
+        mostrarResultadoIncorrecto();
+        return;
+    }
+
     // Convertir fracciones en números decimales para las respuestas del usuario
     respuestasUsuario = respuestasUsuario.map(respuesta => {
-        let fraccion = respuesta.match(/^(\d+)\/(\d+)$/); // Verificar si es una fracción
+        let fraccion = respuesta.match(/^(-?\d+)\/(\d+)$/); // Verificar si es una fracción
         if (fraccion) {
             let numerador = parseInt(fraccion[1], 10);
             let denominador = parseInt(fraccion[2], 10);
-            return numerador / denominador; // Convertir a decimal
+            let numeroDecimal = numerador / denominador; // Convertir a decimal
+            return parseFloat(respuesta) < 0 ? -numeroDecimal : numeroDecimal; // Mantener el signo negativo si es una fracción negativa
         } else {
             return parseFloat(respuesta); // Convertir a decimal si no es una fracción
         }
     });
 
-    console.log("Repuestas Usuario:",respuestasUsuario);
+    console.log("Respuestas del Usuario:", respuestasUsuario);
 
     // Obtener las respuestas correctas y convertir fracciones en números decimales
     let respuestasCorrectas = problemaAleatorio.combinacionesRespuesta.map(respuesta => {
-        let fraccion = respuesta.match(/^(\d+)\/(\d+)$/); // Verificar si es una fracción
+        let fraccion = respuesta.match(/^(-?\d+)\/(\d+)$/); // Verificar si es una fracción
         if (fraccion) {
             let numerador = parseInt(fraccion[1], 10);
             let denominador = parseInt(fraccion[2], 10);
-            return numerador / denominador; // Convertir a decimal
+            let numeroDecimal = numerador / denominador; // Convertir a decimal
+            return parseFloat(respuesta) < 0 ? -numeroDecimal : numeroDecimal; // Mantener el signo negativo si es una fracción negativa
         } else {
             return parseFloat(respuesta); // Convertir a decimal si no es una fracción
         }
     });
 
-    console.log(respuestasCorrectas);
+    console.log("Respuestas Correctas:", respuestasCorrectas);
 
     // Calcular el margen de error individual para cada respuesta del usuario en comparación con cada respuesta correcta
     let margenError = 0.05; // 5% de margen de error
-    let respuestasCorrectasConMargen = respuestasCorrectas.map(respuesta => {
+    let respuestasCorrectasConMargen = respuestasCorrectas.map((respuesta, index) => {
+        let margen = Math.abs(respuesta) * margenError; // Calcula el margen de error basado en el valor absoluto de la respuesta correcta
         return {
-            minimo: respuesta * (1 - margenError),
-            maximo: respuesta * (1 + margenError)
+            minimo: respuesta - margen,
+            maximo: respuesta + margen
         };
     });
 
-
     console.log("Respuesta Correctas con Margen", respuestasCorrectasConMargen);
 
-    // Verificar si las respuestas del usuario están dentro de los márgenes de error de las respuestas correctas
-    let todasLasRespuestasCorrectas = respuestasUsuario.every((respuestaUsuario, indexUsuario) => {
-        return respuestasCorrectasConMargen.some((respuestaCorrectaConMargen, indexCorrecta) => {
+    // Verificar si las respuestas del usuario están contenidas en las respuestas correctas con margen de error
+    let todasLasRespuestasCorrectas = respuestasUsuario.every(respuestaUsuario => {
+        return respuestasCorrectasConMargen.some(respuestaCorrectaConMargen => {
             return respuestaUsuario >= respuestaCorrectaConMargen.minimo && respuestaUsuario <= respuestaCorrectaConMargen.maximo;
         });
     });
 
-    console.log("Todas las repuestas Correctas:",todasLasRespuestasCorrectas);
+    console.log("Todas las repuestas Correctas:", todasLasRespuestasCorrectas);
 
     // Si todas las respuestas del usuario están dentro del margen de error de al menos una respuesta correcta, mostrar resultado correcto
     if (todasLasRespuestasCorrectas) {
@@ -3951,8 +4618,6 @@ function revisarResultadosSistemasEcuaciones() {
     }
     return;
 }
-*/
-
 
 function esRespuestaCorrectaConLetras(resultadoUsuario) {
     if (!resultadoUsuario) {
@@ -4036,7 +4701,6 @@ function mostrarResultadoCorrecto() {
     document.querySelector(".btnEncriptar").classList.add("desactivar");
 }
 
-
 let intentos = 3;
 
 
@@ -4104,6 +4768,8 @@ function quieroRepasar(){
 
     } else if (seleccion === "sistemasEcuaciones") {
         window.open("https://es.khanacademy.org/math/algebra/x2f8bb11595b61c86:systems-of-equations/x2f8bb11595b61c86:introduction-to-systems-of-equations/v/trolls-tolls-and-systems-of-equations");
+    } else if (seleccion === "ecuacionesSegundoGrado") {
+        window.open("https://es.khanacademy.org/math/algebra/x2f8bb11595b61c86:quadratic-functions-equations/x2f8bb11595b61c86:quadratic-formula-a1/v/using-the-quadratic-formula");
     }
     
     console.log(seleccion)
