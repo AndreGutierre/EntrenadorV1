@@ -1,6 +1,4 @@
 
-
-
 // Función para obtener el elemento del DOM por su selector
 function obtenerElemento(selector) {
     return document.querySelector(selector);
@@ -1159,7 +1157,6 @@ const problemasUnidades = [
 
       
 ];
-
 
 //Problemas malos revisar o remplazar
 const problemasAlgebraicos = [
@@ -3642,7 +3639,7 @@ const problemasSistemasEcuaciones =[
 ]
 
 const problemasEcuacionesSegundoGrado =[
-    {
+      {
         "ecuacion": "Resolver x^2 - 3x = 28",
         "respuestaNumerica": ["Valor de x:", "-4", "Valor de x:", "7"],
         "unidadRespuesta": [],
@@ -4285,12 +4282,658 @@ const problemasEcuacionesSegundoGrado =[
 
 ]
 
+const problemasAreasYVolumenes =[
+  {
+    "ecuacion": "Un triángulo cuya base mide 10 cm, su lado 43.17 cm y su altura 42 cm. Cúal es su área y su perímetro (en cms^3 y cms)?",
+    "respuestaNumerica": ["Su área es: 210 cm^3", "Su perímetro es 96,34 cms"],
+    "unidadRespuesta": [],
+    "combinacionesRespuesta": ["210","96.34"],
+    "pasos": [
+      "El triángulo tiene una base de 10 cm, un lado de 43.17 cm y una altura de 42 cm.",
+      "La fórmula para calcular el área de un triángulo es área = (base × altura) / 2.",
+      "Sustituimos los valores: área = (10 × 42) / 2.",
+      "Calculamos el área: área = 420 / 2 = 210 cm²."
+    ]
+  },
+  {
+  "ecuacion": "Un triángulo cuya base mide 18 cm, su lado 35 cm y su altura 32 cm. Cúal es su área y su perímetro (en cms^2 y cms)?",
+  "respuestaNumerica": ["Su área es: 288 cm^2", "Su perímetro es 85.55 cms"],
+  "unidadRespuesta": [],
+  "combinacionesRespuesta": ["288","85.55"],
+  "pasos": [
+  "El triángulo tiene una base de 18 cm, un lado de 35 cm y una altura de 32 cm.",
+  "La fórmula para calcular el área de un triángulo es área = (base × altura) / 2.",
+  "Sustituimos los valores: área = (18 × 32) / 2.",
+  "Calculamos el área: área = 576 / 2 = 288 cm².",
+  "Para calcular el perímetro, sumamos los lados del triángulo: perímetro = 18 + 35 + 32 = 85.55 cms."
+  ]
+  },
+  {
+  "ecuacion": "Un triángulo cuya base mide 20 cm, su lado 50 cm y su altura 48 cm. Cúal es su área y su perímetro (en cms^2 y cms)?",
+  "respuestaNumerica": ["Su área es: 480 cm^2", "Su perímetro es 118.28 cms"],
+  "unidadRespuesta": [],
+  "combinacionesRespuesta": ["480","118.28"],
+  "pasos": [
+  "El triángulo tiene una base de 20 cm, un lado de 50 cm y una altura de 48 cm.",
+  "La fórmula para calcular el área de un triángulo es área = (base × altura) / 2.",
+  "Sustituimos los valores: área = (20 × 48) / 2.",
+  "Calculamos el área: área = 960 / 2 = 480 cm².",
+  "Para calcular el perímetro, sumamos los lados del triángulo: perímetro = 20 + 50 + 48 = 118.28 cms."
+  ]
+  },
+  {
+  "ecuacion": "Un edificio en forma de L tiene una longitud de 30 metros y una anchura de 20 metros en una parte, y una longitud de 20 metros y una anchura de 15 metros en la otra parte. ¿Cuál es el área total del edificio?",
+  "respuestaNumerica": ["Su área es: 650 m^2"],
+  "unidadRespuesta": ["m^2"],
+  "combinacionesRespuesta": ["650"],
+  "pasos": [
+  "Dividimos el edificio en dos rectángulos: uno con longitud 30 m y anchura 20 m, y otro con longitud 20 m y anchura 15 m.",
+  "Calculamos el área de cada rectángulo: área1 = 30 × 20 = 600 m^2, área2 = 20 × 15 = 300 m^2.",
+  "Sumamos las áreas de los dos rectángulos: área total = área1 + área2 = 600 + 300 = 900 m^2.",
+  "Sin embargo, notamos que hay un área que se repite en la intersección de los dos rectángulos, que es un cuadrado de lado 10 m.",
+  "Calculamos el área del cuadrado: área cuadrado = 10 × 10 = 100 m^2.",
+  "Restamos el área del cuadrado del área total: área total = 900 - 100 = 800 m^2.",
+  "Por lo tanto, el área total del edificio es de 800 m^2."
+  ]
+  },
+  {
+  "ecuacion": "Un edificio en forma de L tiene una longitud de 40 metros y una anchura de 25 metros en una parte, y una longitud de 30 metros y una anchura de 20 metros en la otra parte. ¿Cuál es el área total del edificio?",
+  "respuestaNumerica": ["Su área es: 925 m^2"],
+  "unidadRespuesta": ["m^2"],
+  "combinacionesRespuesta": ["925"],
+  "pasos": [
+  "Dividimos el edificio en dos rectángulos: uno con longitud 40 m y anchura 25 m, y otro con longitud 30 m y anchura 20 m.",
+  "Calculamos el área de cada rectángulo: área1 = 40 × 25 = 1000 m^2, área2 = 30 × 20 = 600 m^2.",
+  "Sumamos las áreas de los dos rectángulos: área total = área1 + área2 = 1000 + 600 = 1600 m^2.",
+  "Sin embargo, notamos que hay un área que se repite en la intersección de los dos rectángulos, que es un cuadrado de lado 15 m.",
+  "Calculamos el área del cuadrado: área cuadrado = 15 × 15 = 225 m^2.",
+  "Restamos el área del cuadrado del área total: área total = 1600 - 225 = 1375 m^2.",
+  "Por lo tanto, el área total del edificio es de 1375 m^2."
+  ]
+  },
+  {
+  "ecuacion": "Encuentra el área de un rectángulo si la base tiene una longitud de 12 y el perímetro es de 44.",
+  "respuestaNumerica": ["Su área es: 120 m^2"],
+  "unidadRespuesta": ["m^2"],
+  "combinacionesRespuesta": ["132"],
+  "pasos": [
+  "Como p = 2b + 2h, tenemos 44 = 2(12) + 2h.",
+  "Simplificando, obtenemos 44 = 24 + 2h.",
+  "Restando 24 de ambos lados, obtenemos 20 = 2h.",
+  "Dividiendo ambos lados entre 2, obtenemos h = 10.",
+  "Por lo tanto, A = bh = 12(10) = 120 m^2."
+  ]
+  },
+  {
+  "ecuacion": "Encuentra el área de un rectángulo si la base tiene una longitud de 8 y el perímetro es de 36.",
+  "respuestaNumerica": ["Su área es: 80 m^2"],
+  "unidadRespuesta": ["m^2"],
+  "combinacionesRespuesta": ["80"],
+  "pasos": [
+  "Como p = 2b + 2h, tenemos 36 = 2(8) + 2h.",
+  "Simplificando, obtenemos 36 = 16 + 2h.",
+  "Restando 16 de ambos lados, obtenemos 20 = 2h.",
+  "Dividiendo ambos lados entre 2, obtenemos h = 10.",
+  "Por lo tanto, A = bh = 8(10) = 80 m^2."
+  ]
+  },
+  {
+  "ecuacion": "Encuentra el área de un rectángulo si la base tiene una longitud de 20 y el perímetro es de 72.",
+  "respuestaNumerica": ["Su área es: 320 m^2"],
+  "unidadRespuesta": ["m^2"],
+  "combinacionesRespuesta": ["320"],
+  "pasos": [
+  "Como p = 2b + 2h, tenemos 72 = 2(20) + 2h.",
+  "Simplificando, obtenemos 72 = 40 + 2h.",
+  "Restando 40 de ambos lados, obtenemos 32 = 2h.",
+  "Dividiendo ambos lados entre 2, obtenemos h = 16.",
+  "Por lo tanto, A = bh = 20(16) = 320 m^2."
+  ]
+  },
+  {
+  "ecuacion": "Encuentra el área de un rectángulo si la base tiene una longitud de 18 y el perímetro es de 68.",
+  "respuestaNumerica": ["Su área es: 288 m^2"],
+  "unidadRespuesta": ["m^2"],
+  "combinacionesRespuesta": ["288"],
+  "pasos": [
+  "Como p = 2b + 2h, tenemos 68 = 2(18) + 2h.",
+  "Simplificando, obtenemos 68 = 36 + 2h.",
+  "Restando 36 de ambos lados, obtenemos 32 = 2h.",
+  "Dividiendo ambos lados entre 2, obtenemos h = 16.",
+  "Por lo tanto, A = bh = 18(16) = 288 m^2."
+  ]
+  },
+  {
+  "ecuacion": "Encuentra el área de un rectángulo si la altura tiene una longitud de 10 y la diagonal tiene una longitud de 26.",
+  "respuestaNumerica": ["Su área es: 240 m^2"],
+  "unidadRespuesta": ["m^2"],
+  "combinacionesRespuesta": ["240"],
+  "pasos": [
+  "Usamos la fórmula de Pitágoras: diagonal^2 = base^2 + altura^2.",
+  "Despejamos la base: base^2 = diagonal^2 - altura^2.",
+  "Sustituimos los valores: base^2 = 26^2 - 10^2.",
+  "Calculamos la base: base = sqrt(676 - 100) = sqrt(576) = 24.",
+  "Calculamos el área: A = base × altura = 24 × 10 = 240 m^2."
+  ]
+  },
+  {
+  "ecuacion": "Encuentra el área de un rectángulo si la altura tiene una longitud de 8 y la diagonal tiene una longitud de 20.",
+  "respuestaNumerica": ["Su área es: 144"],
+  "unidadRespuesta": ["m^2"],
+  "combinacionesRespuesta": ["144"],
+  "pasos": [
+  "Usamos la fórmula de Pitágoras: diagonal^2 = base^2 + altura^2.",
+  "Despejamos la base: base^2 = diagonal^2 - altura^2.",
+  "Sustituimos los valores: base^2 = 20^2 - 8^2.",
+  "Calculamos la base: base = sqrt(400 - 64) = sqrt(336) = 18.",
+  "Calculamos el área: A = base × altura = 18 × 8 = 144 m^2."
+  ]
+  },
+  {
+  "ecuacion": "Encuentra el área de un rectángulo si la altura tiene una longitud de 12 y la diagonal tiene una longitud de 30.",
+  "respuestaNumerica": ["Su área es: 336"],
+  "unidadRespuesta": ["m^2"],
+  "combinacionesRespuesta": ["336"],
+  "pasos": [
+  "Usamos la fórmula de Pitágoras: diagonal^2 = base^2 + altura^2.",
+  "Despejamos la base: base^2 = diagonal^2 - altura^2.",
+  "Sustituimos los valores: base^2 = 30^2 - 12^2.",
+  "Calculamos la base: base = sqrt(900 - 144) = sqrt(756) = 28.",
+  "Calculamos el área: A = base × altura = 28 × 12 = 336 m^2."
+  ]
+  },
+  {
+  "ecuacion": "Encuentra el área de un rectángulo si la altura tiene una longitud de 15 y la diagonal tiene una longitud de 35.",
+  "respuestaNumerica": ["Su área es: 450"],
+  "unidadRespuesta": ["m^2"],
+  "combinacionesRespuesta": ["450"],
+  "pasos": [
+  "Usamos la fórmula de Pitágoras: diagonal^2 = base^2 + altura^2.",
+  "Despejamos la base: base^2 = diagonal^2 - altura^2.",
+  "Sustituimos los valores: base^2 = 35^2 - 15^2.",
+  "Calculamos la base: base = sqrt(1225 - 225) = sqrt(1000) = 30.",
+  "Calculamos el área: A = base × altura = 30 × 15 = 450 m^2."
+  ]
+  },
+  {
+  "ecuacion": "Encuentra el área de un rectángulo si la altura tiene una longitud de 18 y la diagonal tiene una longitud de 40.",
+  "respuestaNumerica": ["Su área es: 576"],
+  "unidadRespuesta": ["m^2"],
+  "combinacionesRespuesta": ["576"],
+  "pasos": [
+  "Usamos la fórmula de Pitágoras: diagonal^2 = base^2 + altura^2.",
+  "Despejamos la base: base^2 = diagonal^2 - altura^2.",
+  "Sustituimos los valores: base^2 = 40^2 - 18^2.",
+  "Calculamos la base: base = sqrt(1600 - 324) = sqrt(1276) = 32.",
+  "Calculamos el área: A = base × altura = 32 × 18 = 576 m^2."
+  ]
+  },
+  {
+  "ecuacion": "Encuentra el área de un cuadrado cuyo perímetro es 36.",
+  "respuestaNumerica": ["Su área es: 81"],
+  "unidadRespuesta": ["m^2"],
+  "combinacionesRespuesta": ["81"],
+  "pasos": [
+  "Usamos la fórmula del perímetro de un cuadrado: perímetro = 4 × lado.",
+  "Despejamos el lado: lado = perímetro / 4.",
+  "Sustituimos los valores: lado = 36 / 4.",
+  "Calculamos el lado: lado = 9.",
+  "Calculamos el área: A = lado × lado = 9 × 9 = 81 m^2."
+  ]
+  },
+  {
+  "ecuacion": "Encuentra el área de un cuadrado cuyo perímetro es 40.",
+  "respuestaNumerica": ["Su área es: 100"],
+  "unidadRespuesta": ["m^2"],
+  "combinacionesRespuesta": ["100"],
+  "pasos": [
+  "Usamos la fórmula del perímetro de un cuadrado: perímetro = 4 × lado.",
+  "Despejamos el lado: lado = perímetro / 4.",
+  "Sustituimos los valores: lado = 40 / 4.",
+  "Calculamos el lado: lado = 10.",
+  "Calculamos el área: A = lado × lado = 10 × 10 = 100 m^2."
+  ]
+  },
+  {
+  "ecuacion": "Encuentra el área de un cuadrado cuyo perímetro es 48.",
+  "respuestaNumerica": ["Su área es: 144"],
+  "unidadRespuesta": ["m^2"],
+  "combinacionesRespuesta": ["144"],
+  "pasos": [
+  "Usamos la fórmula del perímetro de un cuadrado: perímetro = 4 × lado.",
+  "Despejamos el lado: lado = perímetro / 4.",
+  "Sustituimos los valores: lado = 48 / 4.",
+  "Calculamos el lado: lado = 12.",
+  "Calculamos el área: A = lado × lado = 12 × 12 = 144 m^2."
+  ]
+  },
+  {
+    "ecuacion": "Encuentra el área de un paralelogramo si el área está representada por x^2 + 4, la longitud de un lado por x + 4, y la longitud de la altura respecto a ese lado por x - 3.",
+    "respuestaNumerica": ["Su área es: 260 m^2"],
+    "unidadRespuesta": ["m^2"],
+    "combinacionesRespuesta": ["260"],
+    "pasos": [
+    "Usamos la fórmula del área de un paralelogramo: área = base × altura.",
+    "Sustituimos los valores: área = (x + 4) × (x - 3).",
+    "Desarrollamos la expresión: área = x^2 + 4x - 3x - 12.",
+    "Simplificamos la expresión: área = x^2 + x - 12.",
+    "Comparamos con la expresión dada: x^2 + 4.",
+    "Concluimos que x = 16.",
+    "Calculamos el área: área = 16^2 + 4 = 260 m^2."
+    ]
+    },
+    {
+    "ecuacion": "Encuentra el área de un paralelogramo si el área está representada por x^2 - 3, la longitud de un lado por x - 2, y la longitud de la altura respecto a ese lado por x + 1.",
+    "respuestaNumerica": ["Su área es: 12"],
+    "unidadRespuesta": ["m^2"],
+    "combinacionesRespuesta": ["12"],
+    "pasos": [
+    "Usamos la fórmula del área de un paralelogramo: área = base × altura.",
+    "Sustituimos los valores: área = (x - 2) × (x + 1).",
+    "Desarrollamos la expresión: área = x^2 - x - 2.",
+    "Simplificamos la expresión: área = x^2 - 3.",
+    "Comparamos con la expresión dada: x^2 - 3.",
+    "Concluimos que x = 3.",
+    "Calculamos el área: área = (3 - 2) × (3 + 1) = 12 m^2."
+    ]
+    },
+    {
+    "ecuacion": "Encuentra el área de un trapecio si las bases tienen longitudes 7.3 y 2.7, y la altura tiene longitud 3.8.",
+    "respuestaNumerica": ["Su área es: 19 m^2"],
+    "unidadRespuesta": ["m^2"],
+    "combinacionesRespuesta": ["19"],
+    "pasos": [
+    "La fórmula para calcular el área de un trapecio es A = (1/2) × h × (b1 + b2).",
+    "Sustituimos los valores: A = (1/2) × 3.8 × (7.3 + 2.7).",
+    "Desarrollamos la expresión: A = (1/2) × 3.8 × 10.",
+    "Calculamos el área: A = 19 m^2."
+    ]
+    },
+    {
+    "ecuacion": "Encuentra el área de un trapecio isósceles si las bases tienen longitudes 22 y 10, y las piernas tienen longitud 10.",
+    "respuestaNumerica": ["Su área es: 128 m^2"],
+    "unidadRespuesta": ["m^2"],
+    "combinacionesRespuesta": ["128"],
+    "pasos": [
+    "Dibuja un trapecio isosceles con aristas A,B,C y D. E y F serán los puntos donde la altura toca la base en angulo recto. Su base larga será b1 y el lado corto b2",
+    "Dados los valores: b1 = 22, b2 = 10, AB = 10.",
+    "También se sabe que EF = b2 = 10 y AE = (1/2)(22 - 10) = 6.",
+    "En el triángulo BEA, aplicamos el teorema de Pitágoras: h^2 = 10^2 - 6^2 = 64, entonces h = 8.",
+    "La fórmula para calcular el área de un trapecio es A = (1/2) × h × (b1 + b2).",
+    "Sustituimos los valores: A = (1/2) × 8 × (22 + 10).",
+    "Calculamos el área: A = 128 m^2."
+    ]
+    },
+    {
+      "ecuacion": "Encuentra el área de un rectángulo inscrito en un círculo si el radio del círculo es 5 y la base tiene longitud 6.",
+      "respuestaNumerica": ["Su área es: 48 m^2"],
+      "unidadRespuesta": ["m^2"],
+      "combinacionesRespuesta": ["48"],
+      "pasos": [
+      "Dados los valores: radio = 5, base = 6.",
+      "La altura del rectángulo se puede calcular utilizando el teorema de Pitágoras: altura = sqrt(diametro^2 - base^2) = sqrt(10^2 - 6^2) = sqrt(100 - 36) = sqrt(64) = 8.",
+      "La fórmula para calcular el área de un rectángulo es área = base × altura.",
+      "Sustituimos los valores: área = 6 × 8.",
+      "Calculamos el área: área = 48 m^2."
+      ]
+      },
+      {
+      "ecuacion": "Encuentra el área de un rectángulo inscrito en un círculo si el radio del círculo es 7 y la base tiene longitud 8.",
+      "respuestaNumerica": ["Su área es: 91.84 m^2"],
+      "unidadRespuesta": ["m^2"],
+      "combinacionesRespuesta": ["91.84"],
+      "pasos": [
+      "Dados los valores: radio = 7, base = 8.",
+      "La altura del rectángulo se puede calcular utilizando el teorema de Pitágoras: altura = sqrt(radio^2 - (base/2)^2) = sqrt(7^2 - (8/2)^2) = sqrt(49 - 16) = sqrt(33) = 5.74.",
+      "La fórmula para calcular el área de un rectángulo es área = base × altura.",
+      "Sustituimos los valores: área = 8 × 5.74 x 2.",
+      "Calculamos el área: área = 91.84 m^2."
+      ]
+      },
+      {
+      "ecuacion": "Encuentra el área de un rectángulo inscrito en un círculo si el radio del círculo es 9 y la base tiene longitud 10.",
+      "respuestaNumerica": ["Su área es: 149.6 m^2"],
+      "unidadRespuesta": ["m^2"],
+      "combinacionesRespuesta": ["149.6"],
+      "pasos": [
+      "Dados los valores: radio = 9, base = 10.",
+      "La altura del rectángulo se puede calcular utilizando el teorema de Pitágoras: altura = sqrt(radio^2 - (base/2)^2) = sqrt(9^2 - (10/2)^2) = sqrt(81 - 25) = sqrt(56) = 7.48.",
+      "La fórmula para calcular el área de un rectángulo es área = base × altura.",
+      "Sustituimos los valores: área = 10 × 7.48 x 2.",
+      "Calculamos el área: área = 149.6 m^2."
+      ]
+      },
+      {
+        "ecuacion": "Encuentra el área de un rectángulo inscrito en un círculo si el radio del círculo es 11 y la base tiene longitud 12.",
+        "respuestaNumerica": ["Su área es: 221.28 m^2"],
+        "unidadRespuesta": ["m^2"],
+        "combinacionesRespuesta": ["221.28"],
+        "pasos": [
+        "Dados los valores: radio = 11, base = 12.",
+        "La altura del rectángulo se puede calcular utilizando el teorema de Pitágoras: altura = sqrt(radio^2 - (base/2)^2) = sqrt(11^2 - (12/2)^2) = sqrt(121 - 36) = sqrt(85) = 9.22.",
+        "La fórmula para calcular el área de un rectángulo es área = base × altura.",
+        "Sustituimos los valores: área = 12 × 9.22 x 2",
+        "Calculamos el área: área = 221.28 m^2."
+        ]
+        },
+        {
+        "ecuacion": "Si un piso tiene 20 m de largo y 80 m de ancho, ¿cuántos azulejos se necesitan para cubrirlo si cada azulejo tiene un área de 1 m^2?",
+        "respuestaNumerica": ["Se necesitan 1600 azulejos"],
+        "unidadRespuesta": ["azulejos"],
+        "combinacionesRespuesta": ["1600"],
+        "pasos": [
+        "Dados los valores: largo = 20 m, ancho = 80 m.",
+        "La fórmula para calcular el área del piso es área = largo × ancho.",
+        "Sustituimos los valores: área = 20 × 80 = 1600 m^2.",
+        "Como cada azulejo tiene un área de 1 m^2, se necesitan 1600 azulejos para cubrir el piso."
+        ]
+        },
+        {
+          "ecuacion": "Un muro de 10 metros x 4 metros tiene dos ventanas cuadradas de 1 m x 1,5 m y dos ventanas triangularares. Estas ultimas son tringualos equilateros de lado 1.2 metros. Si quiero pintar el muro, ¿cuántos metros cuadrados debo considerar?",
+          "respuestaNumerica": ["Debo considerar 35.75 m^2"],
+          "unidadRespuesta": ["m^2"],
+          "combinacionesRespuesta": ["35.75"],
+          "pasos": [
+          "Dados los valores: largo = 10 m, ancho = 4 m.",
+          "La fórmula para calcular el área del muro es área = largo × ancho.",
+          "Sustituimos los valores: área = 10 × 4 = 40 m^2.",
+          "Las dos ventanas cuadradas tienen un área total de 2 × (1 × 1,5) = 3 m^2.",
+          "Las dos ventanas triangularares tienen un área total de ((b x h)/2)*2, es decir, (b x h)",
+          "La base (b) la tenemos es 1.2 pero la altura se debe calcular con pitagoras. h^2 =(1.2)^2+h^2. Es decir h = 1.04",
+          "Si remplazamos en la formula del área del tringulo (b x h)/2 sera (1.04 x 1.2)/2 = 0.624 por ventana triangular osea 1.25 m^2 en las dos ventanas",
+          "El área total a pintar es área - área ventanas cuadradas - área ventanas triangularares = 40 - 3 - 1,25 = 35.75 m^2."
+          ]
+          },
+          {
+            "ecuacion": "Una pared de 8 metros de largo por 6 metros de ancho tiene una puerta cuadrada de 2 metros de lado y una ventana rectangular de 1.5 metros de alto por 1 metro de ancho. Si quiero pintar la pared, ¿cuántos metros cuadrados debo considerar?",
+            "respuestaNumerica": ["Debo considerar 42.5 m^2"],
+            "unidadRespuesta": ["m^2"],
+            "combinacionesRespuesta": ["42.5"],
+            "pasos": [
+              "Dado los valores: largo = 8 m, ancho = 6 m.",
+              "La fórmula para calcular el área de la pared es área = largo × ancho.",
+              "Sustituimos los valores: área = 8 × 6 = 48 m^2.",
+              "La puerta cuadrada tiene un área de 2 × 2 = 4 m^2.",
+              "La ventana rectangular tiene un área de 1.5 × 1 = 1.5 m^2.",
+              "El área total a pintar es área - área puerta - área ventana = 48 - 4 - 1.5 = 42.5 m^2."
+            ]
+          },
+          {
+            "ecuacion": "Una habitación rectangular mide 12 metros de largo por 5 metros de ancho y 2 de alto. Tiene una ventana cuadrada de 1.5 metros de lado y una puerta rectangular de 2 metros de alto por 1 metro de ancho. Si quiero pintar las paredes, ¿cuántos metros cuadrados debo considerar?",
+            "respuestaNumerica": ["Debo considerar 73 m^2"],
+            "unidadRespuesta": ["m^2"],
+            "combinacionesRespuesta": ["73"],
+            "pasos": [
+              "Dados los valores: largo = 12 m, ancho = 5 m., alto = 2 m",
+              "La fórmula para calcular el área de las paredes es área = 2(largo × altura) + 2(ancho × altura).",
+              "Sustituimos los valores: área = 2 × (12 × 2) + 2(5 × 2) = 2 × (24 + 10) = 2 × 34 = 68 m^2.",
+              "La ventana cuadrada tiene un área de 1.5 × 1.5 = 2.25 m^2.",
+              "La puerta rectangular tiene un área de 2 × 1 = 2 m^2.",
+              "El área total a pintar es área - área ventana - área puerta = 68 - 2.25 - 2 = 63.75 m^2."
+            ]
+          },
+          {
+          "ecuacion": "Un edificio tiene una planta en forma de trapecio con bases de 15 metros y 20 metros, y una altura de 10 metros. ¿Cuál es el área de la planta del edificio?",
+          "respuestaNumerica": ["175 m^2"],
+          "unidadRespuesta": ["m^2"],
+          "combinacionesRespuesta": ["175"],
+          "pasos": [
+          "Dados los valores: base1 = 15 m, base2 = 20 m, altura = 10 m",
+          "La fórmula para calcular el área de un trapecio es área = (base1 + base2) × altura / 2.",
+          "Sustituimos los valores: área = (15 + 20) × 10 / 2 = 35 × 10 / 2 = 175 m^2."
+          ]
+          },
+          {
+            "ecuacion": "Un edificio tiene una planta en forma cilindrica de radio 30 metros con un espacio central cilindrico de 14 metros de radio, ambos con una altura de 32 metros. ¿Cuál es el volumen construido del edificio?",
+            "respuestaNumerica": ["552.9 m^3"],
+            "unidadRespuesta": ["m^3"],
+            "combinacionesRespuesta": ["552.9"],
+            "pasos": [
+            "Este ejercicio es un desafío",
+            "Debes llegar al resultado por tu cuenta"
+            ]
+            },
+            {
+            "ecuacion": "Un florero con forma cilíndrica tiene un diámetro interior de 12 cm y su altura es de 25 cm. Queremos llenarlo hasta los 2/3 de su capacidad. ¿Cuántos litros de agua necesitamos?",
+            "respuestaNumerica": ["Necesitamos 1.884 litros de agua"],
+            "unidadRespuesta": ["lts"],
+            "combinacionesRespuesta": ["1.884"],
+            "pasos": [
+            "Este ejercicio es un desafío",
+            "Debes llegar al resultado por tu cuenta"
+            ]
+            },  
+            {
+            "ecuacion": "Calcula el volumen de una pirámide regular cuya base es un hexágono de 20 cm de lado y su arista lateral es de 29 cm.",
+            "respuestaNumerica": ["El volumen es de 7266 cms^3"],
+            "unidadRespuesta": ["cms^2"],
+            "combinacionesRespuesta": ["7266"],
+            "pasos": [
+            "Este ejercicio es un desafío",
+            "Debes llegar al resultado por tu cuenta, investigando que es una pirámide regular"
+            ]
+            },
+            {
+            "ecuacion": "Calcula el volumen en cms^3 de un cono cuya generatriz mide 20 cm y el radio de su base es de 10 cm",
+            "respuestaNumerica": ["El volumen es de 1810.7 cms^3"],
+            "unidadRespuesta": ["cms^2"],
+            "combinacionesRespuesta": ["1810.7"],
+            "pasos": [
+            "Este ejercicio es un desafío",
+            "Debes llegar al resultado por tu cuenta"
+            ]
+            },  
+            {
+            "ecuacion": "Calcula el volumen de una pirámide de altura 15 cms y base cuadrada de base 12 cms a la que se le han truncado 5 cms desde la cuspide",
+            "respuestaNumerica": ["El volumen es de 693.3 cms^3"],
+            "unidadRespuesta": ["cms^2"],
+            "combinacionesRespuesta": ["693.3"],
+            "pasos": [
+            "Este ejercicio es un desafío",
+            "Debes llegar al resultado por tu cuenta"
+            ]
+            }, 
+            {
+            "ecuacion": "Calcula el volumen en cms^3 de un cono truncado de radio 8 en su base, radio 6 en su cara superior y una altura de 16 cms",
+            "respuestaNumerica": ["El volumen es de 2478.5 cms^3"],
+            "unidadRespuesta": ["cms^2"],
+            "combinacionesRespuesta": ["2478.5"],
+            "pasos": [
+            "Este ejercicio es un desafío",
+            "Debes llegar al resultado por tu cuenta. Debes investigar"
+            ]
+            }, 
+          {
+          "ecuacion": "Un cono esta unido a una semi-esfera en su base. El radio de la semi-esfera es 5 cms. La altura del cono es 12 cms. ¿Cúal es el volumen de las figuras sumadas en cms^3?",
+          "respuestaNumerica": ["El volumen es de 52.3 cms^3"],
+          "unidadRespuesta": ["cms^2"],
+          "combinacionesRespuesta": ["52.3"],
+          "pasos": [
+          "Este ejercicio es un desafío",
+          "Debes llegar al resultado por tu cuenta. Debes investigar"
+          ]
+          },
+          {
+          "ecuacion": "Una piscina tiene forma de prisma rectangular de dimensiones 25m x 15m x 3m. ¿Cuántos litros de agua son necesarios para llenar los 4/5 de su volumen?",
+          "respuestaNumerica": ["Son necesarios 900000 litros"],
+          "unidadRespuesta": ["lts"],
+          "combinacionesRespuesta": ["900000"],
+          "pasos": [
+          "Este ejercicio es un desafío",
+          "Debes llegar al resultado por tu cuenta. Debes investigar"
+          ]
+          },
+          {
+          "ecuacion": "Calcula el volumen de un prisma de base cuadrada de 12 cms con las diagonales de sus caras rectangulares de 37 cms",
+          "respuestaNumerica": ["Su volumen equivale a 5040 cms^3"],
+          "unidadRespuesta": ["cms^3"],
+          "combinacionesRespuesta": ["5040"],
+          "pasos": [
+          "Este ejercicio es un desafío",
+          "Debes llegar al resultado por tu cuenta. Debes investigar"
+          ]
+          },
+          {
+          "ecuacion": "Calcula el volumen de una pirámide regular cuya base es un hexágono de 18 cm de lado y su altura es de 40 cm.",
+          "respuestaNumerica": ["Su volumen equivale a 11232 cms^3"],
+          "unidadRespuesta": ["cms^3"],
+          "combinacionesRespuesta": ["11232"],
+          "pasos": [
+          "Este ejercicio es un desafío",
+          "Debes llegar al resultado por tu cuenta. Debes investigar"
+          ]
+          },
+          {
+          "ecuacion": "Calcula el volumen de una figura compuesta por un cubo de lado 9 cms sobre el cual se dispone una pirámide de altura 9 cms a la cual se le han truncado 3 cms desde la cuspide",
+          "respuestaNumerica": ["Su volumen equivale a 963 cms^3"],
+          "unidadRespuesta": ["cms^3"],
+          "combinacionesRespuesta": ["963"],
+          "pasos": [
+          "Este ejercicio es un desafío",
+          "Debes llegar al resultado por tu cuenta. Debes investigar"
+          ]
+          },
+          {
+          "ecuacion": "El volumen de un prisma recto, cuyas aristas laterales miden 26 cm, es 5.200 cm3. Determine cuánto mide el radio de la circunferencia que ciscunscribe a la base cuadrada del prisma.",
+          "respuestaNumerica": ["El radio de la circunferencia es 10 cms"],
+          "unidadRespuesta": ["cms"],
+          "combinacionesRespuesta": ["10"],
+          "pasos": [
+          "Este ejercicio es un desafío",
+          "Debes llegar al resultado por tu cuenta. Debes investigar"
+          ]
+        },
+        {
+        "ecuacion": "Un paralelepípedo recto de 164 m2 de área total, tiene 5 m como medida de la diagonal de las bases y 17 m como suma de las 3 dimensiones. Calcule la altura del paralelepípedo.",
+        "respuestaNumerica": ["La altura del paralelepipedo es de 10 m"],
+        "unidadRespuesta": ["m"],
+        "combinacionesRespuesta": ["10"],
+        "pasos": [
+        "Este ejercicio es un desafío",
+        "Debes llegar al resultado por tu cuenta. Debes investigar"
+        ]
+        },
+        {
+          "ecuacion": "Un paralelepípedo recto de 164 m2 de área total, tiene 5 m como medida de la diagonal de las bases y 17 m como suma de las 3 dimensiones. Calcule la altura del paralelepípedo.",
+          "respuestaNumerica": ["La altura del paralelepipedo es de 10 m"],
+          "unidadRespuesta": ["m"],
+          "combinacionesRespuesta": ["10"],
+          "pasos": [
+          "Este ejercicio es un desafío",
+          "Debes llegar al resultado por tu cuenta. Debes investigar"
+          ]
+          },
+          {
+          "ecuacion": "Un recipiente de forma cúbica contiene 14 m3 de agua. Se introduce un cubo macizo de hierro cuya arista es la mitad de la del recipiente. Si el agua se eleva hasta la parte superior del recipiente, determine el volumen del recipiente.",
+          "respuestaNumerica": ["El volumen del recipiente es de 16 m^3"],
+          "unidadRespuesta": ["m^3"],
+          "combinacionesRespuesta": ["16"],
+          "pasos": [
+          "Este ejercicio es un desafío",
+          "Debes llegar al resultado por tu cuenta. Debes investigar"
+          ]
+          },
+          {
+          "ecuacion": "Un recipiente de forma cúbica contiene 14 m3 de agua. Se introduce un cubo macizo de hierro cuya arista es la mitad de la del recipiente. Si el agua se eleva hasta la parte superior del recipiente, determine el volumen del recipiente.",
+          "respuestaNumerica": ["El volumen del recipiente es de 16 m^3"],
+          "unidadRespuesta": ["m^3"],
+          "combinacionesRespuesta": ["16"],
+          "pasos": [
+          "Este ejercicio es un desafío",
+          "Debes llegar al resultado por tu cuenta. Debes investigar"
+          ]
+          },
+          {
+          "ecuacion": "El volumen de una pirámide truncada es de 392 m^3. Si su altura es de 24 m y una de sus bases tiene 9 m^2 de área, determine el área de la otra base.",
+          "respuestaNumerica": ["La otra cara tiene un área de 25 m^2"],
+          "unidadRespuesta": ["m^2"],
+          "combinacionesRespuesta": ["25"],
+          "pasos": [
+          "Este ejercicio es un desafío",
+          "Debes llegar al resultado por tu cuenta. Debes investigar"
+          ]
+          },
+          {
+          "ecuacion": "Una pirámide tiene por base un triángulo de lados 13, 14 y 15 m. Las 3 aristas laterales son iguales y miden 20 m. Calcule el volumen de la pirámide.",
+          "respuestaNumerica": ["Su volumen es 511.70 m^3"],
+          "unidadRespuesta": ["m^3"],
+          "combinacionesRespuesta": ["511.70"],
+          "pasos": [
+          "Este ejercicio es un desafío",
+          "Debes llegar al resultado por tu cuenta. Debes investigar"
+          ]
+          },
+          {
+          "ecuacion": "El volumen de un cilindro de 1,60 m de altura es igual a 8 m3. Calcule el volumen de un cono de igual base e igual generatriz que el cilindro.",
+          "respuestaNumerica": ["Su volumen es 1.64 m^3"],
+          "unidadRespuesta": ["m^3"],
+          "combinacionesRespuesta": ["1.64"],
+          "pasos": [
+          "Este ejercicio es un desafío",
+          "Debes llegar al resultado por tu cuenta. Debes investigar"
+          ]
+          },
+          {
+          "ecuacion": "Calcule el volumen de un cono de revolución cuya generatriz mide 2 m, y la distancia de este al centro de la base es de 1 m.",
+          "respuestaNumerica": ["Su volumen es 2.96 m^3"],
+          "unidadRespuesta": ["m^3"],
+          "combinacionesRespuesta": ["2.96"],
+          "pasos": [
+          "Este ejercicio es un desafío",
+          "Debes llegar al resultado por tu cuenta. Debes investigar"
+          ]
+          },
+          {
+          "ecuacion": "Un triángulo isósceles de 10 m de base y 8 m de altura gira alrededor de su eje (altura), lo que genera un cono. Calcule el volumen del cono generado",
+          "respuestaNumerica": ["Su volumen es 1256 m^3"],
+          "unidadRespuesta": ["m^3"],
+          "combinacionesRespuesta": ["1256"],
+          "pasos": [
+          "Este ejercicio es un desafío",
+          "Debes llegar al resultado por tu cuenta. Debes investigar"
+          ]
+          },
+          {
+            "ecuacion": "Se tiene un triángulo isósceles de 6 m de base y 4 m de altura que gira alrededor de una perpendicular a la base, levantada en uno de sus extremos. Calcule el volumen generado.",
+            "respuestaNumerica": ["Su volumen es 226 m^3"],
+            "unidadRespuesta": ["m^3"],
+            "combinacionesRespuesta": ["226"],
+            "pasos": [
+            "Este ejercicio es un desafío",
+            "Debes llegar al resultado por tu cuenta. Debes investigar"
+            ]
+            },
+            {
+              "ecuacion": "El volumen de un cono truncado circular recto es 336π m^3. Si la altura mide 4 m y el radio de la base mayor es el doble del radio de la base menor, ¿cuánto suman ambos radios?",
+              "respuestaNumerica": ["Suman 18 metros"],
+              "unidadRespuesta": ["m"],
+              "combinacionesRespuesta": ["18"],
+              "pasos": [
+              "Este ejercicio es un desafío",
+              "Debes llegar al resultado por tu cuenta. Debes investigar"
+              ]
+              },
+      
+
+          
+          
+
+
+
+
+
+
+
+
+]
+
 const frasesCelebres = [
     'No he tenido nunca más que un maestro: el pasado; una sola formación : el estudio del pasado.' + leCobusier, 'He sacado del pasado la lección de historia, la razón de ser de las cosas. Todo acontecimiento y todo objeto están “en relación a”.' + leCobusier, 'La historia se halla inscrita en los trazados y en las arquitecturas de las ciudades. Mis ideas revolucionarias están en la historia, en toda época y en todos sus países.' + leCobusier, 'La arquitectura es un acto de voluntad consciente. Hacer arquitectura es poner orden.' + leCobusier, 'La arquitectura es el resultado del estado de espíritu de una época.' + leCobusier, 'La arquitectura está más allá de los hechos utilitarios. La arquitectura es un hecho plástico.' + leCobusier, 'La arquitectura es arte en su sentido más elevado, es orden matemático, es teoría pura, armonía completa gracias a la exacta proporción de todas las relaciones: ésta es la “función” de la arquitectura.' + leCobusier, 'La arquitectura preside los destinos de la ciudad. Ordena la estructura de la vivienda, esa célula esencial del trazado urbano, cuya salubridad, alegría y armonía están sometidas a sus decisiones.' + leCobusier, 'Organizar es hacer geometría; hacer geometría en la naturaleza o en el magma surgido “naturalmente” de las agrupaciones de hombres en aglomeraciones urbanas, equivale a hacer cirugía.' + leCobusier, 'El arte, producto de la ecuación “razón-pasión”, es, para mí, el lugar de la felicidad humana.' + leCobusier, 'Lo maravilloso está en la exactitud. Lo duradero está en la perfección. La vida está hecha con un cálculo exacto.' + leCobusier, 'El sueño sólo se apoya sobre realidades esenciales. La poesía sólo procede mediante hechos exactos.' + leCobusier, 'La poesía es un acto humano: las relaciones concertadas entre imágenes perceptibles.' + leCobusier, 'El lirismo sólo tiene alas sobre la verdad. Sólo lo genuino nos conmueve. La arquitectura se propone emoción.' + leCobusier, 'La cosa más importante del mundo son los espacios vacíos.' + leCobusier, 'Charles Édouard Jeanneret, mejor conocido como Le Corbusier, fue una de las mentes más brillantes de la arquitectura moderna, cuyas obras traspasaron la teoría y el arte.', 'Le Corbusier nacío en Suiza y se formó en París, ahí encontró la manera de plasmar la vanguardia y su fascinación por la pintura de forma autodidacta, en estructuras lisas y blancas con volumen.', 'Le Corbusier se distinguió por la planificación urbana de viviendas sociales, al visualizar edificios sin ostentaciones decorativas para potenciar la imagen las ciudades.','Arquitectura es cosa de arte, un fenómeno de emociones, que queda fuera y más allá de las cuestiones constructivas.' + leCobusier, 'El propósito de la construcción es mantener las cosas juntas y el de la arquitectura es deleitarnos' + leCobusier,  'Siempre me interesó lo creativo, sobre todo, lo que se aplica al hombre y a su medio. Con la pintura pude desarrollar todo eso. Es un medio apasionante y peligroso' + leCobusier, 'La arquitectura es el juego sabio, correcto y magnífico de los volúmenes reunidos bajo la luz' + leCobusier, 'Prefiero dibujar a hablar. Dibujar es más rápido, y deja menos espacio para la mentira' + leCobusier, 'Una casa es una máquina para vivir. La casa debe ser el estuche de la vida, la máquina de felicidad' + leCobusier, 'La arquitectura debe de ser la expresión de nuestro tiempo y no un plagio de las culturas pasadas' + leCobusier, 'La geometría solucionará los problemas de la Arquitectura' + leCobusier, 'La arquitectura está reprimida por la costumbre, los estilos son una mentira' + leCobusier, 'La arquitectura es el punto de partida del que quiera llevar a la humanidad hacia un porvenir mejor' + leCobusier, 'Trabajé por lo que más necesitan los hombres hoy: el silencio y la paz' + leCobusier, 'Me impresiona profundamente el diseñador del universo. Estoy convencido de que yo nunca hubiera logrado hacer algo así, ni de lejos. - Richard Buckminster Fuller-','Un proceso de diseño abordado con profundidad puede hacer del promotor, del arquitecto y hasta de un visitante ocasional del edificio seres humanos sensiblemente mejores. -Juhani Pallasmaa-', 'He dicho adiós a la manida idea de que la arquitectura tiene que salvar el mundo. -Peter Zumthor-', 'Nosotros no creamos obras. Creo que, de hecho, somos descubridores.Glenn Murcutt', 'Para mí, cada día es algo nuevo. Me enfrento a cada proyecto con una renovada inseguridad, casi como si fuera el primero, y sudo tinta. Cuando me pongo a ello y empiezo a trabajar, nunca estoy seguro de hacia dónde voy; y si lo supiera, sencillamente no lo haría. -Frank O. Gehry-', 'Cojo el lápiz. El trazo fluye. Aparece un edificio. Ahí está. No hay nada más que decir. -Oscar Niemeyer-', 'Para mí, el lenguaje del dibujo es extremadamente revelador: bastan unos pocos trazos para saber si alguien es un arquitecto de verdad. -Eero Saarinen-', '¿Hay algo más agradable para la mente que el papel inmaculado? ¿Que comparar y estudiar la “variedad” de texturas y colores de tarjetas y papeles? -Frank Lloyd Wright-', 'AMO EL PAPEL. BASTAN UN BUEN MONTÓN DE HOJAS Y UN LÁPIZ PARA HACERME FELIZ. -Cecil Balmond-', 'Prefiero dibujar a hablar. Dibujar es más rápido y deja menos espacio a las mentiras. -Le Corbusier-','He advertido que el ordenador a veces conduce a decisiones y resultados insípidos. Ahora, cualquiera puede proyectar un edificio inestable y en forma de burbuja. -Peter Cook-', 'Siempre digo a mis alumnos: en vuestro trabajo tenéis que poner, en primer lugar, esfuerzo, en segundo, amor y en tercero, sufrimiento. -Glenn Murcutt-', 'Al hacer un proyecto me entra el pánico; eso es bueno, puede ser un método. Primero, el pánico. Segundo, conquistar el pánico con trabajo. Tercero, encontrar formas de resolver tus dudas. Eduardo Souto de Moura', 'Estudié arte y después arquitectura, y nunca sentí la necesidad de definirme claramente como arquitecta profesional o como artista: encontré una especie de terreno intermedio contaminado por ambos campos. -Elizabeth Diller-','Muchos arquitectos no son conscientes de sus propios patrones, como tampoco la mayoría de las personas lo son de los que rigen su vida privada. Nos atrae mucho esa cuestión, pues de repente acerca mucho la arquitectura y la psicología. -Jacques Herzog-', 'Siempre he sentido que lo más importante es encontrar la forma de escapar del esquema mental o de la conciencia estética con los que cargo. -Arata Isozaki-', 'EN UNA ARQUITECTURA PURA, EL MÁS NIMIO DETALLE DEBE TENER UN SENTIDO O SERVIR A ALGÚN PROPÓSITO. -Augustus W. N. Pugin-', 'Recuerda que las cosas más bellas del mundo son las más inútiles, como, por ejemplo, los pavos reales y los lirios. -John Ruskin-', 'No quiero desnudar la arquitectura. Quiero enriquecerla y añadirle capas. Básicamente, como sucede en una catedral gótica, donde el ornamento y la estructura forman una alianza. -Cecil Balmond-', 'Menos es más. -Ludwig Mies van der Rohe-', 'Menos es aburrido. -Robert Venturi-', 'Existe una cualidad genérica en el blanco que nos gusta. -Kazuyo Sejima-', 'Siempre trato de pensar con curvas. -Greg Lynn-', 'La forma siempre sigue a la función. -Louis H. Sullivan-', 'La forma sigue a la forma, no a la función. -Philip Johnson-', 'La forma sigue al beneficio” es el principio estético de nuestros tiempos. -Richard Rogers-', 'Una silla es un objeto muy difícil. Un rascacielos es casi más fácil. Por eso el mobiliario Chippendale es famoso. -Ludwig Mies van der Rohe-', 'EL DESEO DE TOCAR EL CIELO ESTÁ PROFUNDAMENTE ARRAIGADO EN LA PSIQUE HUMANA. -Cesar Pelli -', 'Proyecto cualquier cosa que me pidan, desde una catedral hasta un gallinero. Así es como me gano la vida. -Henry Hobson Richardson-','Nunca rechaces un encargo porque pienses que no está a tu altura. -Julia Morgan-', 'El proyecto ideal no existe. Existe la posibilidad de aproximarse a él en cada ocasión. -Paulo Mendes da Rocha-', 'Cuando le preguntas a un arquitecto cuál es su mejor edificio, suele contestar: el próximo. -Emilio Ambasz-', 'Cuidado con el exceso de confianza; sobre todo en cuestiones de estructura. -Cass Gilbert-', 'TAL VEZ NO SEA EL MÁS INTERESANTE DE LOS ARQUITECTOS, PERO SIGO ESTANDO AHÍ Y HE SABIDO MANTENER CIERTA INTEGRIDAD. -David Chipperfield-', 'Estoy absolutamente en contra de lo heroico. Nosotros hacemos cosas pequeñas. Estamos absolutamente a favor de lo patético. -Michael Meredith-', 'Básicamente, la idea es que, con todo el mundo tratando de ser revolucionario, serás más revolucionario si tratas de ser ordinario. -Denise Scott Brown-', 'La mejor de las formas ya está lista y nadie debería tener miedo de utilizarla, incluso si su idea básica procede de algún otro. Basta de genios y de originalidad. -Adolf Loos-','Si no te ves capaz de hacer del mundo un lugar mejor con tu trabajo, al menos asegúrate de no empeorarlo. -Herman Hertzberger-', 'Nunca reutilizo ideas. Una vez he usado una, se acabó. -Arthur Erickson-', 'Tener 65 ideas para solucionar un problema no es una muestra de creatividad. Es un desperdicio de energía. -Jan Kaplický-', 'Algo tan común como la pintura para una casa puede resultar fascinante cuando se pule hasta lograr un acabado espejado. -Tod Williams-', 'El juego de luces y sombras, de sólidos y huecos, puede apreciarse mejor contra una superficie blanca. -Richard Meier-', 'LA LUZ NO ES ALGO VAGO Y DIFUSO QUE PUEDA DARSE POR SENTADO POR EL MERO HECHO DE QUE ESTÁ SIEMPRE AHÍ. EL SOL NO SALE EN VANO CADA DÍA. -Alberto Campo Baeza-', 'Cada material tiene sus propias sombras. La sombra de la piedra no es la misma que la de una frágil hoja de otoño. La sombra penetra en el material e irradia su mensaje. -Sverre Fehn-', 'El Sol no supo de su grandeza hasta que incidió sobre la cara de un edificio. -Louis I. Kahn-', 'Siempre busco más luz y más espacio. -Santiago Calatrava-', 'LA ARQUITECTURA ESTÁ LIGADA AL EMPLAZAMIENTO Y, EN MI OPINIÓN, EL LUGAR ES COMO UN VÍNCULO METAFÍSICO Y POÉTICO CON AQUELLO QUE UN EDIFICO PUEDE LLEGAR A SER. -Steven Holl-', 'El diseño de edificios en entornos naturales, sean urbanos o rurales, debe responder al terreno sobre el que se levantan y al cielo contra el que se proyectan. -James Polshek-', '¿De dónde sale la idea de que nuestras calles tienen que parecer creadas por el mismo cliente o el mismo arquitecto? La diversidad, y no su contrario, es lo que nos atrae. -Günter Behnisch-', 'La incoherencia en sí genera vitalidad. -Kenzo Tange-', 'PUEDES CERRAR UN LIBRO MALO, PUEDES EVITAR ESCUCHAR MÚSICA MALA, PERO NO PUEDES LIBRARTE DE LA TORRE HORROROSA QUE TIENES FRENTE A TU CASA. -Renzo Piano-', 'Siempre me sorprende el poco énfasis que ponen las escuelas de arquitectura y, de hecho, muchos arquitectos en el proceso de integración de un edificio. -Norman Foster-', 'No puedes limitarte a poner algo nuevo en un lugar. Tienes que absorber lo que ves a tu alrededor, lo que existe ya en el terreno, y después usar ese conocimiento, junto con el pensamiento contemporáneo, para interpretar lo que ves. -Tadao Ando-', 'UN ARQUITECTO QUE PROYECTA REALMENTE PARA UN SER HUMANO TIENE QUE SABER BASTANTE MÁS QUE LOS CINCO CÁNONES DE VITRUVIO. -Richard Neutra-', 'Creo que los edificios deben imitar los sistemas ecológicos. -Ken Yeang-', 'UTILIZO MATERIALES BARATOS. -Herman Hertzberger-', 'Creo que para construir un edificio sólido no hace falta usar un material resistente. La solidez de un edificio no tiene nada que ver con la resistencia del material. -Shigeru Ban-', 'Creo que para construir un edificio sólido no hace falta usar un material resistente. La solidez de un edificio no tiene nada que ver con la resistencia del material. -Shigeru Ban-', 'Trato de contrarrestar la permanencia de los edificios, su imperturbabilidad, con elementos que confieran una inefable cualidad inmaterial. -Toyo Ito-','Con independencia de su belleza, la fachada y los muros de una casa, una iglesia o un palacio tan solo son un continente, una caja formada por paredes.El contenido es el espacio interior. -Bruno Zevi-', 'El espacio, el espacio... ¡los arquitectos siempre hablan del espacio! Pero crear un espacio no comporta, automáticamente, hacer arquitectura. Con el mismo espacio puedes hacer una obra maestra o provocar un desastre. -Jean Nouvel-', 'Recuerdo que, cuando era niño, solíamos tirar el balón desde la ventana del primer piso. Nunca íbamos a un espacio especialmente pensado para jugar; el espacio de juego se establecía en el momento de jugar. El juego era inspiración, no organización. -Louis I. Kahn-', 'Yo mismo estoy instalado en una oficina sin ventanas y con aire acondicionado, una especie de celda. Mis visitantes son conscientes de este hecho, lo que les induce a ser concisos e ir al grano. -Le Corbusier-', 'No sé por qué la gente contrata arquitectos para luego decirles lo que tienen que hacer. -Frank O. Gehry-', 'CREO QUE LAS RESTRICCIONES SON MUY IMPORTANTES. SON POSITIVAS PORQUE TE PERMITEN TRABAJAR A PARTIR DE ALGO. -Charles Gwathmey-', 'Odiábamos a la Bauhaus.Fue un mal momento para la arquitectura. Simplemente no tenían talento; todo lo que tenían era reglas. Hasta para los cuchillos y los tenedores crearon reglas. Picasso nunca hubiera aceptado reglas. ¿La casa es una máquina? ¡No! Lo mecánico es feo. La regla es lo peor que hay. Solo te hace querer romperla. -Oscar Niemeyer-', 'Si tienes libertad total, entonces tienes un problema. Es mucho mejor tener alguna obligación, cierta disciplina, algunas reglas. Cuando no tienes reglas, acabas por construirte las tuyas propias. -Renzo Piano-', 'La gente que construye su propia casa suele ser muy valiente. Son personas con curiosidad por la vida. Piensan en lo que significa vivir en una casa en lugar de limitarse a comprar un bien y darle uso. -Tom Kundig-', 'ODIO LAS VACACIONES. ¿PARA QUÉ ESTAR EN LA PLAYA SI PUEDES ESTAR CONSTRUYENDO EDIFICIOS? -Philip Johnson-', 'Siempre estamos trabajando con coreógrafos y directores, expertos en robótica y diferentes científicos e investigadores. Nos interesan siempre los vínculos y cruces entre disciplinas.-Elizabeth Diller-', 'Deberíamos aprender desde niños las posibilidades que ofrece nuestro entorno, las leyes físicas y psicológicas que gobiernan el mundo visual, y el goce supremo que produce participar del proceso creativo por el que uno da forma a su propio espacio vital. -Walter Gropius-', 'Prefiero trabajar con la holgura del lápiz que con la precisión de la tinta o del ordenador. -Thom Mayne-', 'ENTRE EL AÑO 1990 Y EL 2000 NO TUVE ENCARGOS, Y NO QUISE TAMPOCO UN PUESTO ACADÉMICO O EN EL GOBIERNO. SOLO QUERÍA TRABAJAR CON ARTESANOS, ADQUIRIR EXPERIENCIA SOBRE EL TERRENO Y NO SER RESPONSABLE DEL DISEÑO, SOLO DE LA CONSTRUCCIÓN. -Wang Shu-', 'Deberíamos trabajar para hacer nuestro mundo comprensible y no para volverlo aún más confuso. Cuando algo parece madera debería ser madera, y el hierro ser hierro. -Günter Behnisch-', 'Siempre considero un edificio como parte de un todo, una pieza que crea una acción colectiva: la ciudad. -Christian de Portzamparc-', 'TODA OBRA DE ARQUITECTURA QUE NO EXPRESE SERENIDAD ES UN ERROR. -Luis Barragán-', 'LA ARQUITECTURA QUE RECORDAMOS ES AQUELLA QUE NUNCA NOS CONSUELA O RECONFORTA. -Peter Eisenman-', 'Soy un arquitecto que construye y, por tanto, soy optimista. Ser optimista es un prerrequisito para todo aquel que quiera construir, porque la construcción tiene que ver con el optimismo, con encarar el futuro con confianza. -Cesar Pelli-', 'LO QUE MOTIVA ES TRABAJAR SOBRE LA DESAPARICIÓN, SOBRE LOS LÍMITES ENTRE LA PRESENCIA Y LA AUSENCIA DE LA ARQUITECTURA. -Dominique Perrault-', 'En realidad, algunas imágenes y dibujos tienen un impacto mayor que muchos edificios que llegan a construirse. -Emilio Ambasz-', 'Me gustan las ruinas porque lo que queda en ellas no es el diseño total, sino la claridad del pensamiento, la nuda estructura, el espíritu de la cosa. -Tadao Ando-', 'Piensa hasta el final:considera el final primero. -Leonardo da Vinci-'           
 
 
 
 ]
+
 // Función para mostrar un problema aleatorio
 function fraseAleatoria() {
     // Seleccionar aleatoriamente una frase
@@ -4357,6 +5000,12 @@ function actualizarProblemas() {
         selectUnidades.style.display = "none";
         textareaEcuaciones.style.width = "50%";
         advertencia.innerHTML = `${"¡Importante! Si aparece x^2 esto equivale a x elevado a 2. Si aparece sqrt(x+2) esto equivale a raiz cuadrada de (x+2). Debes ingresar dos valores separados por una coma (sin letras). Si el ejercicio tiene un solo resultado ingresalo dos veces separado por una coma."}`;
+    } else if (seleccion === "areasYVolumenes") {
+      problemasMatematicos = problemasAreasYVolumenes;
+      // Ocultar el select de unidades y aumentar el tamaño del textarea
+      selectUnidades.style.display = "none";
+      textareaEcuaciones.style.width = "50%";
+      advertencia.innerHTML = `${"¡Importante! Si aparece x^2 esto equivale a x elevado a 2. Si aparece sqrt(x+2) esto equivale a raiz cuadrada de (x+2). Debes ingresar un valor (sin letras). Si tiene decimales debes usar punto."}`;
 
 
     console.log("Problemas matemáticos seleccionados:", problemasMatematicos);
@@ -4377,28 +5026,40 @@ function revisarResultado() {
         revisarResultadosSistemasEcuaciones();
     } else if (seleccion === "ecuacionesSegundoGrado") {
         revisarResultadosEcuacionesSegundoGrado();
+    } else if (seleccion === "areasYVolumenes") {
+        revisarResultadosAreasYVolumenes();
     }
 }    
 
+// Crear un arreglo para almacenar los problemas ya mostrados
+let problemasMostrados = [];
+
 // Función para mostrar un problema aleatorio
 function mostrarProblemaAleatorio() {
-    // Seleccionar aleatoriamente un problema
+  // Seleccionar aleatoriamente un problema
+ 
+  do {
     problemaAleatorio = problemasMatematicos[Math.floor(Math.random() * problemasMatematicos.length)];
+  } while (problemasMostrados.includes(problemaAleatorio));
 
-    console.log(problemaAleatorio);
+  // Agregar el problema seleccionado al arreglo de problemas mostrados
+  problemasMostrados.push(problemaAleatorio);
 
-    // Actualizar el contenido del elemento problemaMat
-    problemaMat.innerHTML = `${problemaAleatorio.ecuacion}`;
-    // Mostrar un botón para mostrar las respuestas y los pasos
+  console.log(problemaAleatorio);
+
+  // Actualizar el contenido del elemento problemaMat
+  problemaMat.innerHTML = `${problemaAleatorio.ecuacion}`;
+  // Mostrar un botón para mostrar las respuestas y los pasos
     
-    document.querySelector(".btnCopiar").classList.add("ocultar");
-    document.querySelector(".incorrecta").classList.add("ocultar");
-    document.querySelector(".btnRepaso").classList.add("ocultar");
-    document.querySelector(".repaso").classList.add("ocultar");
+  document.querySelector(".btnCopiar").classList.add("ocultar");
+  document.querySelector(".incorrecta").classList.add("ocultar");
+  document.querySelector(".btnRepaso").classList.add("ocultar");
+  document.querySelector(".repaso").classList.add("ocultar");
 
-    // Asignar los valores a las variables globales
-    respuestaOficial.innerHTML = `${problemaAleatorio.respuestaNumerica.join("<br>")}`;
-    pasoApaso.innerHTML = `${problemaAleatorio.pasos.join("<br><br>")}`;
+  // Asignar los valores a las variables globales
+  respuestaOficial.innerHTML = `${problemaAleatorio.respuestaNumerica.join("")}`;
+  pasoApaso.innerHTML = `${problemaAleatorio.pasos.join("")}`;
+  return problemaAleatorio;
 }
 
 function revisarResultadoAlgebra() {
@@ -4619,6 +5280,73 @@ function revisarResultadosEcuacionesSegundoGrado() {
     return;
 }
 
+function revisarResultadosAreasYVolumenes() {
+
+  let resultadoUsuario = respuesta.value.trim().replace(/\s/g, ''); // Eliminar espacios en blanco
+
+  // Separar cada una de las respuestas por una coma
+  let respuestasUsuario = resultadoUsuario.split(',');
+
+  // Convertir fracciones en números decimales para las respuestas del usuario
+  respuestasUsuario = respuestasUsuario.map(respuesta => {
+      let fraccion = respuesta.match(/^(-?\d+)\/(\d+)$/); // Verificar si es una fracción
+      if (fraccion) {
+          let numerador = parseInt(fraccion[1], 10);
+          let denominador = parseInt(fraccion[2], 10);
+          let numeroDecimal = numerador / denominador; // Convertir a decimal
+          return parseFloat(respuesta) < 0 ? -numeroDecimal : numeroDecimal; // Mantener el signo negativo si es una fracción negativa
+      } else {
+          return parseFloat(respuesta); // Convertir a decimal si no es una fracción
+      }
+  });
+
+  console.log("Respuestas del Usuario:", respuestasUsuario);
+
+  // Obtener las respuestas correctas y convertir fracciones en números decimales
+  let respuestasCorrectas = problemaAleatorio.combinacionesRespuesta.map(respuesta => {
+      let fraccion = respuesta.match(/^(-?\d+)\/(\d+)$/); // Verificar si es una fracción
+      if (fraccion) {
+          let numerador = parseInt(fraccion[1], 10);
+          let denominador = parseInt(fraccion[2], 10);
+          let numeroDecimal = numerador / denominador; // Convertir a decimal
+          return parseFloat(respuesta) < 0 ? -numeroDecimal : numeroDecimal; // Mantener el signo negativo si es una fracción negativa
+      } else {
+          return parseFloat(respuesta); // Convertir a decimal si no es una fracción
+      }
+  });
+
+  console.log("Respuestas Correctas:", respuestasCorrectas);
+
+  // Calcular el margen de error individual para cada respuesta del usuario en comparación con cada respuesta correcta
+  let margenError = 0.05; // 5% de margen de error
+  let respuestasCorrectasConMargen = respuestasCorrectas.map((respuesta, index) => {
+      let margen = Math.abs(respuesta) * margenError; // Calcula el margen de error basado en el valor absoluto de la respuesta correcta
+      return {
+          minimo: respuesta - margen,
+          maximo: respuesta + margen
+      };
+  });
+
+  console.log("Respuesta Correctas con Margen", respuestasCorrectasConMargen);
+
+  // Verificar si las respuestas del usuario están contenidas en las respuestas correctas con margen de error
+  let todasLasRespuestasCorrectas = respuestasUsuario.every(respuestaUsuario => {
+      return respuestasCorrectasConMargen.some(respuestaCorrectaConMargen => {
+          return respuestaUsuario >= respuestaCorrectaConMargen.minimo && respuestaUsuario <= respuestaCorrectaConMargen.maximo;
+      });
+  });
+
+  console.log("Todas las repuestas Correctas:", todasLasRespuestasCorrectas);
+
+  // Si todas las respuestas del usuario están dentro del margen de error de al menos una respuesta correcta, mostrar resultado correcto
+  if (todasLasRespuestasCorrectas) {
+      mostrarResultadoCorrecto();
+  } else {
+      mostrarResultadoIncorrecto();
+  }
+  return;
+}
+
 function esRespuestaCorrectaConLetras(resultadoUsuario) {
     if (!resultadoUsuario) {
         alert("Debes ingresar una respuesta.");
@@ -4685,6 +5413,7 @@ function normalizarTerminos(terminos) {
 
 function inicializar(){
     problemaAleatorio = mostrarProblemaAleatorio();
+
 // Función para mostrar un problema aleatorio
 }
 
@@ -4770,6 +5499,8 @@ function quieroRepasar(){
         window.open("https://es.khanacademy.org/math/algebra/x2f8bb11595b61c86:systems-of-equations/x2f8bb11595b61c86:introduction-to-systems-of-equations/v/trolls-tolls-and-systems-of-equations");
     } else if (seleccion === "ecuacionesSegundoGrado") {
         window.open("https://es.khanacademy.org/math/algebra/x2f8bb11595b61c86:quadratic-functions-equations/x2f8bb11595b61c86:quadratic-formula-a1/v/using-the-quadratic-formula");
+    } else if (seleccion === "areasYVolumenes") {
+      window.open("https://es.khanacademy.org/math/basic-geo/basic-geo-area-and-perimeter/basic-geo-unit-squares-area/v/introduction-to-area-and-unit-squares");
     }
     
     console.log(seleccion)
